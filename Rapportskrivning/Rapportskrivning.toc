@@ -1,0 +1,15 @@
+\select@language {swedish}
+\contentsline {chapter}{\numberline {1}Introduction}{viii}{chapter.1}
+\contentsline {chapter}{\numberline {2}Theory}{ix}{chapter.2}
+\contentsline {section}{\numberline {2.1}Teori}{ix}{section.2.1}
+\contentsline {chapter}{\numberline {3}Materials \& methods}{x}{chapter.3}
+\contentsline {section}{\numberline {3.1}Metoder}{x}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Arduino}{x}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}ESP8266}{x}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Kameran}{x}{section.3.2}
+\contentsline {section}{\numberline {3.3}Sensorer}{x}{section.3.3}
+\contentsline {chapter}{\numberline {4}Results}{xi}{chapter.4}
+\contentsline {section}{\numberline {4.1}Suitable parameter settings}{xi}{section.4.1}
+\contentsline {chapter}{\numberline {5}Discussion \& Outlook}{xii}{chapter.5}
+\contentsline {section}{\numberline {5.1}Diskussion}{xii}{section.5.1}
+\contentsline {chapter}{Litteraturf\"orteckning}{xiii}{chapter*.2}

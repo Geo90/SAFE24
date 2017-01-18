@@ -1,0 +1,30 @@
+\ifglsentryexists{ANN}{}%
+{%
+\gls@defglossaryentry{ANN}%
+{%
+name={ANN},%
+sort={ANN},%
+type={main},%
+first={ANN},%
+firstplural={ANNs},%
+text={ANN},%
+plural={ANNs},%
+description={Artificial Neural Network, a generic name for different machine learning models that mimic how learning is done in nature.},%
+descriptionplural={Artificial Neural Network, a generic name for different machine learning models that mimic how learning is done in nature.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
