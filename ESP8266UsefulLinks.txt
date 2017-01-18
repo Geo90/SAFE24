@@ -1,0 +1,43 @@
+
+---------------------------------------------------
+***	Installing ESP8266.h into Arduino IDE	***
+---------------------------------------------------
+
+- Configure Arduino IDE to work with ESP8266.h 
+and connect to WiFi
+http://www.instructables.com/id/IoT-ESP8266-Series-1-Connect-to-WIFI-Router/
+
+---------------------------------------------------
+***************************************************
+---------------------------------------------------
+
+
+---------------------------------------------------
+***		ESP8266 example code		***
+---------------------------------------------------
+
+- Connect module to WiFi and configure it to recieve AT-commands and
+other useful links at bottom of the page
+http://dalpix.com/blog/connecting-your-arduino-wifi-esp-8266-module
+
+- Connect module to a WEBHOST and define PORT-number and send and 
+send and recieve data
+https://github.com/itead/ITEADLIB_Arduino_WeeESP8266/blob/master/examples/HTTPGET/HTTPGET.ino
+
+- Getting the MAC-address of the ESP8266
+http://www.esp8266.com/viewtopic.php?f=29&t=3587
+
+---------------------------------------------------
+***************************************************
+---------------------------------------------------
+
+---------------------------------------------------
+***		ESP8266 AT-commands		***
+---------------------------------------------------
+
+https://room-15.github.io/blog/2015/03/26/esp8266-at-command-reference/
+- AT-commands for the ESP8266
+
+---------------------------------------------------
+***************************************************
+---------------------------------------------------
