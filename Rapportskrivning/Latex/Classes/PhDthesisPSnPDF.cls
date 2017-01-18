@@ -259,10 +259,10 @@
     \thispagestyle{empty}
 %  \null\vfill
   \begin{center}
-    { \Huge {\bfseries {\@title}} \par}
-{\large \vspace*{35mm} {{\@crest} \par} \vspace*{25mm}}
-    {{\Large \@author} \par}
-%	\vspace*{1ex}
+    { \Large {\bfseries {\@title}} \par}
+{\large \vspace*{25mm} {{\@crest} \par} \vspace*{15mm}}
+    {{\Large \@author} \par \vspace*{25mm}}
+{\Large \@date \par} % Date for the report
 %	{{\@cityofbirth} \par}    
 {\large 
 	\vspace*{1ex}
@@ -271,9 +271,9 @@
     {{\@university} \par}
 	\vspace*{25mm}
     {{\submittedtext} \par}
-	\vspace*{1ex}
+	\vspace*{1mm}
     {\it {\@degree} \par}
-	\vspace*{2ex}
+	\vspace*{1mm}
     {\@degreedate}
 }%end large
   \end{center}
