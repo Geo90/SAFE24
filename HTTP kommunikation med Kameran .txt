@@ -1,3 +1,26 @@
+1.3 Terminology
+- Action - An action is a task that can be performed by the Axis product. The action is initiated by an action rule. Examples:
+record video, send e-mail, activate output port.
+- Action rule - An action rule specifies how and when the Axis product should perform an action. Example: record video when
+motion is detected outside office hours.
+- Condition - An additional condition that must be fulfilled to trigger the action rule.
+- Event - Event is used as a collective name for stateful and stateless events. Events are emitted when the Axis product detects an
+occurrence of some kind, for example motion in the camera’s field of view or a signal from an I/O port. Events can be used in action
+rules (as start event or condition) and in notification subscriptions.
+- Fixed action - A fixed action runs during a fixed, predefined time. Depending on the action type, the length of time is defined by one
+or more action parameters, by the length of the audio clip to be played or similar.
+- Recipient - A recipient is a network resource that can receive data, for example video clips or notification messages. Examples:
+network share, FTP server, email address.
+- Stateful event - A stateful event is a property (a state variable) with a number of states. The event is always in one of its states.
+- Example: The Motion Detection event is in state true when motion is detected and in state false when motion is not detected.
+- Stateless event - A stateless event is a momentary occurrence (a pulse). Example: Storage device removed.
+- Unlimited action - An unlimited action runs as long as all conditions are fulfilled.
+- Start event - A condition that must be fulfilled to trigger the action rule. Called Trigger in the product’s webpages.
+
+
+
+
+
 http://192.168.0.70/jpg/image.jpg
 
 http://192.168.0.70//axis-cgi/param.cgi?action=list&group=Event.E0
