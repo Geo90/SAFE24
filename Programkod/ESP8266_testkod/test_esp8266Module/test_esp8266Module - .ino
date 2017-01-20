@@ -1,3 +1,4 @@
+
 //-----------------------------------------------
 //This sketch is combined from Adafruit DHT sensor and tdicola for dht.h library
 // https://learn.adafruit.com/dht/overview
@@ -22,10 +23,10 @@
 //http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 #include "ESP8266WiFi.h"
-#include "ConnectToWiFi.h"
 #define DHTPIN 5    // what pin we're connected to, pin1 is 5th pin from end
 
-
+uint8_t MAC_array[6];
+char MAC_char[18];
 // WiFi parameters to be configured
 const char* ssid = "iPhone";
 const char* password = "12345678";
@@ -36,12 +37,38 @@ const String devid = "vBDE0176C74D864E"; //device ID on Pushingbox for our Scena
 
 
 void setup(void)
-{
+{ 
   Serial.begin(115200);
   // Connect to WiFi
-  connectToWifi(ssid, password);  
+  connectToWifi();
+
+      WiFi.macAddress(MAC_array);
+    for (int i = 0; i < sizeof(MAC_array); ++i){
+      sprintf(MAC_char,"%s%02x:",MAC_char,MAC_array[i]);
+    }
   
+    Serial.println(MAC_char);
+
 }
+
+void connectToWifi(void){
+  Serial.print("Connecting to: "+*ssid);
+  Serial.println("going into wl connect");
+  WiFi.begin(ssid,password);
+
+  // while wifi not connected yet, print '.'
+  // then after it connected, get out of the loop
+  while (WiFi.status() != WL_CONNECTED) {
+     delay(500);
+     Serial.print(".");
+  }
+  //print a new line, then print WiFi connected and the IP address
+  Serial.println("");
+  Serial.println("WiFi connected");
+  // Print the IP address
+  Serial.println(WiFi.localIP());
+}
+
 
 void loop() {
    //Wait between measurements longer then normal to slow donwn
