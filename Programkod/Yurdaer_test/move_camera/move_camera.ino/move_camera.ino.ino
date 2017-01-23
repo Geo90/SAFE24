@@ -20,7 +20,7 @@ void setup() {
   Serial.println();
   Serial.print("Connecting to ");
   Serial.println(ssid);
-  WiFi.config(ip,dns,gateway,subnet);
+  //WiFi.config(ip,dns,gateway,subnet);
   WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED) {
@@ -44,12 +44,12 @@ void loop() {
   Serial.println("192.168.0.70");
 
   // Use WiFiClient class to create TCP connections
-  WiFiClient client;
-  const int httpPort = 80;
-  if (!client.connect(camera_ip, httpPort)) {
-    Serial.println("connection failed");
-    return;
-  }
+ // WiFiClient client;
+//  const int httpPort = 80;
+ // if (!client.connect(camera_ip, httpPort)) {
+ //   Serial.println("connection failed");
+ //   return;
+//  }
 
   // We now create a URI for the request
   String url = "http://192.168.0.70/axis-cgi/com/ptz.cgi?rpan=10&camera=3";
@@ -58,15 +58,15 @@ void loop() {
   Serial.println(url);
 
   // This will send the request to the server
-  client.print(String("POST") + url);
+  //client.print(String("POST") + url);
   delay(10);
 
   // Read all the lines of the reply from server and print them to Serial
-  Serial.println("Respond:");
-  while(client.available()){
-    String line = client.readStringUntil('\r');
-    Serial.print(line);
-  }
+//  Serial.println("Respond:");
+//  while(client.available()){
+ //   String line = client.readStringUntil('\r');
+ //   Serial.print(line);
+//  }
 
   Serial.println();
   Serial.println("closing connection");

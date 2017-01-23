@@ -1,44 +1,55 @@
+
+
+/*
+ *  Simple HTTP get webclient test
+ */
+ 
 #include <ESP8266WiFi.h>
-
-
+ 
 const char* ssid     = "3Com";
-const char* password = "";
+const char* password = "14531453";
+ 
+//const char* host = "wifitest.adafruit.com";
+//IPAddress host = (192,168,0,70);
+ const char* host ="192.168.0.70";
+ IPAddress ipp (192, 168, 0, 21);
+IPAddress gateway(192, 168, 0, 1);
+IPAddress subnet(255, 255, 255, 0);
 
-//const char* host = "https://pure-caverns-1350.herokuapp.com";
-//const char* camera_ip= "192.168.0.70";
 void setup() {
   Serial.begin(115200);
-  delay(10);
-
+  delay(100);
+ 
   // We start by connecting to a WiFi network
-
+ 
   Serial.println();
   Serial.println();
   Serial.print("Connecting to ");
   Serial.println(ssid);
 
-  WiFi.begin(ssid, password);
-
+  WiFi.begin(ssid);
+   WiFi.config(ipp,gateway,subnet);
+  
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
-
+ 
   Serial.println("");
   Serial.println("WiFi connected");  
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 }
-
+ 
 int value = 0;
-
+ 
 void loop() {
-  delay(5000);
+  delay(50);
   ++value;
-
+ 
   Serial.print("connecting to ");
-  Serial.println(c);
-
+  Serial.println(host);
+  
   // Use WiFiClient class to create TCP connections
   WiFiClient client;
   const int httpPort = 80;
@@ -46,24 +57,25 @@ void loop() {
     Serial.println("connection failed");
     return;
   }
-
+  
   // We now create a URI for the request
-  String url = "http://192.168.0.70/axis-cgi/com/ptz.cgi?rpan=10&camera=3";
-
+ // String url = "/testwifi/index.html";
+   String url = "/axis-cgi/com/ptz.cgi?rpan=3&camera=1";
   Serial.print("Requesting URL: ");
   Serial.println(url);
-
+  
   // This will send the request to the server
-  client.print(String("POST") + url);
-  delay(10);
-
+  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
+               "Host: " + host + "\r\n" + 
+               "Connection: close\r\n\r\n");
+  delay(50);
+  
   // Read all the lines of the reply from server and print them to Serial
-  Serial.println("Respond:");
-  while(client.available()){
+  /*while(client.available()){
     String line = client.readStringUntil('\r');
     Serial.print(line);
-  }
-
+  }*/
+  
   Serial.println();
   Serial.println("closing connection");
 }
