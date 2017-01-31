@@ -28,6 +28,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //Project Name: Arduino Template Project Example
 
 
+#include <stdio.h>
+
 //*****************************
 //*****************************
 //********** DEFINES **********
@@ -36,19 +38,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef GEN_C_INIT    //Do only once the first time this file is used
 #define GEN_C_INIT
 
-
-//--------------------------
-//----- SWITCH DEFINES -----
-//--------------------------
-//#define SWITCH_MENU_PRESSED   ((switches_1_debounced & 0x01) ? 1 : 0)
-//#define SWITCH_EXIT_PRESSED   ((switches_1_debounced & 0x02) ? 1 : 0)
-//#define SWITCH_UP_PRESSED   ((switches_1_debounced & 0x04) ? 1 : 0)
-//#define SWITCH_DOWN_PRESSED   ((switches_1_debounced & 0x08) ? 1 : 0)
-
-//#define SWITCH_MENU_NEW_PRESS   ((switches_1_new & 0x01) ? 1 : 0)
-//#define SWITCH_EXIT_NEW_PRESS   ((switches_1_new & 0x02) ? 1 : 0)
-//#define SWITCH_UP_NEW_PRESS   ((switches_1_new & 0x04) ? 1 : 0)
-//#define SWITCH_DOWN_NEW_PRESS         ((switches_1_new & 0x08) ? 1 : 0)
 
 
 #endif
@@ -67,18 +56,15 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //----- INTERNAL & EXTERNAL FUNCTIONS -----
 //-----------------------------------------
 //(Also defined below as extern)
-    uint8_t MAC_array[6];
-    char MAC_char[18];
-    //const char WEBSITE[] = "api.pushingbox.com"; //pushingbox API server
-    const String devid = "vBDE0176C74D864E"; //device ID on Pushingbox for our Scenario
-
+   
 
 #else
 //------------------------------
 //----- EXTERNAL FUNCTIONS -----
 //------------------------------
-extern void connectToWifi(const char*, const char*);
 
+String moveCamera (int, int);
+extern String sentToCamera (WiFiClient, String, String);
 
 #endif
 

@@ -4,8 +4,9 @@
   Released into the public domain.
 */
 
+
+#include "ESP8266WiFi.h"
 #include "ConnectToWiFi.h";
-#include "Arduino.h";
 
 uint8_t MAC_array[6];
 char MAC_char[18];
@@ -13,10 +14,7 @@ char MAC_char[18];
 const char WEBSITE[] = "api.pushingbox.com"; //pushingbox API server
 const String devid = "vBDE0176C74D864E"; //device ID on Pushingbox for our Scenario
 
-#ifndef ConncetToWiFi_h
-#define ConncetToWiFi_h
-
-ConnectToWiFi::connectToWiFi(char* _ssid, char* _password){
+void connectToWifi(const char* ssid, const char* password){
     Serial.begin(115200);
     
     WiFi.macAddress(MAC_array);
@@ -45,5 +43,4 @@ ConnectToWiFi::connectToWiFi(char* _ssid, char* _password){
   Serial.println(WiFi.localIP());
 }
 
-#endif
 
