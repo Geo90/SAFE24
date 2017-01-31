@@ -6,13 +6,14 @@
 
 #include <ESP8266WiFi.h>
 
-const char ssid[]     = "3Com";
-const char password[] = "14531453";
-const string camera_ip = "192.168.0.70";
+
+const char* ssid     = "TP-LINK_7B0E";
+const char* password = "23263345";
+const char* camera_ip = "192.168.0.70";
 const int httpPort = 80;
 
 IPAddress esp_ip (192, 168, 0, 21);
-IPAddress gateway(192, 168, 0, 1);
+IPAddress gateway(192, 168, 1, 1);
 IPAddress subnet(255, 255, 255, 0);
 
 void setup() {
@@ -24,32 +25,25 @@ void setup() {
   Serial.print("Connecting to ");
   Serial.println(ssid);
   connectWifi(ssid, password);
-  Serial.println("");
-  Serial.println("WiFi connected");
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
 }
-
 
 void loop() {
   delay(2000);
-  // Use WiFiClient class to create TCP connections
-  WiFiClient client;
   Serial.print("connecting to ");
   Serial.println(camera_ip);
+  WiFiClient client;
   if (!client.connect(camera_ip, httpPort)) {
     Serial.println("connection failed");
   }
-sentToCamera(
-
+  Serial.println (sentToCamera(client, moveCamera(20, 1), camera_ip));
 }
 
-}
 
 void connectWifi(const char ssid[], const char password[]) {
   Serial.println();
   Serial.print("Connecting to ");
   Serial.println(ssid);
+  WiFi.mode(WIFI_STA);
   if (sizeof(password) != 1) {
     WiFi.begin(ssid, password);
     WiFi.config(esp_ip, gateway, subnet);
@@ -62,9 +56,15 @@ void connectWifi(const char ssid[], const char password[]) {
     delay(500);
     Serial.print(".");
   }
+  Serial.println("");
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
 }
 
-String sentToCamera (WifiClient client, String command, String camera_ip ) {
+
+String sentToCamera ( WiFiClient client, String command, String camera_ip ) {
+  String http_response = "";
   // This will send the request to the server
   client.print(String("GET ")
                + command + " HTTP/1.1\r\n"
@@ -72,17 +72,29 @@ String sentToCamera (WifiClient client, String command, String camera_ip ) {
                + camera_ip
                + "\r\n"
                +  "Connection: close\r\n\r\n");
+
+  unsigned long timeout = millis();
+  while (client.available() == 0) {
+    if (millis() - timeout > 2000) {
+      Serial.println("Client Timeout!");
+      client.stop();
+      timeout = 0;
+      break;
+    }
+    timeout = 1;
+  }
   // Read all the lines of the reply from server and print them to Serial
-  while (client.available()) {
-    String http_response = client.readStringUntil('\r');
-    return http_response;
+  if (timeout) {
+    while (client.available()) {
+      http_response = client.readStringUntil('\r');
 
-
+    }
   }
+  return http_response;
+}
 
-  String moveCamera (int angel, int camera_no) {
-    String url = "/axis-cgi/com/ptz.cgi?rpan=" + String(angel) + "&camera=" + String(camera_no);
-    return url;
-
-  }
+String moveCamera (int angel, int camera_no) {
+  String url = "/axis-cgi/com/ptz.cgi?rpan=" + String(angel) + "&camera=" + String(camera_no);
+  return url;
+}
 
