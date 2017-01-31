@@ -8,7 +8,7 @@
 
 const char ssid[]     = "3Com";
 const char password[] = "14531453";
-const char camera_ip[] = "192.168.0.70";
+const string camera_ip = "192.168.0.70";
 const int httpPort = 80;
 
 IPAddress esp_ip (192, 168, 0, 21);
@@ -24,26 +24,10 @@ void setup() {
   Serial.print("Connecting to ");
   Serial.println(ssid);
   connectWifi(ssid, password);
-  /*
-    WiFi.begin(ssid);
-    WiFi.config(esp_ip, gateway, subnet);
-    while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-    }
-
-    Serial.println("");
-  */
   Serial.println("");
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
-
-
-
-
-
-
 }
 
 
@@ -56,12 +40,9 @@ void loop() {
   if (!client.connect(camera_ip, httpPort)) {
     Serial.println("connection failed");
   }
-  moveCamera(client, 20, 1);
-  // Read all the lines of the reply from server and print them to Serial
-  while (client.available()) {
-    String http_response = client.readStringUntil('\r');
-    Serial.print(http_response);
-  }
+sentToCamera(
+
+}
 
 }
 
@@ -77,26 +58,31 @@ void connectWifi(const char ssid[], const char password[]) {
     WiFi.begin(ssid);
     WiFi.config(esp_ip, gateway, subnet);
   }
-
-
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
 }
 
-
-
-
-void moveCamera (WiFiClient client, int angel, int camera_no) {
-  Serial.print("2 ");
-  String url = "/axis-cgi/com/ptz.cgi?rpan=" + String(angel) + "&camera=" + String(camera_no);
+String sentToCamera (WifiClient client, String command, String camera_ip ) {
   // This will send the request to the server
   client.print(String("GET ")
-               + url + " HTTP/1.1\r\n"
+               + command + " HTTP/1.1\r\n"
                +  "Host: "
                + camera_ip
                + "\r\n"
                +  "Connection: close\r\n\r\n");
-}
+  // Read all the lines of the reply from server and print them to Serial
+  while (client.available()) {
+    String http_response = client.readStringUntil('\r');
+    return http_response;
+
+
+  }
+
+  String moveCamera (int angel, int camera_no) {
+    String url = "/axis-cgi/com/ptz.cgi?rpan=" + String(angel) + "&camera=" + String(camera_no);
+    return url;
+
+  }
 
