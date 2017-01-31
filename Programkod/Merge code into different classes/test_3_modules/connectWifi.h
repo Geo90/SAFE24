@@ -28,6 +28,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //Project Name: Arduino Template Project Example
 
 
+#include <stdio.h>
+
 //*****************************
 //*****************************
 //********** DEFINES **********
@@ -77,7 +79,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //------------------------------
 //----- EXTERNAL FUNCTIONS -----
 //------------------------------
-extern void connectToWifi(const char*, const char*);
+extern void connectWifi(IPAddress, IPAddress, IPAddress, const char*, const char*);
 
 
 #endif

@@ -21,15 +21,21 @@
 //Download ESP8266.h package -->
 //http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
+/**************************
+ *    ARDUINO LIBRARY     *
+ **************************/
 #include "ESP8266WiFi.h"
+
+
+/**************************
+ *    CUSTOM LIBRARY     *
+ **************************/
 #include "ConnectToWiFi.h"
-#define DHTPIN 5    // what pin we're connected to, pin1 is 5th pin from end
 
 
-// WiFi parameters to be configured
+// WiFi parameters to be user-configured
 const char* ssid = "iPhone";
 const char* password = "12345678";
-
 const char WEBSITE[] = "api.pushingbox.com"; //pushingbox API server
 const String devid = "vBDE0176C74D864E"; //device ID on Pushingbox for our Scenario
 
