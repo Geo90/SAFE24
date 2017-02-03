@@ -39,6 +39,19 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define GEN_C_INIT
 
 
+//--------------------------
+//----- SWITCH DEFINES -----
+//--------------------------
+//#define SWITCH_MENU_PRESSED   ((switches_1_debounced & 0x01) ? 1 : 0)
+//#define SWITCH_EXIT_PRESSED   ((switches_1_debounced & 0x02) ? 1 : 0)
+//#define SWITCH_UP_PRESSED   ((switches_1_debounced & 0x04) ? 1 : 0)
+//#define SWITCH_DOWN_PRESSED   ((switches_1_debounced & 0x08) ? 1 : 0)
+
+//#define SWITCH_MENU_NEW_PRESS   ((switches_1_new & 0x01) ? 1 : 0)
+//#define SWITCH_EXIT_NEW_PRESS   ((switches_1_new & 0x02) ? 1 : 0)
+//#define SWITCH_UP_NEW_PRESS   ((switches_1_new & 0x04) ? 1 : 0)
+//#define SWITCH_DOWN_NEW_PRESS         ((switches_1_new & 0x08) ? 1 : 0)
+
 
 #endif
 
@@ -56,19 +69,17 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //----- INTERNAL & EXTERNAL FUNCTIONS -----
 //-----------------------------------------
 //(Also defined below as extern)
-   
+
+    uint8_t MAC_array[6]; //contains the MAC-adress as int
+    char MAC_char[18]; //contains the MAC-adress as chars
 
 #else
 //------------------------------
 //----- EXTERNAL FUNCTIONS -----
 //------------------------------
-//Move the connected camera 0 to the desired angle
-String moveCamera (int);
-//Move camera to the desired angle and specify which camera to move. 
-String moveCamera (int, int);
+//Function that establishes a connection to the specified host
+extern void connectWifi(IPAddress, IPAddress, IPAddress, const char*, const char*); 
 
-//Sending commands to the camera
-extern String sendToCamera (WiFiClient, String,const char*,int);
 
 #endif
 

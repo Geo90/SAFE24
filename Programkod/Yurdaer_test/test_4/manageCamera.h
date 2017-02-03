@@ -62,13 +62,19 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //------------------------------
 //----- EXTERNAL FUNCTIONS -----
 //------------------------------
-//Move the connected camera 0 to the desired angle
-String moveCamera (int);
+
 //Move camera to the desired angle and specify which camera to move. 
-String moveCamera (int, int);
+String moveCameraHorizontal (int, int);
+String moveCameraVertical (int, int);
+// Autofocus On/Off. 
+String autoFocus (String,String);
+// Autoiris On/Off. 
+String autoIris (String,String);
+
+//Move camera to the desired angle and specify which camera to move. 
 
 //Sending commands to the camera
-extern String sendToCamera (WiFiClient, String,const char*,int);
+extern String sendToCamera ( String,String);
 
 #endif
 

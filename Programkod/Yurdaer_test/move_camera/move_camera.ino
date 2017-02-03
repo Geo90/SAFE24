@@ -60,13 +60,12 @@ void loop() {
 
 
   // URL pan-request for the Camera
-  String url = "http://192.168.0.70/axis-cgi/com/ptz.cgi?rpan=10&camera=3";
+  String url = "http://192.168.0.70/axis-cgi/com/ptz.cgi?rpan=10&camera=1";
 
   Serial.print("Requesting URL: ");
   Serial.println(url);
 
-  // This will send the request to the server
-  client.print(String("POST") + url);
+  // This will send the request to the server1  client.print(String("POST") + url);
   delay(10);
 
   //Reads and prints reply from the Camera-server

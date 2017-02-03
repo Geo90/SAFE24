@@ -2,18 +2,22 @@
 
 #include <ESP8266WiFi.h>
 #include "connectWiFi.h"
+#include <ESP8266WiFiMulti.h>
 
 /**
  * Function that establishes a connection to the specified host
  */
 void connectWifi(IPAddress esp_ip, IPAddress gateway, IPAddress subnet, const char ssid[], const char password[]) {
+  ESP8266WiFiMulti WiFiMulti;
   Serial.println();
   Serial.print("Connecting to ");
   Serial.println(ssid);
 
   //Checks if password needed of not and connects to the host
   if (sizeof(password) != 1) {
-    WiFi.begin(ssid, password);
+    
+    WiFiMulti.addAP(ssid,password);
+  //  WiFi.begin(ssid, password);
     WiFi.config(esp_ip, gateway, subnet);
   }
   else {
