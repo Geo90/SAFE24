@@ -12,9 +12,9 @@ const int pirPin = 16;
 const int ledPin2 = 13;
 
 //Sensor values and variables
-int sensorValue = 0;
-int pirCounter = 0;
-int pirSum = 0;
+int sensorValue = 0; //value read from the PIR sensor
+int pirCounter = 0; //what does this count?
+int pirSum = 0; //waht is this
 
 //EthernetClient object and specified Host with password
 EthernetClient client;
@@ -27,7 +27,6 @@ const char* password = "59b3239n";
  */
 void setup() 
 {
-
   pinMode(ledPin1, OUTPUT); //pin1
   pinMode(ledPin1, OUTPUT); //pin1
   pinMode(pirPin, INPUT);   //pirPin
@@ -35,19 +34,22 @@ void setup()
 }
 
 /**
- * 
+ * What happens in this loop?
  */
 void loop() 
 {
   //This is being resetted everytime the loop starts (Why?)
   digitalWrite(ledPin1, LOW);
-
+  delay(10);
+  
   //Reading what? Shock?
   sensorValue = analogRead(sensorPin);
   delay(99);
 
   //Shock is detected and LED lights up 
   int pirValue = digitalRead(pirPin);
+  delay(10)
+  
   if (pirValue == HIGH ){
     digitalWrite(ledPin2, HIGH);
     pirCounter = pirCounter + 1;
@@ -78,5 +80,6 @@ void loop()
       Serial.println(sensorValue);
       digitalWrite(ledPin1, HIGH);
       String url = "http://192.168.0.70/axis-cgi/com/ptz.cgi?rpan=10&camera=3";
+      delay(1000);
   }
 }
