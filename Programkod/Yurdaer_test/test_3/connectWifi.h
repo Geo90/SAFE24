@@ -69,17 +69,16 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //----- INTERNAL & EXTERNAL FUNCTIONS -----
 //-----------------------------------------
 //(Also defined below as extern)
-    uint8_t MAC_array[6];
-    char MAC_char[18];
-    //const char WEBSITE[] = "api.pushingbox.com"; //pushingbox API server
-    const String devid = "vBDE0176C74D864E"; //device ID on Pushingbox for our Scenario
 
+    uint8_t MAC_array[6]; //contains the MAC-adress as int
+    char MAC_char[18]; //contains the MAC-adress as chars
 
 #else
 //------------------------------
 //----- EXTERNAL FUNCTIONS -----
 //------------------------------
-extern void connectWifi(IPAddress, IPAddress, IPAddress, const char*, const char*);
+//Function that establishes a connection to the specified host
+extern void connectWifi(IPAddress, IPAddress, IPAddress, const char*, const char*); 
 
 
 #endif

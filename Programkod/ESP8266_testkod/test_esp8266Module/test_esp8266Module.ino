@@ -1,4 +1,4 @@
-//-----------------------------------------------
+xx  //-----------------------------------------------
 //This sketch is combined from Adafruit DHT sensor and tdicola for dht.h library
 // https://learn.adafruit.com/dht/overview
 // https://gist.github.com/teos0009/acad7d1e54b97f4b2a88
