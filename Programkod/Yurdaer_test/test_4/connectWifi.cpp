@@ -28,7 +28,7 @@ void connectWifi(IPAddress esp_ip, IPAddress gateway, IPAddress subnet, const ch
   
   int connectionTimeOut = 0; //Iterator to interrupt the attempt to connect to host
   //Trying to connect and waits until connected to the specified host
-  while (WiFi.status() != WL_CONNECTED || connectionTimeOut>20) {
+  while (WiFiMulti.run() != WL_CONNECTED || connectionTimeOut>20) {
     delay(500);
     connectionTimeOut++;
     //When 10 seconds has passed the attempt to establish connection is aborted

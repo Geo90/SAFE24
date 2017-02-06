@@ -57,3 +57,13 @@ String autoIris (String OnOff, String camera_no) {
   String url = "/axis-cgi/com/ptz.cgi?autoiris=" + OnOff + "&camera=" + String(camera_no);
   return url;
 }
+/*Continuous pan/tilt motion.
+  Positive values mean right (pan) and up (tilt),
+  negative values mean left (pan) and down (tilt). "0,0"
+  means stop.
+*/
+String continuousPanTiltMove (int panSpeed, int tiltSpeed, int camera_no){
+   String url = "/axis-cgi/com/ptz.cgi?continuouspantiltmove=" +String(panSpeed)+"," +String(tiltSpeed) + "&camera=" + String(camera_no);
+  return url;
+}
+

@@ -71,6 +71,9 @@ String autoFocus (String,String);
 // Autoiris On/Off. 
 String autoIris (String,String);
 
+String continuousPanTiltMove (int,int,int);
+
+
 //Move camera to the desired angle and specify which camera to move. 
 
 //Sending commands to the camera

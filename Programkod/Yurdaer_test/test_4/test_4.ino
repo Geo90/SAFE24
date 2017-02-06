@@ -37,12 +37,11 @@ void setup() {
 }
 
 void loop() {
-  delay(2000);
+ 
 
- sendToCamera(moveCameraVertical(100, 1),camera_ip);
-  //sendToCamera( "/axis-cgi/com/ptz.cgi?rpan=3&camera=1",camera_ip);
+ sendToCamera(continuousPanTiltMove(0,0,1),camera_ip);
   
-
+ delay(30000);
 }
 
 
