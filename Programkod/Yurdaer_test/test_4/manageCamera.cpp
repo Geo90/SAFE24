@@ -5,12 +5,12 @@
 /**
    This function will send a request to the server
 */
-String sendToCamera ( String command, String camera_ip ) {
+String sendToCamera ( String command, String host ) {
   HTTPClient httpClient;
   String http_response;
   Serial.print("connecting to ");
-  Serial.println(camera_ip);
-  httpClient.begin("http://" + camera_ip + command + ""); //HTTP
+  Serial.println(host);
+  httpClient.begin("http://" + host + command); //HTTP
   Serial.println("[HTTP] GET...\n");
   int httpCode =  httpClient.GET();
 
@@ -20,11 +20,12 @@ String sendToCamera ( String command, String camera_ip ) {
     Serial.printf("[HTTP] GET... code: %d\n", httpCode);
 
     // file found at server
-    if (httpCode == HTTP_CODE_OK) {
+   // if (httpCode == HTTP_CODE_OK) {
       http_response =  httpClient.getString();
 
-    }
+  //  }
   }
+  
   //If connection not successful
   else {
 
@@ -33,6 +34,37 @@ String sendToCamera ( String command, String camera_ip ) {
   httpClient.end();
   return http_response;
 
+}
+
+String getTime() {
+  WiFiClient client;
+  while (!!!client.connect("google.com", 80)) {
+    Serial.println("connection failed, retrying...");
+  }
+
+  client.print("HEAD / HTTP/1.1\r\n\r\n");
+  while(!!!client.available()) {
+     yield();
+  }
+
+  while(client.available()){
+    if (client.read() == '\n') {    
+      if (client.read() == 'D') {    
+        if (client.read() == 'a') {    
+          if (client.read() == 't') {    
+            if (client.read() == 'e') {    
+              if (client.read() == ':') {    
+                client.read();
+                String theDate = client.readStringUntil('\r');
+                client.stop();
+                return theDate;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /**
@@ -66,4 +98,11 @@ String continuousPanTiltMove (int panSpeed, int tiltSpeed, int camera_no){
    String url = "/axis-cgi/com/ptz.cgi?continuouspantiltmove=" +String(panSpeed)+"," +String(tiltSpeed) + "&camera=" + String(camera_no);
   return url;
 }
+
+String GetTimeCamera () {
+  String url = "/axis-cgi/date.cgi?action=get";
+  return url;
+}
+
+
 

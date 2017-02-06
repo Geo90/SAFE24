@@ -73,6 +73,8 @@ String autoIris (String,String);
 
 String continuousPanTiltMove (int,int,int);
 
+String getTime();
+String GetTimeCamera();
 
 //Move camera to the desired angle and specify which camera to move. 
 

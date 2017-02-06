@@ -78,7 +78,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //----- EXTERNAL FUNCTIONS -----
 //------------------------------
 //Function that establishes a connection to the specified host
-extern void connectWifi(IPAddress, IPAddress, IPAddress, const char*, const char*); 
+extern void connectWifi(IPAddress,IPAddress, IPAddress, IPAddress, const char*, const char*); 
 
 
 #endif

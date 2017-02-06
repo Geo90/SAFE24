@@ -7,7 +7,7 @@
 /**
  * Function that establishes a connection to the specified host
  */
-void connectWifi(IPAddress esp_ip, IPAddress gateway, IPAddress subnet, const char ssid[], const char password[]) {
+void connectWifi(IPAddress esp_ip,IPAddress dns, IPAddress gateway, IPAddress subnet, const char ssid[], const char password[]) {
   ESP8266WiFiMulti WiFiMulti;
   Serial.println();
   Serial.print("Connecting to ");
@@ -18,11 +18,11 @@ void connectWifi(IPAddress esp_ip, IPAddress gateway, IPAddress subnet, const ch
     
     WiFiMulti.addAP(ssid,password);
   //  WiFi.begin(ssid, password);
-    WiFi.config(esp_ip, gateway, subnet);
+   // WiFi.config(esp_ip,dns, gateway, subnet);
   }
   else {
     WiFi.begin(ssid);
-    WiFi.config(esp_ip, gateway, subnet);
+  //  WiFi.config(esp_ip,dns, gateway, subnet);
   }
 
   
