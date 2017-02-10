@@ -1,8 +1,6 @@
 
 
-#include <ESP8266WiFi.h>
 #include "connectWiFi.h"
-#include <ESP8266WiFiMulti.h>
 
 /**
  * Function that establishes a connection to the specified host

@@ -29,6 +29,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 #include <stdio.h>
+#include <ESP8266WiFiMulti.h>
+#include <ESP8266WiFi.h>
 
 //*****************************
 //*****************************
