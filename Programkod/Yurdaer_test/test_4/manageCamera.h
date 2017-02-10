@@ -27,8 +27,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 //Project Name: Arduino Template Project Example
 
-
+#include <Arduino.h>
 #include <stdio.h>
+#include <ESP8266WiFi.h>
+#include <ESP8266HTTPClient.h>
+
 
 //*****************************
 //*****************************

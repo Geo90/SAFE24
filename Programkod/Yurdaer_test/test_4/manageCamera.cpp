@@ -1,7 +1,5 @@
 
-#include <Arduino.h>
-#include <ESP8266WiFi.h>
-#include <ESP8266HTTPClient.h>
+#include "manageCamera.h"
 /**
    This function will send a request to the server
 */

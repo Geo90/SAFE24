@@ -1,4 +1,5 @@
 
+ 
 
 /*
     Simple HTTP get webclient test
@@ -8,6 +9,7 @@
 
 #include "connectWiFi.h"
 #include "manageCamera.h"
+#include "schedule.h"
 #include <Arduino.h>
 const char* ssid     = "TP-LINK_7B0E";
 const char* password = "23263345";

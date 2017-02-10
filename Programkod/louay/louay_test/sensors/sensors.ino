@@ -3,7 +3,7 @@
 
 const int sensorPin = A0; // 
 const int ledPin1 = 14; // 
-const int pirPin = 16;
+
 const int ledPin2 = 12;
 const int pir = 13;
 unsigned long prevTime;
@@ -21,32 +21,28 @@ void setup()
 {
   pinMode(ledPin1, OUTPUT); //pin1
   pinMode(ledPin2, OUTPUT); //pin1
-  pinMode(pirPin, INPUT);   //pirPin
+  pinMode(pir, INPUT);
   pinMode(sensorPin, INPUT);
   prevTime = passTime = 0;
   Serial.begin(115200);
 }
 
-void loop() 
-{ 
-  pinMode(pir, INPUT);
-  int pirValue = digitalRead(pir);
-  Serial.println(pirValue);
-  delay(50);
 
-  int sensorValue = analogRead(sensorPin);
-  delay(50);                                                                                                                                                                                                                                                              
-  if (pirValue == HIGH ){
+void doWithPirValue(int pirvalue) {
+  if (pirvalue == HIGH ){
     //digitalWrite(ledPin1, HIGH);
     pirCounter = pirCounter + 1;
     pirSum = pirSum + 10;
   }
-  if (pirValue == LOW ){
+
+  
+  if (pirvalue == LOW ){
     //digitalWrite(ledPin1, LOW);
     pirCounter = pirCounter + 1;
   }
-  delay(300);
+}
 
+void doWhenMove() {
   if (pirCounter == 7) {
     pirCounter = 0;
     if (pirSum == 70) {
@@ -54,27 +50,37 @@ void loop()
       digitalWrite(ledPin1, HIGH);
       passTime = 0;
     }
-    if (pirSum < 70 && ( millis()  - prevTime ) > 60000 ) {
+    if (pirSum < 70 && ( millis()  - prevTime ) > 10000 ) {
       digitalWrite(ledPin1, LOW);
       prevTime = 0;
       passTime = 0;
     }
     pirSum = 0;
-  }
-  delay(100);
-  
+  }  
+}
 
-  if (sensorValue > 75) {
-     
-      delay(90);
+void doWithSensorValue(int sensorvalue) {
+  if (sensorvalue > 75) {
       digitalWrite(ledPin2, HIGH);
   }
-  if (pirValue < 75) {
-      
-      delay(90);
+  if (sensorvalue < 75) {
       digitalWrite(ledPin2, LOW);
- 
   }
+}
+
+void loop() 
+{ 
+  Serial.begin(9600);
+  int pirValue = digitalRead(pir);
+  delay(10);
+  Serial.println(pirValue);
+  int sensorValue = analogRead(sensorPin);
+  delay(10);
+  Serial.println(sensorValue);
   
+  doWithSensorValue(sensorValue);
+  doWithPirValue(pirValue);
+  doWhenMove();
+  delay(500);
 }
 

@@ -29,8 +29,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 #include <stdio.h>
-#include <ESP8266WiFiMulti.h>
-#include <ESP8266WiFi.h>
+
+#include <Scheduler.h>
+#include <Task.h>
+
+
 
 //*****************************
 //*****************************
@@ -41,6 +44,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define GEN_C_INIT
 
 
+typedef void (*functiontype)();
 //--------------------------
 //----- SWITCH DEFINES -----
 //--------------------------
@@ -71,17 +75,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //----- INTERNAL & EXTERNAL FUNCTIONS -----
 //-----------------------------------------
 //(Also defined below as extern)
-
-    uint8_t MAC_array[6]; //contains the MAC-adress as int
-    char MAC_char[18]; //contains the MAC-adress as chars
+           Scheduler ESP8266Scheduler;
 
 #else
 //------------------------------
 //----- EXTERNAL FUNCTIONS -----
 //------------------------------
-//Function that establishes a connection to the specified host
-extern void connectWifi(IPAddress,IPAddress, IPAddress, IPAddress, const char*, const char*); 
-
+extern void myNewTask(void (*f)(int));
+extern void startTasks(void);
 
 #endif
 
