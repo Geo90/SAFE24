@@ -1,25 +1,17 @@
-/**
- * 
- */
-
 #include <Ethernet.h>
 #include <ESP8266WiFi.h>
 
-//Defining ESP8266 pins
 const int sensorPin = A0; // 
 const int ledPin1 = 14; // 
 const int pirPin = 16;
-const int ledPin2 = 13;
+const int ledPin2 = 12;
+const int pir = 13;
+unsigned long prevTime;
+unsigned long passTime;
 
-//Sensor values and variables
 int sensorValue = 0; //value read from the PIR sensor
 int pirCounter = 0; //what does this count?
 int pirSum = 0; //waht is this
-
-//EthernetClient object and specified Host with password
-EthernetClient client;
-const char* ssid     = "Tele2GatewayE2B2";
-const char* password = "59b3239n";
 
 
 /**
@@ -28,58 +20,61 @@ const char* password = "59b3239n";
 void setup() 
 {
   pinMode(ledPin1, OUTPUT); //pin1
-  pinMode(ledPin1, OUTPUT); //pin1
+  pinMode(ledPin2, OUTPUT); //pin1
   pinMode(pirPin, INPUT);   //pirPin
+  pinMode(sensorPin, INPUT);
+  prevTime = passTime = 0;
   Serial.begin(115200);
 }
 
-/**
- * What happens in this loop?
- */
 void loop() 
-{
-  //This is being resetted everytime the loop starts (Why?)
-  digitalWrite(ledPin1, LOW);
-  delay(10);
-  
-  //Reading what? Shock?
-  sensorValue = analogRead(sensorPin);
-  delay(99);
+{ 
+  pinMode(pir, INPUT);
+  int pirValue = digitalRead(pir);
+  Serial.println(pirValue);
+  delay(50);
 
-  //Shock is detected and LED lights up 
-  int pirValue = digitalRead(pirPin);
-  delay(10)
-  
+  int sensorValue = analogRead(sensorPin);
+  delay(50);                                                                                                                                                                                                                                                              
   if (pirValue == HIGH ){
-    digitalWrite(ledPin2, HIGH);
+    //digitalWrite(ledPin1, HIGH);
     pirCounter = pirCounter + 1;
     pirSum = pirSum + 10;
   }
-
-  //No shock detected LED is switched off
   if (pirValue == LOW ){
-    digitalWrite(ledPin2, LOW);
+    //digitalWrite(ledPin1, LOW);
     pirCounter = pirCounter + 1;
   }
+  delay(300);
 
-  //What is happening here?
-  if (pirCounter == 5) {
+  if (pirCounter == 7) {
     pirCounter = 0;
-    if (pirSum > 30) {
-      digitalWrite(ledPin2, HIGH);
+    if (pirSum == 70) {
+      prevTime = millis();
+      digitalWrite(ledPin1, HIGH);
+      passTime = 0;
     }
-    if (pirSum < 30) {
-      digitalWrite(ledPin2, LOW);
+    if (pirSum < 70 && ( millis()  - prevTime ) > 60000 ) {
+      digitalWrite(ledPin1, LOW);
+      prevTime = 0;
+      passTime = 0;
     }
     pirSum = 0;
   }
-  delay(5);
+  delay(100);
+  
 
-  //What is happening here?
   if (sensorValue > 75) {
-      Serial.println(sensorValue);
-      digitalWrite(ledPin1, HIGH);
-      String url = "http://192.168.0.70/axis-cgi/com/ptz.cgi?rpan=10&camera=3";
-      delay(1000);
+     
+      delay(90);
+      digitalWrite(ledPin2, HIGH);
   }
+  if (pirValue < 75) {
+      
+      delay(90);
+      digitalWrite(ledPin2, LOW);
+ 
+  }
+  
 }
+
