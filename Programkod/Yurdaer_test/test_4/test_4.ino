@@ -6,7 +6,6 @@
 */
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
-
 #include "connectWiFi.h"
 #include "manageCamera.h"
 #include "schedule.h"
@@ -14,7 +13,6 @@
 const char* ssid     = "TP-LINK_7B0E";
 const char* password = "23263345";
 const String camera_ip = "192.168.0.70";
-const String time_host ="www.google.com";
 
 
 //The esp module IP, gateway and subnet adresses
@@ -41,10 +39,10 @@ void setup() {
 }
 
 void loop() {
- Serial.println( sendToCamera(GetTimeCamera(),camera_ip));
+
 
 //Serial.print( sendToCamera(continuousPanTiltMove(0,0,1),camera_ip));
-//Serial.println( sendToCamera("",time_host));
+
   
  delay(2000);
 }
