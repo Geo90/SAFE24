@@ -1,14 +1,15 @@
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Theory}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Teori}{chapter.2}% 3
-\BOOKMARK [0][-]{chapter.3}{Materials \046 methods}{}% 4
+\BOOKMARK [0][-]{chapter.1}{Inledning}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Teori}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Problemet med skadeg\366relse}{chapter.2}% 3
+\BOOKMARK [0][-]{chapter.3}{Material \046 metoder}{}% 4
 \BOOKMARK [1][-]{section.3.1}{Metoder}{chapter.3}% 5
-\BOOKMARK [2][-]{subsection.3.1.1}{Arduino}{section.3.1}% 6
-\BOOKMARK [2][-]{subsection.3.1.2}{ESP8266}{section.3.1}% 7
-\BOOKMARK [1][-]{section.3.2}{Kameran}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.3}{Sensorer}{chapter.3}% 9
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 10
-\BOOKMARK [1][-]{section.4.1}{Suitable parameter settings}{chapter.4}% 11
-\BOOKMARK [0][-]{chapter.5}{Discussion \046 Outlook}{}% 12
-\BOOKMARK [1][-]{section.5.1}{Diskussion}{chapter.5}% 13
-\BOOKMARK [0][-]{chapter*.2}{Litteraturf\366rteckning}{}% 14
+\BOOKMARK [2][-]{subsection.3.1.1}{ESP8266 - mikroprocessorn}{section.3.1}% 6
+\BOOKMARK [1][-]{section.3.2}{IP-kameran}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.3}{Sensorer}{chapter.3}% 8
+\BOOKMARK [0][-]{chapter.4}{Resultat}{}% 9
+\BOOKMARK [1][-]{section.4.1}{PIR-sensorn}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.2}{Mikrofon}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.3}{Testfall}{chapter.4}% 12
+\BOOKMARK [0][-]{chapter.5}{Diskussion \046 Framtid}{}% 13
+\BOOKMARK [1][-]{section.5.1}{Diskussion}{chapter.5}% 14
+\BOOKMARK [0][-]{chapter*.2}{Litteraturf\366rteckning}{}% 15

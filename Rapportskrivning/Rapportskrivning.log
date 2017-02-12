@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.15)  18 JAN 2017 14:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.15)  12 FEB 2017 13:28
 entering extended mode
 **Rapportskrivning.tex
 (Rapportskrivning.tex
@@ -826,26 +826,27 @@ Package: glossary-tree 2016/12/16 v4.27 (NLCT)
 \glswrite=\write4
 \glo@main@file=\write5
 Package glossaries Info: Writing glossary file Rapportskrivning.glo on input li
-ne 110.
+ne 109.
 
 (Rapportskrivning.aux (0_frontmatter/abstract.aux)
 (0_frontmatter/dedication.aux) (0_frontmatter/acknowledgement.aux)
-(1_introduction/introduction.aux) (3/theory.aux) (4/XYZ.aux) (5/XYZ.aux)
-(8/materials_methods.aux) (6/results.aux) (7/discussion.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
+(1_introduction/introduction.aux) (3_theory/theory.aux) (4/XYZ.aux) (5/XYZ.aux)
+(8_materials_and_methods/materials_methods.aux) (6_results/results.aux)
+(7_discussion/discussion.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
 
 ("C:\My Program\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -870,7 +871,7 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 118.
+Package hyperref Info: Link coloring OFF on input line 117.
 
 ("C:\My Program\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -880,28 +881,28 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 118.
-LaTeX Info: Redefining \pageref on input line 118.
-LaTeX Info: Redefining \nameref on input line 118.
+LaTeX Info: Redefining \ref on input line 117.
+LaTeX Info: Redefining \pageref on input line 117.
+LaTeX Info: Redefining \nameref on input line 117.
 
 (Rapportskrivning.out) (Rapportskrivning.out)
 \@outlinefile=\write6
  (Rapportskrivning.glsdefs)
-<0_frontmatter/figures/MAH_logotyp_original.jpg, id=59, 130.4875pt x 139.52126p
+<0_frontmatter/figures/MAH_logotyp_original.jpg, id=63, 130.4875pt x 139.52126p
 t>
 File: 0_frontmatter/figures/MAH_logotyp_original.jpg Graphic file (type jpg)
  <use 0_frontmatter/figures/MAH_logotyp_original.jpg>
 Package pdftex.def Info: 0_frontmatter/figures/MAH_logotyp_original.jpg used on
- input line 129.
+ input line 128.
 (pdftex.def)             Requested size: 113.81102pt x 121.6912pt.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 128.
  [1
 
 
@@ -958,13 +959,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write7
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 171.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 171.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 171.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 171.
+(babel)             in language  on input line 170.
  [5
 \FN@pp@footnotehinttrue 
 
@@ -972,13 +973,13 @@ Package babel Info: Redefining swedish shorthand "~
 ]
 No file Rapportskrivning.gls.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 193.
 [6] (1_introduction/introduction.tex
  1.
 Package babel Info: Redefining swedish shorthand "|
@@ -988,17 +989,17 @@ Package babel Info: Redefining swedish shorthand "~
 \@gls@deffile=\write8
 )
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 193.
  [7
 
 
-] (3/theory.tex
+] (3_theory/theory.tex
  2.
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 5.
@@ -1008,23 +1009,31 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 19.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 19.
-)
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 196.
- [8
+(babel)             in language  on input line 29.
+[8
 
 
 
-]
+])
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 195.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 195.
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 195.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 195.
+ [9]
 No file 4/XYZ.tex.
 No file 5/XYZ.tex.
-(8/materials_methods.tex
+(8_materials_and_methods/materials_methods.tex
  3.
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 5.
@@ -1035,39 +1044,44 @@ Package babel Info: Redefining swedish shorthand "|
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 21.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 35.
+[10
+
+
+
+
+
+
+
+]
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 40.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 40.
 )
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 201.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 201.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 201.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 201.
- [9
-
-
-
-
-
-
-
-] (6/results.tex
+(babel)             in language  on input line 200.
+ [11] (6_results/results.tex
  4.
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 6.
@@ -1077,20 +1091,28 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 22.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 22.
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 25.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 25.
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 27.
 )
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 202.
- [10
+(babel)             in language  on input line 201.
+ [12
 
 
 
-] (7/discussion.tex
+] (7_discussion/discussion.tex
  5.
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 4.
@@ -1102,51 +1124,52 @@ Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 21.
 )
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 203.
+(babel)             in language  on input line 202.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 203.
+(babel)             in language  on input line 202.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 203.
+(babel)             in language  on input line 202.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 203.
- [11
+(babel)             in language  on input line 202.
+ [13
 
 
 
 ]
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 261.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
+(babel)             in language  on input line 260.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 280.
+(babel)             in language  on input line 279.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 280.
+(babel)             in language  on input line 279.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 280.
+(babel)             in language  on input line 279.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 280.
- [12
+(babel)             in language  on input line 279.
+ [14
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
  (Rapportskrivning.aux (0_frontmatter/abstract.aux)
 (0_frontmatter/dedication.aux) (0_frontmatter/acknowledgement.aux)
-(1_introduction/introduction.aux) (3/theory.aux) (4/XYZ.aux) (5/XYZ.aux)
-(8/materials_methods.aux) (6/results.aux) (7/discussion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
+(1_introduction/introduction.aux) (3_theory/theory.aux) (4/XYZ.aux) (5/XYZ.aux)
+(8_materials_and_methods/materials_methods.aux) (6_results/results.aux)
+(7_discussion/discussion.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
 Package rerunfilecheck Info: File `Rapportskrivning.out' has not changed.
-(rerunfilecheck)             Checksum: 86BC514DBFF86670E2A11C63CCCBC817;784.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 280.
+(rerunfilecheck)             Checksum: 2A1AF71E68AA1EA9D3061A1E1B3FE66A;859.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 279.
  ) 
 Here is how much of TeX's memory you used:
- 14704 strings out of 493673
- 237266 string characters out of 3145172
- 378995 words of memory out of 3000000
- 17681 multiletter control sequences out of 15000+200000
+ 14717 strings out of 493673
+ 237787 string characters out of 3145172
+ 381180 words of memory out of 3000000
+ 17691 multiletter control sequences out of 15000+200000
  11963 words of font info for 44 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  46i,13n,45p,1930b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1154,9 +1177,9 @@ Here is how much of TeX's memory you used:
 ogram/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/My Program/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/My Program/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmr12.pfb>
-Output written on Rapportskrivning.pdf (12 pages, 122951 bytes).
+Output written on Rapportskrivning.pdf (14 pages, 132358 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

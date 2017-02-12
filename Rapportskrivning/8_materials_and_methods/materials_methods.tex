@@ -1,0 +1,61 @@
+
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+\chapter{Material \& metoder} % top level followed by section, subsection
+\label{ch:metoder}
+
+% ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{8/figures/PNG/}{8/figures/PDF/}{8/figures/}}
+\else
+    \graphicspath{{8/figures/EPS/}{8/figures/}}
+\fi
+
+% ----------------------- contents from here ------------------------
+
+
+
+\section{Metoder}
+För att hela systemet ska kunna fungera samtidigt så användes en schemaläggare så att varje komponent kunder vara aktiv utan att begränsa andra komponenter. Detta var nödvändigt att göra eftersom sensorer som användes skulle lyssna kontinuerligt på förändringar hos omgivningen medan systemet var aktivt och utförde andra uppgifter.\\
+
+En server upprättades för att kunna ta emot data från kameran och lagra denna datan på en dator.\\
+
+All kodning gjordes i Arduino IDE och olika bibliotek användes för att ansluta till ett WiFi-nätverk, skapa en schemaläggare, kommunicera med kameran via HTTP.\\ 
+
+\subsection{ESP8266 - mikroprocessorn}
+Mikroprocessorn som användes var en ESP8266 med WiFi-anslutning. Denna mikroprocessorn styrde hela systemet. Sensorerna skickade kontinuerligt data till ESP8266 som utvärderade datan. Om specifika villkor var uppfyllda så tändes en glödlampa och IP-kameran aktiverades.\\
+
+ESP8266 kommunicerade och skickade kommandon till IP-kameran.\\
+
+\section{IP-kameran}
+Kameran som används är tillhandahållen av AXIS. Kameran är en IP-kamera med möjlighet till internet uppkoppling sända bilder och streama video till en server.\\
+
+IP-kameran användes för att skicka bilder och video till en server för datalagring.\\
+
+Kommunikation med kameran gjordes via ESP8266 som sände kommandon över internet för att styra kameran.\\
+
+\section{Sensorer}
+En PIR-sensor och en mikrofon användes.\\
+
+PIR-sensorn registrerade ifall det förekom någon rörelse. Denna sensorn skickade digitala värden till ESP8266.\\
+
+Mikrofonen som användes skickade analoga värden till ESP8266.\\
+
+
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+
+
+

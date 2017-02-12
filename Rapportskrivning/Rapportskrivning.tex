@@ -20,8 +20,7 @@
 % Here, they are placed in an external file /Latex/Macros/MacroFile1.tex
 % An macro that you may use frequently is the figuremacro (see introduction.tex)
 \include{Latex/Macros/MacroFile1}
-
-
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{sektion \ref*{#1}. \nameref*{#1}}} % One single link
 
 %: ----------------------------------------------------------------------
 %:                  TITLE PAGE: name, degree,..
@@ -193,14 +192,14 @@ section,]      %use section level for toc entries
 % But take care that the paths match. You can also change the order of appearance by moving the include commands.
 \include{1_introduction/introduction}	% background information
 %\include{2/aims}						% aims of the project
-\include{3/theory}			
+\include{3_theory/theory}			
 \include{4/XYZ}	
 \include{5/XYZ}
 
 
-\include{8/materials_methods}               % description of lab methods results
-\include{6/results}
-\include{7/discussion}      			    % discussion of
+\include{8_materials_and_methods/materials_methods}               % description of lab methods results
+\include{6_results/results}
+\include{7_discussion/discussion}      			    % discussion of
 
 
 
@@ -257,7 +256,7 @@ section,]      %use section level for toc entries
 %\include{9_backmatter/declaration}
 
 
-
+%Bibliography
 \begin{thebibliography}{50}
 
 

@@ -1,15 +1,16 @@
 \select@language {swedish}
-\contentsline {chapter}{\numberline {1}Introduction}{vii}{chapter.1}
-\contentsline {chapter}{\numberline {2}Theory}{viii}{chapter.2}
-\contentsline {section}{\numberline {2.1}Teori}{viii}{section.2.1}
-\contentsline {chapter}{\numberline {3}Materials \& methods}{ix}{chapter.3}
-\contentsline {section}{\numberline {3.1}Metoder}{ix}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Arduino}{ix}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}ESP8266}{ix}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Kameran}{ix}{section.3.2}
-\contentsline {section}{\numberline {3.3}Sensorer}{ix}{section.3.3}
-\contentsline {chapter}{\numberline {4}Results}{x}{chapter.4}
-\contentsline {section}{\numberline {4.1}Suitable parameter settings}{x}{section.4.1}
-\contentsline {chapter}{\numberline {5}Discussion \& Outlook}{xi}{chapter.5}
-\contentsline {section}{\numberline {5.1}Diskussion}{xi}{section.5.1}
-\contentsline {chapter}{Litteraturf\"orteckning}{xii}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Inledning}{vii}{chapter.1}
+\contentsline {chapter}{\numberline {2}Teori}{viii}{chapter.2}
+\contentsline {section}{\numberline {2.1}Problemet med skadeg\IeC {\"o}relse}{viii}{section.2.1}
+\contentsline {chapter}{\numberline {3}Material \& metoder}{x}{chapter.3}
+\contentsline {section}{\numberline {3.1}Metoder}{x}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}ESP8266 - mikroprocessorn}{x}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}IP-kameran}{xi}{section.3.2}
+\contentsline {section}{\numberline {3.3}Sensorer}{xi}{section.3.3}
+\contentsline {chapter}{\numberline {4}Resultat}{xii}{chapter.4}
+\contentsline {section}{\numberline {4.1}PIR-sensorn}{xii}{section.4.1}
+\contentsline {section}{\numberline {4.2}Mikrofon}{xii}{section.4.2}
+\contentsline {section}{\numberline {4.3}Testfall}{xii}{section.4.3}
+\contentsline {chapter}{\numberline {5}Diskussion \& Framtid}{xiii}{chapter.5}
+\contentsline {section}{\numberline {5.1}Diskussion}{xiii}{section.5.1}
+\contentsline {chapter}{Litteraturf\"orteckning}{xiv}{chapter*.2}
