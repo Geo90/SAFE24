@@ -79,13 +79,15 @@ String continuousPanTiltMove (int, int, int);
 //Move camera to the desired angle and specify which camera to move. 
 
 //Sending commands to the camera
-extern String sendToCamera ( String, String);
+int sendToCamera ( String, String);
 
 // Activates a virtual port on Camera
 String activateVirtualPort (String);
 
 // Deactivates a virtual port on Camera
 String deactivateVirtualPort (String);
+
+int setAuthorization(String, const char*, const char*);
 
 #endif
 

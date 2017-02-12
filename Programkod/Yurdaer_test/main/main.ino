@@ -14,8 +14,8 @@ const char* ssid     = "TP-LINK_7B0E";
 const char* password = "23263345";
 const String camera_ip = "192.168.0.70";
 const String guardTourPort = "9";
-const String authorizationID = "root";
-const String authorizationPSWD = "pass";
+const char* authorizationID = "root";
+const char* authorizationPSWD = "pass";
 
 //The esp module IP, gateway and subnet adresses
   IPAddress esp_ip (192, 168, 0, 21);
@@ -38,11 +38,13 @@ void setup() {
 }
 
 void loop() {
-String newIp =authorizationID+":"+authorizationPSWD+"@"+camera_ip;
-  //Serial.println(sendToCamera(newIp, activateVirtualPort (guardTourPort)));
+  setAuthorization(camera_ip, authorizationID, authorizationPSWD);
+  Serial.println(sendToCamera(camera_ip, activateVirtualPort (guardTourPort)));
   delay(10000);
- // Serial.println(sendToCamera(newIp, deactivateVirtualPort (guardTourPort)));
+  setAuthorization(camera_ip, authorizationID, authorizationPSWD);
+  Serial.println(sendToCamera(camera_ip, deactivateVirtualPort (guardTourPort)));
   delay(10000);
+  
 // Try to connect the WiFi network as long as the connection is down
   while (!checkConnection());
   connectWifi(esp_ip, dns, gateway, subnet, ssid, password);
