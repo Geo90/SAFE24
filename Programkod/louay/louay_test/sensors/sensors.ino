@@ -70,17 +70,17 @@ void doWithSensorValue(int sensorvalue) {
 
 void loop() 
 { 
-  Serial.begin(9600);
+  Serial.begin(115200);
   int pirValue = digitalRead(pir);
   delay(10);
   Serial.println(pirValue);
   int sensorValue = analogRead(sensorPin);
-  delay(10);
+  delay(100);
   Serial.println(sensorValue);
   
   doWithSensorValue(sensorValue);
   doWithPirValue(pirValue);
   doWhenMove();
-  delay(500);
+  delay(390);
 }
 
