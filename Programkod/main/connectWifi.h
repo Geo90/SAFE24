@@ -76,7 +76,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //------------------------------
 //Function that establishes a connection to the specified host
 void connectWifi(IPAddress,IPAddress, IPAddress, IPAddress, const char*, const char*); 
-//int checkConnection(void);
+int checkConnection(void);
 
 #endif
 
