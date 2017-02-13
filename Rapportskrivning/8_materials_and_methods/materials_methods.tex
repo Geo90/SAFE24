@@ -19,14 +19,16 @@
 
 
 \section{Metoder}
-För att hela systemet ska kunna fungera samtidigt så användes en schemaläggare så att varje komponent kunder vara aktiv utan att begränsa andra komponenter. Detta var nödvändigt att göra eftersom sensorer som användes skulle lyssna kontinuerligt på förändringar hos omgivningen medan systemet var aktivt och utförde andra uppgifter.\\
+För att hela systemet ska kunna fungera samtidigt så användes en schemaläggare så att varje komponent kunde vara aktiv utan att begränsa andra komponenter. Detta var nödvändigt att göra eftersom sensorer som användes skulle lyssna kontinuerligt på förändringar hos omgivningen medan systemet var aktivt och utförde andra uppgifter.\\
 
 En server upprättades för att kunna ta emot data från kameran och lagra denna datan på en dator.\\
 
-All kodning gjordes i Arduino IDE och olika bibliotek användes för att ansluta till ett WiFi-nätverk, skapa en schemaläggare, kommunicera med kameran via HTTP.\\ 
+All kodning gjordes i Arduino IDE och olika bibliotek användes för att ansluta till ett WiFi-nätverk, skapa en schemaläggare, och kommunicera med kameran via HTTP.\\ 
 
-\subsection{ESP8266 - mikroprocessorn}
-Mikroprocessorn som användes var en ESP8266 med WiFi-anslutning. Denna mikroprocessorn styrde hela systemet. Sensorerna skickade kontinuerligt data till ESP8266 som utvärderade datan. Om specifika villkor var uppfyllda så tändes en glödlampa och IP-kameran aktiverades.\\
+\section{ESP8266 - mikroprocessorn}
+Huvudanledningen för valet av denna mikroprocessor var att den hade en inbyggd Wifi-mottagare vilket var absolut nödvändigt för att kunna kommunicera med nätverket där kameran är upppkopplad. Givetvis kunde vi hitta på alternativa lösningar men just denna lösning var den smidigaste. I övrigt fanns det allt vi behövde till vårt projekt. Det fanns gott om digitala pins samt en analog på max, dock tog den emot max 1 V. \\
+
+Vår tanke var att kopppla sensorer till vår ESP som sedan kommunicerade med kameran utifrån de uppgiffter som lästes in från sensorerna. ESP:n var då kopplad till samma nätverk som kameran.
 
 ESP8266 kommunicerade och skickade kommandon till IP-kameran.\\
 
