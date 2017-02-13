@@ -29,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 
+
 //*****************************
 //*****************************
 //********** DEFINES **********
@@ -37,19 +38,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef GEN_C_INIT    //Do only once the first time this file is used
 #define GEN_C_INIT
 
-
-//--------------------------
-//----- SWITCH DEFINES -----
-//--------------------------
-//#define SWITCH_MENU_PRESSED   ((switches_1_debounced & 0x01) ? 1 : 0)
-//#define SWITCH_EXIT_PRESSED   ((switches_1_debounced & 0x02) ? 1 : 0)
-//#define SWITCH_UP_PRESSED   ((switches_1_debounced & 0x04) ? 1 : 0)
-//#define SWITCH_DOWN_PRESSED   ((switches_1_debounced & 0x08) ? 1 : 0)
-
-//#define SWITCH_MENU_NEW_PRESS   ((switches_1_new & 0x01) ? 1 : 0)
-//#define SWITCH_EXIT_NEW_PRESS   ((switches_1_new & 0x02) ? 1 : 0)
-//#define SWITCH_UP_NEW_PRESS   ((switches_1_new & 0x04) ? 1 : 0)
-//#define SWITCH_DOWN_NEW_PRESS         ((switches_1_new & 0x08) ? 1 : 0)
 
 
 #endif
@@ -68,17 +56,42 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //----- INTERNAL & EXTERNAL FUNCTIONS -----
 //-----------------------------------------
 //(Also defined below as extern)
-
+   
 
 #else
 //------------------------------
 //----- EXTERNAL FUNCTIONS -----
 //------------------------------
-//Function that establishes a connection to the specified host
-extern void connectWifi(IPAddress,IPAddress, IPAddress, IPAddress, const char*, const char*); 
-int checkConnection(void);
+
+//Move camera to the desired angle and specify which camera to move. 
+String moveCameraHorizontal (int, int);
+
+String moveCameraVertical (int, int);
+
+// Autofocus On/Off. 
+String autoFocus ( String, String);
+
+// Autoiris On/Off. 
+String autoIris ( String, String);
+
+String continuousPanTiltMove (int, int, int);
+
+//Move camera to the desired angle and specify which camera to move. 
+
+//Sending commands to the camera
+int sendToCamera ( String, String,const char*,const char*);
+
+// Activates a virtual port on Camera
+String activateVirtualPort (String);
+
+// Deactivates a virtual port on Camera
+String deactivateVirtualPort (String);
+
 
 #endif
+
+
+
 
 //****************************
 //****************************
@@ -101,10 +114,6 @@ BYTE switches_1_new = 0;
 
 
 #else
-//---------------------------------------
-//----- EXTERNAL MEMORY DEFINITIONS -----
-//---------------------------------------
-
 
 
 #endif

@@ -5,13 +5,14 @@
 /**
    This function will send a request to the server
 */
-int sendToCamera ( String host, String command) {
+int sendToCamera ( String host, String command,const char username[],const char password[]) {
   int check;
   HTTPClient httpClient;
   String http_response;
   Serial.print("Connecting to ");
   Serial.println(host);
   httpClient.begin("http://" + host + command);
+  httpClient.setAuthorization(username, password);
   // start connection and send HTTP header
   int httpCode = httpClient.GET();
   // httpCode will be negative on error
@@ -83,33 +84,6 @@ String deactivateVirtualPort (String portNumber) {
   return url;
 }
 
-//
-int setAuthorization(String hostIp, const char* username, const char* password) {
-  int check;
-  HTTPClient http;
-  Serial.print("[HTTP] begin...\n");
-
-  // start connection and send HTTP header
-  http.begin("http://" + hostIp);
-  http.setAuthorization(username, password);
-
-  int httpCode = http.GET();
-  // httpCode will be negative on error
-  if (httpCode > 0) {
-    check = 1;
-
-    if (httpCode == HTTP_CODE_OK) {
-      String response = http.getString();
-      Serial.println(response);
-
-    }
-  } else {
-    Serial.printf("[HTTP] Authorization failed, error: %s\n", http.errorToString(httpCode).c_str());
-    check = 0;
-  }
-
-  return check;
-}
 
 
 
