@@ -5,7 +5,7 @@
 //Creates a new task and adds it to the scheduler
 void myNewTask(Task* func){
   Serial.println();
-  Serial.print("This is a template for further development of modules for the project");
+  Serial.print("Adding tsdk to list...");
   Scheduler.start(func);
 }
 

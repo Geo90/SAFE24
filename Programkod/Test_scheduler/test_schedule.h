@@ -70,7 +70,7 @@ typedef void (*functiontype)();
 //------------------------------
 //----- EXTERNAL FUNCTIONS -----
 //------------------------------
-extern void myNewTask(void (*f)(int));
+extern void myNewTask(void (*f));
 extern void startTasks(void);
 
 #endif
