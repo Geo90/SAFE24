@@ -1,10 +1,10 @@
-#ifndef TASK1_H // In order to tell the compiler that it will only be defined once we need these guards
-#define TASK1_H
+#ifndef task1_h // In order to tell the compiler that it will only be defined once we need these guards
+#define task1_h
 
 
 
 //#include <Scheduler.h> // needs to be included in order to know about the Task header
-#include "test_schedule.h"
+#include "schedule.h"
 
 
 
