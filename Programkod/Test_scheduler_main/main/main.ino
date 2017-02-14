@@ -1,11 +1,8 @@
 /*
     Main
 */
-
-#include <ESP8266WiFi.h>
+//#include "test_schedule.h"
 #include "task1.h"
-#include "test_schedule.h"
-
 
 void setup() {
   Serial.begin(115200);

@@ -1,6 +1,5 @@
 //#include "test_schedule.h"
-
-#include "task1.h"
+#include "task1.h" //this file (task1.cpp) includes scheduler.h because task1.h includes <Scheduler.h> 
 
 
 
@@ -9,14 +8,13 @@
 //--------------------------------------------------
 
 
-const int led_1 = 12;
-
-setup::setup()
+void task1::setup() // :: => "binary scope resolution operator", setup() is a member of the class task1
 {
+  const int led_1 = 12;
   pinMode(led_1, OUTPUT);
 }
 
-loop::loop()
+void task1::loop()
 {
   Serial.print(" LED_1 TASK ");
   digitalWrite(led_1, HIGH);
