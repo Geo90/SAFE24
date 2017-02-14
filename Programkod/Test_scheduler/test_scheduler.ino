@@ -1,28 +1,66 @@
 #include "test_schedule.h"
 
-int led_1 = 14;
-int led_2 = 12;
+//--------------------------------------------------
+//----- TASK 1 -----
+//--------------------------------------------------
+class BlinkLed_1 : public Task {
+  public:
+  
+  const int led_1 = 12;
+    
+    void setup() 
+    {
+      pinMode(led_1, OUTPUT);
+    }
+    
+    void loop() 
+    {
+      Serial.print(" LED_1 TASK ");
+      digitalWrite(led_1, HIGH);
+      delay(5000);
+      digitalWrite(led_1, LOW);
+      delay(5000);
+    }
+    
+} led1_task;
 
+
+//--------------------------------------------------
+//----- TASK 2 -----
+//--------------------------------------------------
+class BlinkLed_2 : public Task {
+  public:
+  
+  const int led_2 = 14;
+    
+    void setup() 
+    {
+      pinMode(led_2, OUTPUT);
+    }
+    
+    void loop() 
+    {
+      Serial.print(" LED_2 TASK ");
+      digitalWrite(led_2, HIGH);
+      delay(1000);
+      digitalWrite(led_2, LOW);
+      delay(1000);
+    }
+    
+} led2_task;
+
+
+//--------------------------------------------------
+//----- SETUP -----
+//--------------------------------------------------
 void setup() {
   Serial.begin(115200);
-  pinMode(led_1, OUTPUT);
-  pinMode(led_2, OUTPUT);
-  myNewTask(&task_led1);
-  myNewTask(&task_led2);
-}
-
-void task_led1() {
-  digitalWrite(led_1, HIGH);
-  delay(3);
-  digitalWrite(led_1, LOW);
-}
-
-void task_led2() {
-  digitalWrite(led_2, HIGH);
-  delay(0.5);
-  digitalWrite(led_2, LOW);
+  Serial.print("ESP8266 SETUP");
+  myNewTask(&led1_task);
+  myNewTask(&led2_task);
+  startTasks();
 }
 
 void loop() {
-    
+    // ...
 }

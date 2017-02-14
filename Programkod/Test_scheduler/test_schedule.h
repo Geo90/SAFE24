@@ -70,8 +70,9 @@ typedef void (*functiontype)();
 //------------------------------
 //----- EXTERNAL FUNCTIONS -----
 //------------------------------
-extern void myNewTask(void (*f));
-extern void startTasks(void);
+//void myNewTask( void (*f) (void) ); // *f = pointer to a function, return type = void, argument = void
+void myNewTask( Task *task );
+void startTasks(void);
 
 #endif
 
@@ -107,11 +108,6 @@ BYTE switches_1_new = 0;
 
 
 #endif
-
-
-
-
-
 
 
 
