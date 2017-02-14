@@ -15,6 +15,7 @@ const char* passwordWifi = "23263345";
 const String camera_ip = "192.168.0.70";
 
 const String guardTourPort = "9";
+const String recordPort = "1";
 const char* username = "root";
 const char* password = "pass";
 
@@ -40,15 +41,19 @@ void setup() {
 
 void loop() {
 
-
+  sendToCamera(camera_ip, activateVirtualPort (recordPort), username, password);
+  delay(100);
   Serial.println(sendToCamera(camera_ip, activateVirtualPort (guardTourPort), username, password));
 
-  delay(10000);
+  delay(20000);
 
   Serial.println(sendToCamera(camera_ip, deactivateVirtualPort (guardTourPort), username, password));
+  delay(100);
+  sendToCamera(camera_ip, deactivateVirtualPort (recordPort), username, password);
 
-  delay(10000);
-
+while(1){
+  
+}
   // Try to connect the WiFi network as long as the connection is down
   while (!checkConnection()) {
     Serial.println("Wifi connection is down");
