@@ -1,5 +1,6 @@
-#ifndef schedule_h
-#define schedule_h
+#ifndef SchedulerT_h
+#define SchedulerT_h
+
 
 #include <Scheduler.h>
 #include <Task.h>

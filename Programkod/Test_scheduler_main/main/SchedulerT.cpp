@@ -1,6 +1,4 @@
-
-#include "schedule.h"
-
+#include "Scheduler.h"
 
 //Creates a new task and adds it to the scheduler
 void myNewTask( Task *task ) 
