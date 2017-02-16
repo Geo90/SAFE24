@@ -10,17 +10,6 @@
 //-----  FUNCTIONS -----
 //------------------------------
 
-//Move camera to the desired angle and specify which camera to move. 
-String moveCameraHorizontal (int, int);
-String moveCameraVertical (int, int);
-
-String continuousPanTiltMove (int, int, int);
-
-// Autofocus On/Off. 
-String autoFocus ( String, String);
-
-// Autoiris On/Off. 
-String autoIris ( String, String);
 
 //Sending commands to the camera
 int sendToCamera ( String, String,const char*,const char*);

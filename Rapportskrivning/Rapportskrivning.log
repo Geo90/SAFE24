@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.13)  16 FEB 2017 11:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.13)  16 FEB 2017 13:01
 entering extended mode
 **./Rapportskrivning.tex
 (Rapportskrivning.tex
@@ -1321,10 +1321,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 280.
  ) 
 Here is how much of TeX's memory you used:
- 14967 strings out of 493333
- 241753 string characters out of 3139185
- 387629 words of memory out of 3000000
- 18114 multiletter control sequences out of 15000+200000
+ 14966 strings out of 493333
+ 241742 string characters out of 3139185
+ 387631 words of memory out of 3000000
+ 18113 multiletter control sequences out of 15000+200000
  11656 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,13n,45p,1932b,414s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1332,7 +1332,7 @@ Here is how much of TeX's memory you used:
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on Rapportskrivning.pdf (13 pages, 152930 bytes).
+Output written on Rapportskrivning.pdf (13 pages, 152926 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  36 named destinations out of 1000 (max. 500000)
