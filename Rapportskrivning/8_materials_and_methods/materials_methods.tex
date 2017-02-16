@@ -19,7 +19,7 @@
 
 
 \section{Metoder}
-För att hela systemet ska kunna fungera samtidigt så användes en schemaläggare så att varje komponent kunde vara aktiv utan att begränsa andra komponenter. Detta var nödvändigt att göra eftersom sensorer som användes skulle lyssna kontinuerligt på förändringar hos omgivningen medan systemet var aktivt och utförde andra uppgifter.\\
+För att hela systemet skulle kunna fungera samtidigt så användes en schemaläggare så att varje komponent kunde vara aktiv utan att begränsa andra komponenter. Detta var nödvändigt att göra eftersom sensorer som användes skulle lyssna kontinuerligt på förändringar hos omgivningen medan systemet var aktivt och utförde andra uppgifter.\\
 
 En server upprättades för att kunna ta emot data från kameran och lagra denna datan på en dator.\\
 
@@ -28,9 +28,7 @@ All kodning gjordes i Arduino IDE och olika bibliotek användes för att ansluta
 \section{ESP8266 - mikroprocessorn}
 Huvudanledningen för valet av denna mikroprocessor var att den hade en inbyggd Wifi-mottagare vilket var absolut nödvändigt för att kunna kommunicera med nätverket där kameran är upppkopplad. Givetvis kunde vi hitta på alternativa lösningar men just denna lösning var den smidigaste. I övrigt fanns det allt vi behövde till vårt projekt. Det fanns gott om digitala pins samt en analog på max, dock tog den emot max 1 V. \\
 
-Vår tanke var att kopppla sensorer till vår ESP som sedan kommunicerade med kameran utifrån de uppgiffter som lästes in från sensorerna. ESP:n var då kopplad till samma nätverk som kameran.
-
-ESP8266 kommunicerade och skickade kommandon till IP-kameran.\\
+Vår tanke var att kopppla sensorer till vår ESP som sedan kommunicerade med kameran utifrån de uppgiffter som lästes in från sensorerna. ESP:n var då kopplad till samma nätverk som kameran och kommunicerade och skickade kommandon till kameran.\\
 
 \section{IP-kameran}
 Kameran som används är tillhandahållen av AXIS. Kameran är en IP-kamera med möjlighet till internet uppkoppling sända bilder och streama video till en server.\\

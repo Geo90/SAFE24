@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.13)  13 FEB 2017 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.13)  16 FEB 2017 10:07
 entering extended mode
 **./Rapportskrivning.tex
 (Rapportskrivning.tex
@@ -1037,13 +1037,13 @@ AH_logotyp_original.jpg>]
 
  (0_frontmatter/abstract.tex
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 12.
  [2
 
 ])
@@ -1066,25 +1066,36 @@ Package babel Info: Redefining swedish shorthand "~
 \openout2 = `0_frontmatter/acknowledgement.aux'.
 
  (0_frontmatter/acknowledgement.tex
+! Misplaced alignment tab character &.
+l.7 Mot slutet på kursen Inbyggda System &
+                                            Signaler fick vi ett examination...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 7.
- [4
+(babel)             in language  on input line 8.
+[4
 
 
-])
-(Rapportskrivning.toc
+]) (Rapportskrivning.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 4.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 4.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write7
@@ -1212,13 +1223,13 @@ Package babel Info: Redefining swedish shorthand "~
 
 ]
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 40.
 )
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 200.
@@ -1314,35 +1325,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
 (7_discussion/discussion.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
-
-
-Package rerunfilecheck Warning: File `Rapportskrivning.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Rapportskrivning.out':
-(rerunfilecheck)             Before: 2A1AF71E68AA1EA9D3061A1E1B3FE66A;859
-(rerunfilecheck)             After:  28214496A8F55C1A770FEA070E97D237;852.
+Package rerunfilecheck Info: File `Rapportskrivning.out' has not changed.
+(rerunfilecheck)             Checksum: 28214496A8F55C1A770FEA070E97D237;852.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 279.
  ) 
 Here is how much of TeX's memory you used:
- 14964 strings out of 493333
- 241658 string characters out of 3139185
+ 14963 strings out of 493333
+ 241637 string characters out of 3139185
  387568 words of memory out of 3000000
  18109 multiletter control sequences out of 15000+200000
  11656 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,13n,45p,1932b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{subsection.3.1.1} has been referenced but does no
-t exist, replaced by a fixed one
-
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on Rapportskrivning.pdf (14 pages, 133147 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on Rapportskrivning.pdf (14 pages, 134009 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
