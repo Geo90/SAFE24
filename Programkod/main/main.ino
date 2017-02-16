@@ -44,18 +44,20 @@ void loop() {
 }
 void activateCamera() {
   // sendToCamera(camera_ip, activateVirtualPort (StationOnePort), username, password);
-  delay(10);
-  sendToCamera(camera_ip, activateVirtualPort (recordPort), username, password);
-  delay(10);
+ // delay(10);
   sendToCamera(camera_ip, activateVirtualPort (guardTourPort), username, password);
+  delay(100);
+  //sendToCamera(camera_ip, activateVirtualPort (guardTourPort), username, password);
+  /*
   for (int i = 0; i < 60; i++) {
     delay(1000);
     Serial.print(i);
   }
   Serial.println("");
+  */
   sendToCamera(camera_ip, deactivateVirtualPort (guardTourPort), username, password);
-  delay(10);
-  sendToCamera(camera_ip, deactivateVirtualPort (recordPort), username, password);
+ // delay(10);
+ // sendToCamera(camera_ip, deactivateVirtualPort (recordPort), username, password);
   // sendToCamera(camera_ip, deactivateVirtualPort (StationOnePort), username, password);
 }
 
