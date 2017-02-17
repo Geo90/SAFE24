@@ -56,10 +56,10 @@ void activateCamera() {
 
 class PirTask : public Task {
   public:
-    
+
     const int ledPin1 = 14; // Big lamp
     const int pir = 13; //  Pir sensor
- 
+
     int pirCounter = 0; // counter to read from pir sensor
     int pirSum = 0; // sum to add up the HIGHs and LOWs from pir sensor
 
@@ -117,8 +117,6 @@ class PirTask : public Task {
 
 //----------------------------- END OF PirTask -------------------------------------
 
-
-
 /*
    --------------------
      Task: LedTask
@@ -159,13 +157,27 @@ class LedTask : public Task {
 
 //----------------------------- END OF ledTask -------------------------------------
 
-
-
 /*
    --------------------
      Task: CameraTask ... TODO
    --------------------
 */
+
+class WifiTask : public Task {
+  public:
+
+    void setup() {
+      //...
+    }
+
+    void loop() {
+      while (!checkConnection()) {
+        Serial.println("Wifi connection is down");
+        connectWifi(ssid, password);
+      }
+    }
+} WifiTask;
+
 
 void setup() {
 
