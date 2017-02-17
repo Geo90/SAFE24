@@ -25,8 +25,8 @@ void activateCamera() {
   sendToCamera(camera_ip, activateVirtualPort (guardTourPort), username, password);
   sendToCamera(camera_ip, deactivateVirtualPort (guardTourPort), username, password);
   delay(10000);
-  continuousPanTiltMove (20,0,1);
-
+  sendToCamera(camera_ip, continuousPanTiltMove (6, 0, 1), username, password);
+  
 }
 
 
