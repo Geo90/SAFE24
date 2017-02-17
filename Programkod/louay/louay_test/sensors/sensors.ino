@@ -42,13 +42,13 @@ void doWithPirValue(int pirvalue) {
  * checks if there is a movement or not and acts according to that
  */
 void doWhenMove() {
-  if (pirCounter == 7) {
+  if (pirCounter == 8) {
     pirCounter = 0;
-    if (pirSum == 70) {
+    if (pirSum == 0) {
       prevTime = millis();
       digitalWrite(ledPin1, HIGH);
     }
-    if (pirSum < 70 && ( millis()  - prevTime ) > 10000 ) {
+    if (pirSum < 80 && ( millis()  - prevTime ) > 10000 ) {
       digitalWrite(ledPin1, LOW);
       prevTime = 0;
     }

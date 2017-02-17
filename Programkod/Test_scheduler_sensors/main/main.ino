@@ -19,11 +19,7 @@ const char* password = "pass";
 
 
 void loop() {
-  // Try to connect the WiFi network as long as the connection is down
-  while (!checkConnection()) {
-    Serial.println("Wifi connection is down");
-    connectWifi(ssid, password);
-  }
+  //...
 }
 
 
@@ -47,11 +43,10 @@ void activateCamera() {
 }
 
 
-
 /*
-   --------------------
+   ----------------------------------------
      Task: Pirsensor
-   --------------------
+   ----------------------------------------
 */
 
 class PirTask : public Task {
@@ -67,7 +62,6 @@ class PirTask : public Task {
 
 
     void setup() {
-      Serial.begin(115200); // behövs inte kanske?
       pinMode(ledPin1, OUTPUT);
       pinMode(pir, INPUT);
     }
@@ -78,6 +72,7 @@ class PirTask : public Task {
       Serial.println(pirValue);
       delay(100);
       doWithPirValue(pirValue);
+      doWhenMove();
       delay(390);
     }
 
@@ -104,6 +99,7 @@ class PirTask : public Task {
         if (pirSum == 70) {
           prevTime = millis();
           digitalWrite(ledPin1, HIGH);
+          activateCamera();
         }
         if (pirSum < 70 && ( millis()  - prevTime ) > 10000 ) {
           digitalWrite(ledPin1, LOW);
@@ -118,9 +114,9 @@ class PirTask : public Task {
 //----------------------------- END OF PirTask -------------------------------------
 
 /*
-   --------------------
+   ----------------------------------------
      Task: LedTask
-   --------------------
+   ----------------------------------------
 */
 
 class LedTask : public Task {
@@ -139,6 +135,7 @@ class LedTask : public Task {
       delay(100);
       Serial.println(sensorValue);
       doWithSensorValue(sensorValue);
+      delay(100);
     }
 
     /*
@@ -158,9 +155,9 @@ class LedTask : public Task {
 //----------------------------- END OF ledTask -------------------------------------
 
 /*
-   --------------------
-     Task: CameraTask ... TODO
-   --------------------
+   ----------------------------------------
+     Task: WifiTask
+   ----------------------------------------
 */
 
 class WifiTask : public Task {
@@ -171,6 +168,7 @@ class WifiTask : public Task {
     }
 
     void loop() {
+      // Try to connect the WiFi network as long as the connection is down
       while (!checkConnection()) {
         Serial.println("Wifi connection is down");
         connectWifi(ssid, password);
@@ -187,8 +185,11 @@ void setup() {
   // Connecting to a WiFi network
   connectWifi(ssid, passwordWifi);
   delay(100);
-  activateCamera();
+  
+  Scheduler.start(&WifiTask);
   Scheduler.start(&pirTask);
+  Scheduler.start(&ledTask);
+  Scheduler.begin();
 }
 
 
