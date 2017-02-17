@@ -22,19 +22,12 @@ void loop() {
 
 
 void activateCamera() {
-<<<<<<< HEAD
   sendToCamera(camera_ip, activateVirtualPort (portRecord), username, password);
   delay(10);
   sendToCamera(camera_ip, deactivateVirtualPort (portRecord), username, password);
   delay(15000);
   sendToCamera(camera_ip, continuousPanTiltMove (5, 0, 1), username, password);
 }
-=======
-  sendToCamera(camera_ip, activateVirtualPort (guardTourPort), username, password);
-  sendToCamera(camera_ip, deactivateVirtualPort (guardTourPort), username, password);
-  delay(10000);
-  sendToCamera(camera_ip, continuousPanTiltMove (6, 0, 1), username, password);
->>>>>>> master
 
 void returnHome() {
   sendToCamera(camera_ip, activateVirtualPort (portHome), username, password);
@@ -57,21 +50,15 @@ class PirTask : public Task {
 
     int pirCounter = 0; // counter to read from pir sensor
     int pirSum = 0; // sum to add up the HIGHs and LOWs from pir sensor
-<<<<<<< HEAD
     unsigned long previousMillis = 0;
     int timeValue = 0;
     int cameraFlag = 0;
     unsigned long prevTime = 0; // variable that keeps track of a previous time
-=======
-
-    unsigned long prevTime; // variable that keeps track of a previous time
->>>>>>> master
 
 
     void setup() {
       pinMode(ledPin1, OUTPUT);
       pinMode(pir, INPUT);
-      prevTime = 0;
     }
 
     void loop() {
@@ -120,15 +107,8 @@ class PirTask : public Task {
           prevTime = millis();
           digitalWrite(ledPin1, HIGH);
           activateCamera();
-<<<<<<< HEAD
           cameraFlag = 1;
           timeValue = 0;
-=======
-          pirCounter = -23;
-          pinMode(pir, OUTPUT);
-          digitalWrite(pir, LOW);
-          pinMode(pir, INPUT);
->>>>>>> master
         }
         if (pirSum < 70 && ( millis()  - prevTime ) > 10000 ) {
           digitalWrite(ledPin1, LOW);
