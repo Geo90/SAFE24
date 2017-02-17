@@ -37,6 +37,15 @@ int sendToCamera ( String host, String command,const char username[],const char 
   return check;
 }
 
+/*Continuous pan/tilt motion.
+  Positive values mean right (pan) and up (tilt),
+  negative values mean left (pan) and down (tilt). "0,0"
+  means stop.
+*/
+String continuousPanTiltMove (int panSpeed, int tiltSpeed, int camera_no){
+   String url = "/axis-cgi/com/ptz.cgi?continuouspantiltmove=" +String(panSpeed)+"," +String(tiltSpeed) + "&camera=" + String(camera_no);
+  return url;
+}
 
 
 //  Activates a virtual port on Camera

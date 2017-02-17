@@ -12,8 +12,6 @@ const char* passwordWifi = "23263345";
 const String camera_ip = "192.168.0.70";
 
 const String guardTourPort = "9";
-const String recordPort = "1";
-const String StationOnePort = "2";
 const char* username = "root";
 const char* password = "pass";
 
@@ -24,22 +22,11 @@ void loop() {
 
 
 void activateCamera() {
-  // sendToCamera(camera_ip, activateVirtualPort (StationOnePort), username, password);
-  // delay(10);
   sendToCamera(camera_ip, activateVirtualPort (guardTourPort), username, password);
-  delay(100);
-  //sendToCamera(camera_ip, activateVirtualPort (guardTourPort), username, password);
-  /*
-    for (int i = 0; i < 60; i++) {
-    delay(1000);
-    Serial.print(i);
-    }
-    Serial.println("");
-  */
   sendToCamera(camera_ip, deactivateVirtualPort (guardTourPort), username, password);
-  // delay(10);
-  // sendToCamera(camera_ip, deactivateVirtualPort (recordPort), username, password);
-  // sendToCamera(camera_ip, deactivateVirtualPort (StationOnePort), username, password);
+  delay(10000);
+  continuousPanTiltMove (20,0,1);
+
 }
 
 

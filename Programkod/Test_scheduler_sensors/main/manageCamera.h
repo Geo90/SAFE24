@@ -14,6 +14,7 @@
 //Sending commands to the camera
 int sendToCamera ( String, String,const char*,const char*);
 
+String continuousPanTiltMove (int,int,int);
 // Activates a virtual port on Camera
 String activateVirtualPort (String);
 
