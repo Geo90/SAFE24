@@ -11,10 +11,10 @@ const char* ssid     = "TP-LINK_7B0E";
 const char* passwordWifi = "23263345";
 const String camera_ip = "192.168.0.70";
 
-const String guardTourPort = "9";
+const String portRecord = "9";
+const String portHome = "10";
 const char* username = "root";
 const char* password = "pass";
-
 
 void loop() {
   //...
@@ -22,11 +22,17 @@ void loop() {
 
 
 void activateCamera() {
-  sendToCamera(camera_ip, activateVirtualPort (guardTourPort), username, password);
-  sendToCamera(camera_ip, deactivateVirtualPort (guardTourPort), username, password);
-  delay(10000);
-  sendToCamera(camera_ip, continuousPanTiltMove (6, 0, 1), username, password);
-  
+  sendToCamera(camera_ip, activateVirtualPort (portRecord), username, password);
+  delay(10);
+  sendToCamera(camera_ip, deactivateVirtualPort (portRecord), username, password);
+  delay(15000);
+  sendToCamera(camera_ip, continuousPanTiltMove (5, 0, 1), username, password);
+}
+
+void returnHome() {
+  sendToCamera(camera_ip, activateVirtualPort (portHome), username, password);
+  delay(10);
+  sendToCamera(camera_ip, deactivateVirtualPort (portHome), username, password);
 }
 
 
@@ -44,7 +50,9 @@ class PirTask : public Task {
 
     int pirCounter = 0; // counter to read from pir sensor
     int pirSum = 0; // sum to add up the HIGHs and LOWs from pir sensor
-
+    unsigned long previousMillis = 0;
+    int timeValue = 0;
+    int cameraFlag = 0;
     unsigned long prevTime = 0; // variable that keeps track of a previous time
 
 
@@ -61,6 +69,18 @@ class PirTask : public Task {
       doWithPirValue(pirValue);
       doWhenMove();
       delay(390);
+      if (cameraFlag) {
+        unsigned long currentMillis = millis();
+        if (currentMillis - previousMillis >= 1000) {
+          previousMillis = currentMillis;
+          timeValue++;
+        }
+        if (timeValue >= 45) {
+          returnHome();
+          cameraFlag=0;
+          timeValue = 0;
+        }
+      }
     }
 
     /*
@@ -87,6 +107,8 @@ class PirTask : public Task {
           prevTime = millis();
           digitalWrite(ledPin1, HIGH);
           activateCamera();
+          cameraFlag = 1;
+          timeValue = 0;
         }
         if (pirSum < 70 && ( millis()  - prevTime ) > 10000 ) {
           digitalWrite(ledPin1, LOW);
@@ -172,7 +194,7 @@ void setup() {
   // Connecting to a WiFi network
   connectWifi(ssid, passwordWifi);
   delay(100);
-  
+
   Scheduler.start(&WifiTask);
   Scheduler.start(&pirTask);
   Scheduler.start(&ledTask);
