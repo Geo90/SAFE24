@@ -25,7 +25,7 @@ void activateCamera() {
   sendToCamera(camera_ip, activateVirtualPort (guardTourPort), username, password);
   sendToCamera(camera_ip, deactivateVirtualPort (guardTourPort), username, password);
   delay(10000);
-  continuousPanTiltMove (20,0,1);
+  sendToCamera(camera_ip, continuousPanTiltMove (6, 0, 1), username, password);
 
 }
 
@@ -45,12 +45,13 @@ class PirTask : public Task {
     int pirCounter = 0; // counter to read from pir sensor
     int pirSum = 0; // sum to add up the HIGHs and LOWs from pir sensor
 
-    unsigned long prevTime = 0; // variable that keeps track of a previous time
+    unsigned long prevTime; // variable that keeps track of a previous time
 
 
     void setup() {
       pinMode(ledPin1, OUTPUT);
       pinMode(pir, INPUT);
+      prevTime = 0;
     }
 
     void loop() {
@@ -87,6 +88,10 @@ class PirTask : public Task {
           prevTime = millis();
           digitalWrite(ledPin1, HIGH);
           activateCamera();
+          pirCounter = -23;
+          pinMode(pir, OUTPUT);
+          digitalWrite(pir, LOW);
+          pinMode(pir, INPUT);
         }
         if (pirSum < 70 && ( millis()  - prevTime ) > 10000 ) {
           digitalWrite(ledPin1, LOW);
@@ -172,7 +177,7 @@ void setup() {
   // Connecting to a WiFi network
   connectWifi(ssid, passwordWifi);
   delay(100);
-  
+
   Scheduler.start(&WifiTask);
   Scheduler.start(&pirTask);
   Scheduler.start(&ledTask);
