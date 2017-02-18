@@ -1,0 +1,196 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.1 (25/3/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, numbers=endperiod]{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+%\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[colorlinks=false]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{titleref}
+\usepackage{lipsum, etoolbox}
+\usepackage{{titlesec}}
+
+\renewcommand{\ref}{Källförteckning}
+\makeatletter
+\newcommand*{\currentname}{\TR@currentTitle}
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{sektion \ref*{#1}. \nameref*{#1}}} % One single link
+%\newcommand*{\fullref}[1]{\nameref*{#1}} % No link
+\patchcmd{\l@section}
+  {\hfil}
+  {\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill}
+  {}{}
+  
+  
+  \newcommand\frontmatter{%
+    \cleardoublepage
+  %\@mainmatterfalse
+  \pagenumbering{roman}}
+
+\newcommand\mainmatter{%
+    \cleardoublepage
+ % \@mainmattertrue
+  \pagenumbering{arabic}}
+
+\makeatother
+
+\renewcommand{\contentsname}{Innehållsförteckning}
+\renewcommand{\index}{sektion}
+
+\titlelabel{\thetitle.\quad}
+%----------------------------------------------------------------------------------------
+%	
+%----------------------------------------------------------------------------------------
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\usepackage[most]{tcolorbox}
+
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+
+\title{API} % Title
+
+\author{}%George \textsc{Albert Florea}} % Author name
+
+\date{17 Februari, 2017 Malmö} % Date for the report
+
+\begin{document}
+
+\begin{titlepage}
+
+
+\clearpage\maketitle % Insert the title, author and date
+\thispagestyle{empty}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.25\textwidth]{MAH_logotyp_original}
+	\end{center}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{l r}
+Senast uppdaterad: & 12 Januari, 2017 \\ % Date the experiment was performed
+\end{tabular}
+\end{center}
+
+\end{titlepage}
+
+\clearpage
+
+% Add a link target to the TOC itself
+\addtocontents{toc}{\protect\hypertarget{toc}{}}
+
+\tableofcontents
+
+\thispagestyle{empty}\newpage
+\setcounter{page}{1}
+
+
+%----------------------------------------------------------------------------------------
+%	Inledning
+%----------------------------------------------------------------------------------------
+\section{Inledning}
+Detta API förklarar och framhäver funktionaliteten hos programkoden. Dess möjligheter att kunna implementeras i andra projekt. Genom denna manual så kommer användare att lättare kunna förstå och snabbt sätta sig in i vilka klasser och metoder som finns tillgängliga.\\
+
+\hyperlink{toc}{Table of Contents}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%     connectWifi.h     %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{connectWifi.h}
+\label{sec: connectWifi.h}
+
+\subsection*{connectWifi(const char*, const char*)}
+Function that establishes a connection to the specified host\\
+
+Return: void
+
+
+
+
+\hyperlink{toc}{Table of Contents}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%    manageCamera.h     %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{manageCamera.h}
+\label{sec: manageCamera.h}
+%\begin{tcolorbox}[breakable,colback=white,colframe=cyan,width=\dimexpr\textwidth+12mm\relax,enlarge left by=-6mm]
+
+
+\subsection*{sendToCamera ( String, String,const char*,const char*)}
+Sending commands to the camera\\
+
+Return: int
+
+
+\subsection*{activateVirtualPort (String)}
+Activates a virtual port on Camera\\
+
+Return: String
+
+
+\subsection*{activateVirtualPort (String)}
+Dectivates a virtual port on Camera\\
+
+Return: String
+
+%\end{tcolorbox}
+\hyperlink{toc}{Table of Contents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%     sensor.h          %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{sensor.h}
+\label{sec: sensor.h}
+
+\subsection*{doWithPirValue(int}
+Uses a reading from pir sensor to calculate a movement\\
+
+Return: void
+
+\subsection*{doWhenMove()}
+Checks if there is a movement or not and acts according to that\\
+
+Return: void
+
+\subsection*{doWithSensorValue(int)}
+Checks if the sensor value goes past the threshold of 75.\\
+
+Return: void
+
+
+\hyperlink{toc}{Table of Contents}
+\end{document}
