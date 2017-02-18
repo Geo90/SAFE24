@@ -10,41 +10,17 @@
 const char* ssid     = "TP-LINK_7B0E";
 const char* passwordWifi = "23263345";
 const String camera_ip = "192.168.0.70";
-
 const String portStationOne = "8";
 const String portRecord = "9";
 const String portHome = "10";
 const char* username = "root";
 const char* password = "pass";
 
+
 void loop() {
   //...
 }
 
-
-void activateCamera() {
-  sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
-  delay(10);
-  sendToCamera(camera_ip, activateVirtualPort (portRecord), username, password);
-  delay(10);
-  sendToCamera(camera_ip, deactivateVirtualPort (portRecord), username, password);
-  delay(10);
-  sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
-}
-void moveCamera() {
-  sendToCamera(camera_ip, continuousPanTiltMove (9, 0, 1), username, password);
-}
-void returnStationOne() {
-  sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
-  delay(10);
-  sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
-}
-
-void returnHome() {
-  sendToCamera(camera_ip, activateVirtualPort (portHome), username, password);
-  delay(10);
-  sendToCamera(camera_ip, deactivateVirtualPort (portHome), username, password);
-}
 
 
 /*
@@ -214,7 +190,7 @@ void setup() {
   // Connecting to a WiFi network
   connectWifi(ssid, passwordWifi);
   delay(100);
-
+  setHostInfo( camera_ip, username, password, portStationOne, portRecord, portHome);
   Scheduler.start(&WifiTask);
   Scheduler.start(&pirTask);
   Scheduler.start(&ledTask);

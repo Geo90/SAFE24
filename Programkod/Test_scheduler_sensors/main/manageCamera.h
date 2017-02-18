@@ -27,6 +27,10 @@ String activateVirtualPort (String);
 
 // Deactivates a virtual port on Camera
 String deactivateVirtualPort (String);
-
+void setHostInfo(String , const char* , const char* , String , String , String);
+void activateCamera(void);
+void moveCamera(void);
+void returnStationOne(void);
+void returnHome(void);
 
 

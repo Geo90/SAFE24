@@ -2,10 +2,18 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include "manageCamera.h"
+
+String camera_ip;
+const char* Username;
+const char* Password;
+String portStationOne;
+String portRecord;
+String portHome;
+
 /**
    This function will send a request to the server
 */
-int sendToCamera ( String host, String command,const char username[],const char password[]) {
+int sendToCamera ( String host, String command, const char username[], const char password[]) {
   int check;
   HTTPClient httpClient;
   String http_response;
@@ -42,8 +50,8 @@ int sendToCamera ( String host, String command,const char username[],const char 
   negative values mean left (pan) and down (tilt). "0,0"
   means stop.
 */
-String continuousPanTiltMove (int panSpeed, int tiltSpeed, int camera_no){
-   String url = "/axis-cgi/com/ptz.cgi?continuouspantiltmove=" +String(panSpeed)+"," +String(tiltSpeed) + "&camera=" + String(camera_no);
+String continuousPanTiltMove (int panSpeed, int tiltSpeed, int camera_no) {
+  String url = "/axis-cgi/com/ptz.cgi?continuouspantiltmove=" + String(panSpeed) + "," + String(tiltSpeed) + "&camera=" + String(camera_no);
   return url;
 }
 
@@ -60,6 +68,40 @@ String deactivateVirtualPort (String portNumber) {
   return url;
 }
 
+void setHostInfo(String hostIp, const char hostUsername[], const char hostPassword[], String portStation, String portRecord, String portHome) {
 
+  camera_ip = hostIp;
+  Username = hostUsername;
+  Password = hostPassword;
+  portStationOne = portStation;
+  portRecord = portRecord;
+  portHome = portHome;
+
+}
+
+
+void activateCamera() {
+  sendToCamera(camera_ip, activateVirtualPort (portStationOne), Username, Password);
+  delay(10);
+  sendToCamera(camera_ip, activateVirtualPort (portRecord), Username, Password);
+  delay(10);
+  sendToCamera(camera_ip, deactivateVirtualPort (portRecord), Username, Password);
+  delay(10);
+  sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), Username, Password);
+}
+void moveCamera() {
+  sendToCamera(camera_ip, continuousPanTiltMove (9, 0, 1), Username, Password);
+}
+void returnStationOne() {
+  sendToCamera(camera_ip, activateVirtualPort (portStationOne), Username, Password);
+  delay(10);
+  sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), Username, Password);
+}
+
+void returnHome() {
+  sendToCamera(camera_ip, activateVirtualPort (portHome), Username, Password);
+  delay(10);
+  sendToCamera(camera_ip, deactivateVirtualPort (portHome), Username, Password);
+}
 
 
