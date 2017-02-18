@@ -32,7 +32,7 @@ void activateCamera() {
   sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
 }
 void moveCamera() {
-  sendToCamera(camera_ip, continuousPanTiltMove (5, 0, 1), username, password);
+  sendToCamera(camera_ip, continuousPanTiltMove (9, 0, 1), username, password);
 }
 void returnStationOne() {
   sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
@@ -156,7 +156,7 @@ class LedTask : public Task {
         if (timeValue == 40) {
           returnStationOne();
         }
-        if (timeValue == 45) {
+        if (timeValue == 60) {
           returnHome();
           cameraFlag = 0;
           timeValue = 0;
