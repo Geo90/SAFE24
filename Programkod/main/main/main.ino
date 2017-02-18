@@ -5,7 +5,7 @@
 #include <ESP8266WiFi.h>
 #include "connectWiFi.h"
 #include "manageCamera.h"
-#include "schedule.h"
+#include <Scheduler.h>
 
 //Information about the IP-camera
 const char* ssid     = "TP-LINK_7B0E";
@@ -172,8 +172,9 @@ class LedTask : public Task {
         //No movement detected
         digitalWrite(micLed, LOW);
       }
+      return movement;
     }
-  return movement;
+  
 } ledTask;
 
 //----------------------------- END OF ledTask -------------------------------------
