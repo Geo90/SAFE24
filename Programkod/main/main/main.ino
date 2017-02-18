@@ -76,6 +76,7 @@ class PirTask : public Task {
         //No movement detected
         pirCounter = pirCounter + 1;
       }
+      return movement;
     }
 
     /*
@@ -159,20 +160,20 @@ class MicTask : public Task {
       the value 1 if movement is detected
     */
     int doWithSensorValue(int sensorvalue) {
-      int movement = 0; //no movement detected
+      int soundDetected = 0; //no movement detected
       if (sensorvalue > 71) { // LED ON
         //Movement detected
         digitalWrite(micLed, HIGH);
         activateCamera();
         cameraFlag = 1;
         timeValue = 0;
-        movement = 1;
+        soundDetected = 1;
       }
       if (sensorvalue <= 71) { // LED OFF
         //No movement detected
         digitalWrite(micLed, LOW);
       }
-      return movement;
+      return soundDetected;
     }
   
 } micTask;
