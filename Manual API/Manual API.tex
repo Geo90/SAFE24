@@ -19,7 +19,7 @@
 %	PACKAGES AND DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt, numbers=endperiod]{article}
+\documentclass[11pt, numbers=endperiod]{report}
 
 \usepackage[version=3]{mhchem} % Package for chemical equation typesetting
 \usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
@@ -33,6 +33,7 @@
 \usepackage{{titlesec}}
 
 \renewcommand{\ref}{Källförteckning}
+
 \makeatletter
 \newcommand*{\currentname}{\TR@currentTitle}
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{sektion \ref*{#1}. \nameref*{#1}}} % One single link
@@ -59,6 +60,8 @@
 \renewcommand{\index}{sektion}
 
 \titlelabel{\thetitle.\quad}
+
+
 %----------------------------------------------------------------------------------------
 %	
 %----------------------------------------------------------------------------------------
@@ -66,8 +69,31 @@
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
-\usepackage[most]{tcolorbox}
+\usepackage{tcolorbox}
 
+\renewcommand\thesection{\color{cyan!}\arabic{section}}
+
+\renewcommand\thesection{\color{cyan!}}
+
+\titleformat{\section}
+  {\normalfont\sffamily\Large\bfseries\color{cyan}}
+  {\thesection}{1em}{}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%		MY COMMANDS		%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Vseparation}{\vspace{10mm}}
+
+\newcommand{\setColor}[1]
+			{\color{blue!}\textbf{#1}\color{black!}}
+\newcommand\MySection[2][\DefaultOpt]{%
+  \def\DefaultOpt{#2}%
+  \color{cyan!}\section[#1]{#2}\color{black!}%
+}
 
 %----------------------------------------------------------------------------------------
 %	DOCUMENT INFORMATION
@@ -88,7 +114,7 @@
 \clearpage\maketitle % Insert the title, author and date
 \thispagestyle{empty}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=0.25\textwidth]{MAH_logotyp_original}
 	\end{center}
@@ -121,21 +147,25 @@ Detta API förklarar och framhäver funktionaliteten hos programkoden. Dess möj
 
 \hyperlink{toc}{Table of Contents}
 
-
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %     connectWifi.h     %
 %%%%%%%%%%%%%%%%%%%%%%%%%
-\section{connectWifi.h}
+\MySection{connectWifi.h}
 \label{sec: connectWifi.h}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colback=white,colframe=cyan,width=\dimexpr\textwidth+12mm\relax,enlarge left by=-6mm]
+
 
 \subsection*{connectWifi(const char*, const char*)}
 Function that establishes a connection to the specified host\\
 
-Return: void
+\textbf{Return:} \setColor{void}
+\hspace{20mm}
 
 
-
+\end{tcolorbox}
 
 \hyperlink{toc}{Table of Contents}
 
@@ -143,54 +173,56 @@ Return: void
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %    manageCamera.h     %
 %%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section*{manageCamera.h}
+\MySection{manageCamera.h}
 \label{sec: manageCamera.h}
-%\begin{tcolorbox}[breakable,colback=white,colframe=cyan,width=\dimexpr\textwidth+12mm\relax,enlarge left by=-6mm]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colback=white,colframe=cyan,width=\dimexpr\textwidth+12mm\relax,enlarge left by=-6mm]
 
 
 \subsection*{sendToCamera ( String, String,const char*,const char*)}
 Sending commands to the camera\\
 
-Return: int
-
+\textbf{Return:} \setColor{int}
+\Vseparation
 
 \subsection*{activateVirtualPort (String)}
 Activates a virtual port on Camera\\
 
-Return: String
-
+\textbf{Return:} \setColor{String}
+\Vseparation
 
 \subsection*{activateVirtualPort (String)}
 Dectivates a virtual port on Camera\\
 
-Return: String
-
-%\end{tcolorbox}
+\textbf{Return:} \setColor{String}
+\Vseparation
+\end{tcolorbox}
 \hyperlink{toc}{Table of Contents}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %     sensor.h          %
 %%%%%%%%%%%%%%%%%%%%%%%%%
-\section{sensor.h}
+\MySection{sensor.h}
 \label{sec: sensor.h}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colback=white,colframe=cyan,width=\dimexpr\textwidth+12mm\relax,enlarge left by=-6mm]
 
 \subsection*{doWithPirValue(int}
 Uses a reading from pir sensor to calculate a movement\\
 
-Return: void
-
+\textbf{Return:} \setColor{void}
+\Vseparation
 \subsection*{doWhenMove()}
 Checks if there is a movement or not and acts according to that\\
 
-Return: void
-
+\textbf{Return:} \setColor{void}
+\Vseparation
 \subsection*{doWithSensorValue(int)}
 Checks if the sensor value goes past the threshold of 75.\\
 
-Return: void
-
+\textbf{Return:} \setColor{void}
+\Vseparation
+\end{tcolorbox}
 
 \hyperlink{toc}{Table of Contents}
 \end{document}
