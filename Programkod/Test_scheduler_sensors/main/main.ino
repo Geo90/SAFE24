@@ -11,6 +11,7 @@ const char* ssid     = "TP-LINK_7B0E";
 const char* passwordWifi = "23263345";
 const String camera_ip = "192.168.0.70";
 
+const String portStationOne = "8";
 const String portRecord = "9";
 const String portHome = "10";
 const char* username = "root";
@@ -22,11 +23,21 @@ void loop() {
 
 
 void activateCamera() {
+  sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
+  delay(10);
   sendToCamera(camera_ip, activateVirtualPort (portRecord), username, password);
   delay(10);
   sendToCamera(camera_ip, deactivateVirtualPort (portRecord), username, password);
-  delay(15000);
+  delay(10);
+  sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
+}
+void moveCamera() {
   sendToCamera(camera_ip, continuousPanTiltMove (5, 0, 1), username, password);
+}
+void returnStationOne() {
+  sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
+  delay(10);
+  sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
 }
 
 void returnHome() {
@@ -75,9 +86,15 @@ class PirTask : public Task {
           previousMillis = currentMillis;
           timeValue++;
         }
-        if (timeValue >= 45) {
+        if (timeValue == 15) {
+          moveCamera();
+        }
+        if (timeValue == 40) {
+          returnStationOne();
+        }
+        if (timeValue == 45) {
           returnHome();
-          cameraFlag=0;
+          cameraFlag = 0;
           timeValue = 0;
         }
       }

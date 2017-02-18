@@ -11,7 +11,7 @@
 //------------------------------
 //Function that establishes a connection to the specified host
 void connectWifi(const char*, const char*); 
-
+// This funktion checks the WiFi connection
 int checkConnection(void);
 
 
