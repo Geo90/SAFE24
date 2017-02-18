@@ -10,11 +10,18 @@
 //-----  FUNCTIONS -----
 //------------------------------
 
+/**
+   This function will send a request to the server
+*/
+int sendToCamera ( String, String, const char*, const char*);
 
-//Sending commands to the camera
-int sendToCamera ( String, String,const char*,const char*);
+/*Continuous pan/tilt motion.
+  Positive values mean right (pan) and up (tilt),
+  negative values mean left (pan) and down (tilt). "0,0"
+  means stop.
+*/
 
-String continuousPanTiltMove (int,int,int);
+String continuousPanTiltMove (int, int, int);
 // Activates a virtual port on Camera
 String activateVirtualPort (String);
 

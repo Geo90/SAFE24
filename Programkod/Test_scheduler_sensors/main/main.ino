@@ -11,6 +11,7 @@ const char* ssid     = "TP-LINK_7B0E";
 const char* passwordWifi = "23263345";
 const String camera_ip = "192.168.0.70";
 
+const String portStationOne = "8";
 const String portRecord = "9";
 const String portHome = "10";
 const char* username = "root";
@@ -22,11 +23,21 @@ void loop() {
 
 
 void activateCamera() {
+  sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
+  delay(10);
   sendToCamera(camera_ip, activateVirtualPort (portRecord), username, password);
   delay(10);
   sendToCamera(camera_ip, deactivateVirtualPort (portRecord), username, password);
-  delay(15000);
+  delay(10);
+  sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
+}
+void moveCamera() {
   sendToCamera(camera_ip, continuousPanTiltMove (5, 0, 1), username, password);
+}
+void returnStationOne() {
+  sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
+  delay(10);
+  sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
 }
 
 void returnHome() {
@@ -45,42 +56,28 @@ void returnHome() {
 class PirTask : public Task {
   public:
 
-    const int ledPin1 = 14; // Big lamp
-    const int pir = 13; //  Pir sensor
+    const int pirLed = 14; // Big lamp
+    const int pirSen = 13; //  Pir sensor
 
     int pirCounter = 0; // counter to read from pir sensor
     int pirSum = 0; // sum to add up the HIGHs and LOWs from pir sensor
-    unsigned long previousMillis = 0;
-    int timeValue = 0;
-    int cameraFlag = 0;
     unsigned long prevTime = 0; // variable that keeps track of a previous time
 
 
     void setup() {
-      pinMode(ledPin1, OUTPUT);
-      pinMode(pir, INPUT);
+      pinMode(pirLed, OUTPUT);
+      pinMode(pirSen, INPUT);
     }
 
     void loop() {
-      int pirValue = digitalRead(pir);
+      int pirValue = digitalRead(pirSen);
       delay(10);
       Serial.println(pirValue);
       delay(100);
       doWithPirValue(pirValue);
       doWhenMove();
       delay(390);
-      if (cameraFlag) {
-        unsigned long currentMillis = millis();
-        if (currentMillis - previousMillis >= 1000) {
-          previousMillis = currentMillis;
-          timeValue++;
-        }
-        if (timeValue >= 45) {
-          returnHome();
-          cameraFlag=0;
-          timeValue = 0;
-        }
-      }
+
     }
 
     /*
@@ -105,13 +102,11 @@ class PirTask : public Task {
         pirCounter = 0;
         if (pirSum == 70) {
           prevTime = millis();
-          digitalWrite(ledPin1, HIGH);
-          activateCamera();
-          cameraFlag = 1;
-          timeValue = 0;
+          digitalWrite(pirLed, HIGH);
+
         }
         if (pirSum < 70 && ( millis()  - prevTime ) > 10000 ) {
-          digitalWrite(ledPin1, LOW);
+          digitalWrite(pirLed, LOW);
           prevTime = 0;
         }
         pirSum = 0;
@@ -131,31 +126,56 @@ class PirTask : public Task {
 class LedTask : public Task {
   public:
 
-    const int ledPin2 = 12; // small lamp
-    const int sensorPin = A0; // Analogpin for the pir sensor
+    const int micLed = 12; // small lamp
+    const int micSen = A0; // Analogpin for the pir sensor
+    unsigned long previousMillis = 0;
+    int timeValue = 0;
+    int cameraFlag = 0;
+
 
     void setup() {
-      pinMode(sensorPin, INPUT);
-      pinMode(ledPin2, OUTPUT);
+      pinMode(micSen, INPUT);
+      pinMode(micLed, OUTPUT);
     }
 
     void loop() {
-      int sensorValue = analogRead(sensorPin);
+      int sensorValue = analogRead(micSen);
       delay(100);
       Serial.println(sensorValue);
       doWithSensorValue(sensorValue);
       delay(100);
+      if (cameraFlag) {
+        unsigned long currentMillis = millis();
+        if (currentMillis - previousMillis >= 1000) {
+          previousMillis = currentMillis;
+          timeValue++;
+        }
+        if (timeValue == 15) {
+          moveCamera();
+        }
+        if (timeValue == 40) {
+          returnStationOne();
+        }
+        if (timeValue == 45) {
+          returnHome();
+          cameraFlag = 0;
+          timeValue = 0;
+        }
+      }
     }
 
     /*
       checks if the sensor value goes past the threshold of 75.
     */
     void doWithSensorValue(int sensorvalue) {
-      if (sensorvalue > 75) { // LED ON
-        digitalWrite(ledPin2, HIGH);
+      if (sensorvalue > 71) { // LED ON
+        digitalWrite(micLed, HIGH);
+        activateCamera();
+        cameraFlag = 1;
+        timeValue = 0;
       }
-      if (sensorvalue < 75) { // LED OFF
-        digitalWrite(ledPin2, LOW);
+      if (sensorvalue <= 71) { // LED OFF
+        digitalWrite(micLed, LOW);
       }
     }
 
