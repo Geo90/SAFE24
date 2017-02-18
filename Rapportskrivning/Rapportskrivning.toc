@@ -1,16 +1,18 @@
 \select@language {swedish}
-\contentsline {chapter}{\numberline {1}Inledning}{vi}{chapter.1}
-\contentsline {chapter}{\numberline {2}Teori}{vii}{chapter.2}
-\contentsline {section}{\numberline {2.1}Problemet med skadeg\IeC {\"o}relse}{vii}{section.2.1}
-\contentsline {chapter}{\numberline {3}Material \& metoder}{ix}{chapter.3}
-\contentsline {section}{\numberline {3.1}Metoder}{ix}{section.3.1}
-\contentsline {section}{\numberline {3.2}ESP8266 - mikroprocessorn}{ix}{section.3.2}
-\contentsline {section}{\numberline {3.3}IP-kameran}{x}{section.3.3}
-\contentsline {section}{\numberline {3.4}Sensorer}{x}{section.3.4}
-\contentsline {chapter}{\numberline {4}Resultat}{xi}{chapter.4}
-\contentsline {section}{\numberline {4.1}PIR-sensorn}{xi}{section.4.1}
-\contentsline {section}{\numberline {4.2}Mikrofon}{xi}{section.4.2}
-\contentsline {section}{\numberline {4.3}Testfall}{xi}{section.4.3}
-\contentsline {chapter}{\numberline {5}Diskussion \& Framtid}{xii}{chapter.5}
-\contentsline {section}{\numberline {5.1}Diskussion}{xii}{section.5.1}
-\contentsline {chapter}{Litteraturf\"orteckning}{xiv}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Inledning}{vii}{chapter.1}
+\contentsline {chapter}{\numberline {2}Teori}{viii}{chapter.2}
+\contentsline {section}{\numberline {2.1}Problemet med skadeg\IeC {\"o}relse}{viii}{section.2.1}
+\contentsline {chapter}{\numberline {3}Material \& metoder}{x}{chapter.3}
+\contentsline {section}{\numberline {3.1}Metoder}{x}{section.3.1}
+\contentsline {section}{\numberline {3.2}ESP8266 - mikroprocessorn}{x}{section.3.2}
+\contentsline {section}{\numberline {3.3}FTP-Server}{xi}{section.3.3}
+\contentsline {section}{\numberline {3.4}IP-kameran}{xi}{section.3.4}
+\contentsline {section}{\numberline {3.5}Sensorer}{xii}{section.3.5}
+\contentsline {chapter}{\numberline {4}Resultat}{xiii}{chapter.4}
+\contentsline {section}{\numberline {4.1}PIR-sensorn}{xiii}{section.4.1}
+\contentsline {section}{\numberline {4.2}Mikrofon}{xiii}{section.4.2}
+\contentsline {section}{\numberline {4.3}Testfall}{xiii}{section.4.3}
+\contentsline {chapter}{\numberline {5}Diskussion \& Framtid}{xiv}{chapter.5}
+\contentsline {section}{\numberline {5.1}Diskussion}{xiv}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Lagar och Etsika Aspekter}{xiv}{subsection.5.1.1}
+\contentsline {chapter}{Litteraturf\"orteckning}{xvi}{chapter*.3}

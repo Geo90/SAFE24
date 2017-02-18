@@ -68,14 +68,14 @@ String deactivateVirtualPort (String portNumber) {
   return url;
 }
 
-void setHostInfo(String hostIp, const char hostUsername[], const char hostPassword[], String portStation, String portRecord, String portHome) {
+void setHostInfo(String hostIp, const char hostUsername[], const char hostPassword[], String PortStation, String PortRecord, String PortHome) {
 
   camera_ip = hostIp;
   Username = hostUsername;
   Password = hostPassword;
-  portStationOne = portStation;
-  portRecord = portRecord;
-  portHome = portHome;
+  portStationOne = PortStation;
+  portRecord = PortRecord;
+  portHome = PortHome;
 
 }
 
