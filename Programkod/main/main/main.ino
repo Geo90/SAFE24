@@ -112,7 +112,7 @@ class PirTask : public Task {
    ----------------------------------------
 */
 
-class LedTask : public Task {
+class MicTask : public Task {
   public:
 
     const int micLed = 12; // small lamp
@@ -175,7 +175,7 @@ class LedTask : public Task {
       return movement;
     }
   
-} ledTask;
+} micTask;
 
 //----------------------------- END OF ledTask -------------------------------------
 
@@ -217,7 +217,7 @@ void setup() {
   //Start all the tasks
   Scheduler.start(&WifiTask);
   Scheduler.start(&pirTask);
-  Scheduler.start(&ledTask);
+  Scheduler.start(&micTask);
   Scheduler.begin();
 }
 
