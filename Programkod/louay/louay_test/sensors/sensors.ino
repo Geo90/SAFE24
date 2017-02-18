@@ -1,28 +1,20 @@
 #include <Ethernet.h>
 #include <ESP8266WiFi.h>
 
-const int sensorPin = A0; // Analogpin for the pir sensor 
-const int ledPin1 = 14; // Big lamp 
-const int ledPin2 = 12; // Small lamp
-const int pir = 13; //  Pir sensor
-unsigned long prevTime; // variable that keeps track of a previous time 
+/*
+ * Declaring the pins required for pir sensor
+ */
+const int pirLed = 14; // Big lamp for pir-action
+const int pirSen = 13; // Digital pin for pir sensor
 
-int sensorValue = 0; // value read from the PIR sensor
+
+/*
+ * Declaring variables used for pir-action
+ */
+unsigned long prevTime; // variable that keeps track of a previous time 
 int pirCounter = 0; // counter to read from pir sensor
 int pirSum = 0; // sum to add up the HIGHs and LOWs from pir sensor
 
-/**
- * Initializing the pins
- */
-void setup() 
-{
-  pinMode(ledPin1, OUTPUT); 
-  pinMode(ledPin2, OUTPUT); 
-  pinMode(pir, INPUT);
-  pinMode(sensorPin, INPUT);
-  prevTime = 0;
-  Serial.begin(115200);
-}
 
 /*
  * uses a reading from pir sensor to calculate a movement
@@ -46,38 +38,70 @@ void doWhenMove() {
     pirCounter = 0;
     if (pirSum == 0) {
       prevTime = millis();
-      digitalWrite(ledPin1, HIGH);
+      digitalWrite(pirLed, HIGH);
     }
     if (pirSum < 80 && ( millis()  - prevTime ) > 10000 ) {
-      digitalWrite(ledPin1, LOW);
+      digitalWrite(pirLed, LOW);
       prevTime = 0;
     }
     pirSum = 0;
   }  
 }
 
+
+
 /*
- * checks if the sensor value goes past the threshold of 75. 
+ * Initializing the pins required for mic sensor
+ */
+const int micSen = A0; // Analogpin for the pir sensor 
+const int micLed = 12; // Small lamp for mic-action
+
+/*
+ * Declaring variables used for mic-action
+ */
+int sensorValue = 0; // value read from the PIR sensor
+
+
+/*
+ * checks if the sensor value goes past the threshold of 71. 
  */
 void doWithSensorValue(int sensorvalue) {
-  if (sensorvalue > 75) { // LED ON 
-      digitalWrite(ledPin2, HIGH);
+  if (sensorvalue > 71) { // LED ON 
+      digitalWrite(micLed, HIGH);
   }
-  if (sensorvalue < 75) { // LED OFF
-      digitalWrite(ledPin2, LOW);
+  if (sensorvalue < 72) { // LED OFF
+      digitalWrite(micLed, LOW);
   }
 }
 
+
+/**
+ * Initializing setup-options for pir and mic-action
+ */
+void setup() 
+{
+  pinMode(pirLed, OUTPUT); 
+  pinMode(micLed, OUTPUT); 
+  pinMode(pirSen, INPUT);
+  pinMode(micSen, INPUT);
+  prevTime = 0;
+  Serial.begin(115200);
+}
+
+
 /*
  * loops continously in order to obtain the newest sensor values  
+ * Note that the pirSen gets an digitalWrite of LOW before reading
+ * Delaays are calculated according to the reading values from pir sensor
  */
 void loop() 
 { 
   Serial.begin(115200);
-  int pirValue = digitalRead(pir);
+  digitalWrite(pirSen, LOW); // to be noted
+  int pirValue = digitalRead(pirSen);
   delay(10);
   Serial.println(pirValue);
-  int sensorValue = analogRead(sensorPin);
+  int sensorValue = analogRead(micSen);
   delay(100);
   Serial.println(sensorValue);
   
