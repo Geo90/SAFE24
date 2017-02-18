@@ -23,7 +23,7 @@ int sendToCamera ( String host, String command, const char username[], const cha
   httpClient.setAuthorization(username, password);
   // start connection and send HTTP header
   int httpCode = httpClient.GET();
-  // httpCode will be negative on error
+  // httpCode will be negative when error occurs
   if (httpCode > 0) {
     check = 1;
 
@@ -47,8 +47,8 @@ int sendToCamera ( String host, String command, const char username[], const cha
 
 /*Continuous pan/tilt motion.
   Positive values mean right (pan) and up (tilt),
-  negative values mean left (pan) and down (tilt). "0,0"
-  means stop.
+  negative values mean left (pan) and down (tilt). 
+  "0,0" means stop.
 */
 String continuousPanTiltMove (int panSpeed, int tiltSpeed, int camera_no) {
   String url = "/axis-cgi/com/ptz.cgi?continuouspantiltmove=" + String(panSpeed) + "," + String(tiltSpeed) + "&camera=" + String(camera_no);
@@ -68,8 +68,10 @@ String deactivateVirtualPort (String portNumber) {
   return url;
 }
 
+/*
+ * SET: the connection data is stored in this class for future use when connecting to the IP-camera
+ */
 void setHostInfo(String hostIp, const char hostUsername[], const char hostPassword[], String portStation, String portRecord, String portHome) {
-
   camera_ip = hostIp;
   Username = hostUsername;
   Password = hostPassword;
@@ -89,9 +91,11 @@ void activateCamera() {
   delay(10);
   sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), Username, Password);
 }
+
 void moveCamera() {
   sendToCamera(camera_ip, continuousPanTiltMove (9, 0, 1), Username, Password);
 }
+
 void returnStationOne() {
   sendToCamera(camera_ip, activateVirtualPort (portStationOne), Username, Password);
   delay(10);

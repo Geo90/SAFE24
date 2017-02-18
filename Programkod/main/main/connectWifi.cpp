@@ -20,22 +20,23 @@ void connectWifi(const char ssid[], const char password[]) {
     connectionTimeOut++;
     //When 10 seconds has passed the attempt to establish connection is aborted
     if (connectionTimeOut > 10) {
-      Serial.println("Connections timedout... Couldn't connect to host.");
+      Serial.println("Connection timedout... Couldn't connect to host.");
     }
   }
   Serial.println("IP adress : ");
   Serial.println(WiFi.localIP());
 }
 
-
-//Funktion checks the WiFi connection
+/**
+   Checks the the WiFi connection
+*/
 int checkConnection() {
   ESP8266WiFiMulti WiFiMulti;
-  int result;
+  int result = 0; //no connection
   if ( WiFiMulti.run() == WL_CONNECTED) {
-    result = 1;
+    result = 1; //connection established
   } else {
-    result = 0;
+    result = 0; //no connection
   }
   return result;
 }
