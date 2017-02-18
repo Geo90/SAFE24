@@ -68,16 +68,21 @@ String deactivateVirtualPort (String portNumber) {
   return url;
 }
 
+<<<<<<< HEAD:Programkod/main/main/manageCamera.cpp
 /*
  * SET: the connection data is stored in this class for future use when connecting to the IP-camera
  */
 void setHostInfo(String hostIp, const char hostUsername[], const char hostPassword[], String portStation, String portRecord, String portHome) {
+=======
+void setHostInfo(String hostIp, const char hostUsername[], const char hostPassword[], String PortStation, String PortRecord, String PortHome) {
+
+>>>>>>> master:Programkod/Test_scheduler_sensors/main/manageCamera.cpp
   camera_ip = hostIp;
   Username = hostUsername;
   Password = hostPassword;
-  portStationOne = portStation;
-  portRecord = portRecord;
-  portHome = portHome;
+  portStationOne = PortStation;
+  portRecord = PortRecord;
+  portHome = PortHome;
 
 }
 
