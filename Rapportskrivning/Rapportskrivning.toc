@@ -15,4 +15,4 @@
 \contentsline {chapter}{\numberline {5}Diskussion \& Framtid}{xiii}{chapter.5}
 \contentsline {section}{\numberline {5.1}Diskussion}{xiii}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Lagar och Etsika Aspekter}{xiii}{subsection.5.1.1}
-\contentsline {chapter}{Litteraturf\"orteckning}{xv}{chapter*.4}
+\contentsline {chapter}{Litteraturf\"orteckning}{xv}{chapter*.5}
