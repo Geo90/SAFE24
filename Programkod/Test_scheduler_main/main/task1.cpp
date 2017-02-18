@@ -7,7 +7,7 @@
 
 void Task1::setup() // :: => "binary scope resolution operator", setup() is a member of the class task1
 {
-  const int led_1 = 12;
+  Task1::led_1 = 12;
   pinMode(led_1, OUTPUT);
 }
 

@@ -6,10 +6,12 @@
 
 class Task1 : public Task 
 {
+  
   public:
     int led_1;
     void setup(void);
     void loop(void);
+    
 };
 
 
