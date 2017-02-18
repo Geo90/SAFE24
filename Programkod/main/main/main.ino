@@ -5,7 +5,7 @@
 #include <ESP8266WiFi.h>
 #include "connectWiFi.h"
 #include "manageCamera.h"
-#include "schedule.h"
+#include <Scheduler.h>
 
 //Information about the IP-camera
 const char* ssid     = "TP-LINK_7B0E";
@@ -112,7 +112,7 @@ class PirTask : public Task {
    ----------------------------------------
 */
 
-class LedTask : public Task {
+class MicTask : public Task {
   public:
 
     const int micLed = 12; // small lamp
@@ -172,9 +172,10 @@ class LedTask : public Task {
         //No movement detected
         digitalWrite(micLed, LOW);
       }
+      return movement;
     }
-  return movement;
-} ledTask;
+  
+} micTask;
 
 //----------------------------- END OF ledTask -------------------------------------
 
@@ -216,7 +217,7 @@ void setup() {
   //Start all the tasks
   Scheduler.start(&WifiTask);
   Scheduler.start(&pirTask);
-  Scheduler.start(&ledTask);
+  Scheduler.start(&micTask);
   Scheduler.begin();
 }
 
