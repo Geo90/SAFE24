@@ -1,5 +1,5 @@
 \hypertarget {toc}{}
 \contentsline {section}{\numberline {\color {cyan!}}Inledning}{1}{section.0.1}
-\contentsline {section}{\numberline {\color {cyan!}}connectWifi.h}{2}{section.0.2}
-\contentsline {section}{\numberline {\color {cyan!}}manageCamera.h}{2}{section.0.3}
-\contentsline {section}{\numberline {\color {cyan!}}sensor.h}{3}{section.0.4}
+\contentsline {section}{\numberline {\color {cyan!}}main.ino}{2}{section.0.2}
+\contentsline {section}{\numberline {\color {cyan!}}connectWifi.h}{3}{section.0.3}
+\contentsline {section}{\numberline {\color {cyan!}}manageCamera.h}{4}{section.0.4}

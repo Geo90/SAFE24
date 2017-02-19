@@ -100,11 +100,11 @@
 %----------------------------------------------------------------------------------------
 
 
-\title{API} % Title
+\title{SAFE24 API } % Title
 
 \author{}%George \textsc{Albert Florea}} % Author name
 
-\date{17 Februari, 2017 Malmö} % Date for the report
+\date{22 Februari, 2017 Malmö} % Date for the report
 
 \begin{document}
 
@@ -122,7 +122,7 @@
 
 \begin{center}
 \begin{tabular}{l r}
-Senast uppdaterad: & 12 Januari, 2017 \\ % Date the experiment was performed
+Last update: & 19 February, 2017 \\ % Date the experiment was performed
 \end{tabular}
 \end{center}
 
@@ -143,11 +143,61 @@ Senast uppdaterad: & 12 Januari, 2017 \\ % Date the experiment was performed
 %	Inledning
 %----------------------------------------------------------------------------------------
 \section{Inledning}
-Detta API förklarar och framhäver funktionaliteten hos programkoden. Dess möjligheter att kunna implementeras i andra projekt. Genom denna manual så kommer användare att lättare kunna förstå och snabbt sätta sig in i vilka klasser och metoder som finns tillgängliga.\\
+Detta API förklarar och framhäver funktionaliteten hos programkoden. Programkodens möjlighet att kunna implementeras i andra projekt och dess struktur kommer att framgå tydligt. Genom denna manual så kommer användare att lättare kunna förstå och snabbt sätta sig in i vilka klasser och metoder som finns tillgängliga.\\
 
 \hyperlink{toc}{Table of Contents}
 
-\newpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%     main.ino     		%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\MySection{main.ino}
+\label{sec: main.ino}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colback=white,colframe=cyan,width=\dimexpr\textwidth+12mm\relax,enlarge left by=-6mm]
+
+Initializes all constants needed such as SSID and password in order to connect to a wifi-source. Connects to a wifi-source and also initiates the three tasks that are presented below.
+\subsection*{class PirTask : public Task}
+Scheduled task that uses the PIR-sensor to detect movement.\\
+\begin{tcolorbox}[colback=white,colframe=cyan,width=\dimexpr\textwidth+4mm\relax,enlarge left by=-2mm]
+
+
+\subsubsection*{doWithPirValue(int)}
+Uses a reading from pir sensor to calculate a movement\\
+
+\textbf{Return:} \setColor{void}
+\Vseparation
+\subsubsection*{doWhenMove()}
+Checks if there is a movement or not and acts according to that\\
+
+\textbf{Return:} \setColor{void}
+\Vseparation
+
+\end{tcolorbox}
+
+\subsection*{class MicTask : public Task}
+Scheduled task that listens to the microphone sensor in order to detect sound.\\
+\begin{tcolorbox}[colback=white,colframe=cyan,width=\dimexpr\textwidth+4mm\relax,enlarge left by=-2mm]
+
+\subsubsection*{doWithSensorValue(int)}
+Checks if the sensor value goes past the threshold of 75.\\
+
+\textbf{Return:} \setColor{void}
+\Vseparation
+
+
+\end{tcolorbox}
+
+\subsection*{class WifiTask : public Task}
+Scheduled task that ensures that there is a wifi-connection. This task checks the wifi-connecteion periodically.\\
+
+\end{tcolorbox}
+
+\hyperlink{toc}{Table of Contents}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %     connectWifi.h     %
@@ -162,7 +212,13 @@ Detta API förklarar och framhäver funktionaliteten hos programkoden. Dess möj
 Function that establishes a connection to the specified host\\
 
 \textbf{Return:} \setColor{void}
-\hspace{20mm}
+\Vseparation
+
+\subsection*{checkConnection()}
+Function that establishes a connection to the specified host\\
+
+\textbf{Return:} \setColor{int}
+\Vseparation
 
 
 \end{tcolorbox}
@@ -179,10 +235,19 @@ Function that establishes a connection to the specified host\\
 \begin{tcolorbox}[colback=white,colframe=cyan,width=\dimexpr\textwidth+12mm\relax,enlarge left by=-6mm]
 
 
-\subsection*{sendToCamera ( String, String,const char*,const char*)}
+\subsection*{sendToCamera ( String, String, const char*, const char*)}
 Sending commands to the camera\\
 
 \textbf{Return:} \setColor{int}
+\Vseparation
+
+
+\subsection*{continuousPanTiltMove (int, int, int)}
+Moves the cames depending on the arguments.\\
+Positive values mean right (pan) and up (tilt),\\
+  negative values mean left (pan) and down (tilt),\\
+	"0,0" means stop
+\textbf{Return:} \setColor{String}
 \Vseparation
 
 \subsection*{activateVirtualPort (String)}
@@ -197,32 +262,8 @@ Dectivates a virtual port on Camera\\
 \textbf{Return:} \setColor{String}
 \Vseparation
 \end{tcolorbox}
-\hyperlink{toc}{Table of Contents}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%     sensor.h          %
-%%%%%%%%%%%%%%%%%%%%%%%%%
-\MySection{sensor.h}
-\label{sec: sensor.h}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tcolorbox}[colback=white,colframe=cyan,width=\dimexpr\textwidth+12mm\relax,enlarge left by=-6mm]
 
-\subsection*{doWithPirValue(int}
-Uses a reading from pir sensor to calculate a movement\\
-
-\textbf{Return:} \setColor{void}
-\Vseparation
-\subsection*{doWhenMove()}
-Checks if there is a movement or not and acts according to that\\
-
-\textbf{Return:} \setColor{void}
-\Vseparation
-\subsection*{doWithSensorValue(int)}
-Checks if the sensor value goes past the threshold of 75.\\
-
-\textbf{Return:} \setColor{void}
-\Vseparation
-\end{tcolorbox}
 
 \hyperlink{toc}{Table of Contents}
 \end{document}
