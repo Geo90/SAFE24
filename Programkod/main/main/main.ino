@@ -1,23 +1,28 @@
 
 /*
-    
- This sketch 
 
+  This sketch created for ESP8266. Contains three different tasks.
+  WifiTask check and creat the WiFi connection.
+  pirTask control a PIR sensor.
+  micTask control a sound sensor.
+  Created by SAFE24, February 18, 2017.
 */
 #include <ESP8266WiFi.h>
 #include "connectWiFi.h"
 #include "manageCamera.h"
 #include <Scheduler.h>
 
-//Information about the IP-camera
+//wireless network SSID (name)
 const char* ssid     = "TP-LINK_7B0E";
+//wireless network password
 const char* passwordWifi = "23263345";
-//
+//IP-adress for camera
 const String camera_ip = "192.168.0.70";
-
+//virtual port numbers on camera
 const String portStationOne = "8";
 const String portRecord = "9";
 const String portHome = "10";
+//username and password for camera
 const char* username = "root";
 const char* password = "pass";
 
@@ -137,20 +142,24 @@ class MicTask : public Task {
       Serial.println(sensorValue);
       doWithSensorValue(sensorValue);
       delay(100);
+      // if the camera is activated
       if (cameraFlag) {
         unsigned long currentMillis = millis();
         if (currentMillis - previousMillis >= 1000) {
           previousMillis = currentMillis;
           timeValue++;
         }
+        //After about 15 seconds starts continuous pan motion with speed 9
         if (timeValue == 15) {
           sendToCamera(camera_ip, continuousPanTiltMove (9, 0, 1), username, password);
         }
+        //After about 40 seconds aims the camera to the busstation.
         if (timeValue == 40) {
           sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
           delay(10);
           sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
         }
+        //After about 60 seconds aims the camera to the homeposition.
         if (timeValue == 60) {
           sendToCamera(camera_ip, activateVirtualPort (portHome), username, password);
           delay(10);
@@ -171,12 +180,16 @@ class MicTask : public Task {
       if (sensorvalue > 71) { // LED ON
         //Movement detected
         digitalWrite(micLed, HIGH);
+        //Activates virtuall port 8 aims the cameran to the bustation
         sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
         delay(10);
+        //Activates virtuall port 9 that starts recording
         sendToCamera(camera_ip, activateVirtualPort (portRecord), username, password);
         delay(10);
+        //Deactivates virtuall port 9
         sendToCamera(camera_ip, deactivateVirtualPort (portRecord), username, password);
         delay(10);
+        //Deactivates virtuall port 8
         sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
         cameraFlag = 1;
         timeValue = 0;
