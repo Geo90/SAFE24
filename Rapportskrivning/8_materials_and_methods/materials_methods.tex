@@ -27,11 +27,11 @@ Pir-sensorns uppgift var att lysa upp busshållplatsen vid rörelse i den. Ljud-
 
 
 \section{ESP8266 - mikroprocessorn}
-Huvudanledningen för valet av denna mikroprocessor var att den hade en inbyggd Wifi-mottagare vilket var absolut nödvändigt för att kunna kommunicera med nätverket där kameran är upppkopplad. Givetvis kunde vi hitta på alternativa lösningar men just denna lösning var den smidigaste. I övrigt fanns det allt vi behövde till vårt projekt. Det fanns gott om digitala pins samt en analog på max, dock tog den emot max 1 V. \\
+Huvudanledningen för valet av denna mikroprocessor var att den hade en inbyggd Wifi-mottagare vilket var absolut nödvändigt för att kunna kommunicera med nätverket där kameran var uppkopplad. Givetvis kunde gruppen hitta på alternativa lösningar men just denna lösning var den smidigaste. I övrigt fanns det allt de behövde till deras projekt. Det fanns gott om digitala pins samt en analog-pin, dock tog den emot max 1 V. \\
 
-Vår tanke var att kopppla sensorer till vår ESP som sedan kommunicerade med kameran utifrån de uppgiffter som lästes in från sensorerna. ESP:n var då kopplad till samma nätverk som kameran och kommunicerade och skickade kommandon till kameran.\\
+Deras tanke var att kopppla sensorer till ESP:n som sedan kommunicerade med kameran utifrån de uppgiffter som lästes in från sensorerna. ESP:n var då kopplad till samma nätverk som kameran och kommunicerade och skickade kommandon till kameran.\\
 \section{FTP-Server}
-För att kunna identifiera personer som ligger bakom skadegörelser behöver systemet lagra bilder eller/och filmer i en server och den är en viktig del av lösningen. Studenter valde att använda en FTP server som ska bilder och/eller filmer lagras.  FTP server ligger i samma subnät som IP-kameran ligger. Information om FTP server:
+För att kunna identifiera personer som ligger bakom skadegörelser behövde systemet lagra bilder eller/och filmer på en server och den var en viktig del av lösningen. Gruppen valde att använda en FTP-server där bilder och/eller filmer skulle lagras. FTP-servern låg under samma subnät som IP-kameran. Information om FTP-servern:
 
 \begin{itemize}
 \item IP adress : 192.168.0.106
@@ -44,16 +44,16 @@ För att kunna identifiera personer som ligger bakom skadegörelser behöver sys
 
 \end{itemize}
 \section{IP-kameran}
-Kameran som används är tillhandahållen av AXIS. Kameran är en Q6128-E Network Camera med möjlighet till internet uppkoppling sända bilder och streama video till en server.\\
+Kameran som används var tillhandahållen av AXIS. Kameran var en Q6128-E Network Camera med möjlighet till att via  internetuppkoppling sända bilder och streama video till en server.\\
 
 IP-kameran användes för att skicka bilder och video till en server för datalagring.\\
 
-Kommunikation med kameran gjordes via ESP8266 som sänder kommandon över internet för att styra kameran.\\
+Kommunikationen med kameran gjordes via ESP8266 som sände kommandon över internet för att styra kameran.\\
 
-Studenterna skapade tre aktiviteter i kameran, ”ActionPTZStation1”, ”ActionRecord”, ”ActionPTZHome”.
-ActionRecord är en aktivitet som spelar in en film som är en minut långt och skickar den filmen till en FTP server som har namnet FTP-Safe24. Filmens upplösning som skickas till FTP-server är 3840x2860. Ett suffix läggs i filmen som innehåller datum och tid information. ActionRecord aktiveras när virtuell port 9 är aktiv.\\
-ActionPTZHome är aktivitet som riktar kameran till hemposition. Kamerans hemposition är definierat som position ”Safe24”. ActionPTZHome kan aktiveras genom att aktivera virtuell port nummer 10.
-ActionPTZStation1 är aktivitet som riktar kameran till position som heter ”plats1” (busshållplatsen). ”. ActionPTZHome kan aktiveras genom att aktivera virtuell port nummer 8.
+Grupperna skapade tre aktiviteter i kameran, ”ActionPTZStation1”, ”ActionRecord”, ”ActionPTZHome”.
+ActionRecord var en aktivitet som spelade in en film som var en minut lång och skickade den till FTP-server som har namnet FTP-Safe24. Filmens upplösning som skickades till FTP-servern var 3840x2860. Ett suffix lades i filmen som innehöll datum och tidsinformation. ActionRecord aktiverades när virtuell port 9 var aktiv.\\
+ActionPTZHome var den som riktade kameran till hemposition. Kamerans hemposition var definierad som position ”Safe24”. ActionPTZHome kunde aktiveras genom att aktivera virtuell port nummer 10.
+ActionPTZStation1 var den som riktade kameran till position som heter ”plats1” (busshållplatsen). ”. ActionPTZHome kunde aktiveras egenom att aktivera virtuell port nummer 8.
 
 
 \section{Sensorer}
