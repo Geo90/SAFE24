@@ -50,9 +50,9 @@ För att kunna identifiera personer som ligger bakom skadegörelser behövde sys
 \section{IP-kameran}
 Kameran som används var tillhandahållen av AXIS. Kameran var en Q6128-E Network Camera med möjlighet till att via  internetuppkoppling sända bilder och streama video till en server.\\
 
-IP-kameran användes för att skicka bilder och video till en server för datalagring.\\
+IP-kameran användes för att skicka bilder och video till en server för datalagring.
 
-Kommunikationen med kameran gjordes via ESP8266 som sände kommandon över internet för att styra kameran.\\
+Kommunikationen med kameran gjordes via ESP8266 som sände kommandon över internet för att styra kameran.
 
 Grupperna skapade tre aktiviteter i kameran, ”ActionPTZStation1”, ”ActionRecord”, ”ActionPTZHome”.
 ActionRecord var en aktivitet som spelade in en film som var en minut lång och skickade den till FTP-server som har namnet FTP-Safe24. Filmens upplösning som skickades till FTP-servern var 3840x2860. Ett suffix lades i filmen som innehöll datum och tidsinformation. ActionRecord aktiverades när virtuell port 9 var aktiv.\\
