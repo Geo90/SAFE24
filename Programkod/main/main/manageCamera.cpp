@@ -1,17 +1,19 @@
+/*
+  ConnectToWiFi.h
+  Contains fuctions that kan be used for comminication
+  between httpclient (ESP8266) and httphost (Axis IP-Camera) 
+  Created by SAFE24, February 18, 2017.
+  Released into the public domain.
+*/
+
 
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include "manageCamera.h"
 
-String camera_ip;
-const char* Username;
-const char* Password;
-String portStationOne;
-String portRecord;
-String portHome;
 
 /**
-   This function will send a request to the server
+   This function will send a request to the server (Axis IP-Camera)
 */
 int sendToCamera ( String host, String command, const char username[], const char password[]) {
   int check;
@@ -19,9 +21,10 @@ int sendToCamera ( String host, String command, const char username[], const cha
   String http_response;
   Serial.print("Connecting to ");
   Serial.println(host);
+   // start connection and send HTTP header
   httpClient.begin("http://" + host + command);
+   // Authorization
   httpClient.setAuthorization(username, password);
-  // start connection and send HTTP header
   int httpCode = httpClient.GET();
   // httpCode will be negative when error occurs
   if (httpCode > 0) {
@@ -47,7 +50,7 @@ int sendToCamera ( String host, String command, const char username[], const cha
 
 /*Continuous pan/tilt motion.
   Positive values mean right (pan) and up (tilt),
-  negative values mean left (pan) and down (tilt). 
+  negative values mean left (pan) and down (tilt).
   "0,0" means stop.
 */
 String continuousPanTiltMove (int panSpeed, int tiltSpeed, int camera_no) {
@@ -69,44 +72,6 @@ String deactivateVirtualPort (String portNumber) {
 }
 
 
-/*
- * SET: the connection data is stored in this class for future use when connecting to the IP-camera
- */
-void setHostInfo(String hostIp, const char hostUsername[], const char hostPassword[], String PortStation, String PortRecord, String PortHome) {
-  camera_ip = hostIp;
-  Username = hostUsername;
-  Password = hostPassword;
-  portStationOne = PortStation;
-  portRecord = PortRecord;
-  portHome = PortHome;
 
-}
-
-
-void activateCamera() {
-  sendToCamera(camera_ip, activateVirtualPort (portStationOne), Username, Password);
-  delay(10);
-  sendToCamera(camera_ip, activateVirtualPort (portRecord), Username, Password);
-  delay(10);
-  sendToCamera(camera_ip, deactivateVirtualPort (portRecord), Username, Password);
-  delay(10);
-  sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), Username, Password);
-}
-
-void moveCamera() {
-  sendToCamera(camera_ip, continuousPanTiltMove (9, 0, 1), Username, Password);
-}
-
-void returnStationOne() {
-  sendToCamera(camera_ip, activateVirtualPort (portStationOne), Username, Password);
-  delay(10);
-  sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), Username, Password);
-}
-
-void returnHome() {
-  sendToCamera(camera_ip, activateVirtualPort (portHome), Username, Password);
-  delay(10);
-  sendToCamera(camera_ip, deactivateVirtualPort (portHome), Username, Password);
-}
 
 

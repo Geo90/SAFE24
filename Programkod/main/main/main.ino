@@ -1,6 +1,8 @@
 
 /*
-    Main
+    
+ This sketch 
+
 */
 #include <ESP8266WiFi.h>
 #include "connectWiFi.h"
@@ -10,6 +12,7 @@
 //Information about the IP-camera
 const char* ssid     = "TP-LINK_7B0E";
 const char* passwordWifi = "23263345";
+//
 const String camera_ip = "192.168.0.70";
 
 const String portStationOne = "8";
@@ -97,11 +100,11 @@ class PirTask : public Task {
         if (pirSum < 70 && ( millis()  - prevTime ) > 10000 ) {
           //No movement detected
           digitalWrite(pirLed, LOW);
-          prevTime = 0;      
+          prevTime = 0;
         }
         pirSum = 0;
       }
-    return movement;
+      return movement;
     }
 } pirTask;
 
@@ -141,13 +144,17 @@ class MicTask : public Task {
           timeValue++;
         }
         if (timeValue == 15) {
-          moveCamera();
+          sendToCamera(camera_ip, continuousPanTiltMove (9, 0, 1), username, password);
         }
         if (timeValue == 40) {
-          returnStationOne();
+          sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
+          delay(10);
+          sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
         }
         if (timeValue == 60) {
-          returnHome();
+          sendToCamera(camera_ip, activateVirtualPort (portHome), username, password);
+          delay(10);
+          sendToCamera(camera_ip, deactivateVirtualPort (portHome), username, password);
           cameraFlag = 0;
           timeValue = 0;
         }
@@ -164,7 +171,13 @@ class MicTask : public Task {
       if (sensorvalue > 71) { // LED ON
         //Movement detected
         digitalWrite(micLed, HIGH);
-        activateCamera();
+        sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
+        delay(10);
+        sendToCamera(camera_ip, activateVirtualPort (portRecord), username, password);
+        delay(10);
+        sendToCamera(camera_ip, deactivateVirtualPort (portRecord), username, password);
+        delay(10);
+        sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
         cameraFlag = 1;
         timeValue = 0;
         soundDetected = 1;
@@ -175,7 +188,7 @@ class MicTask : public Task {
       }
       return soundDetected;
     }
-  
+
 } micTask;
 
 //----------------------------- END OF ledTask -------------------------------------
@@ -210,10 +223,8 @@ void setup() {
 
   // Connecting to a WiFi network
   connectWifi(ssid, passwordWifi);
-  
+
   delay(100);
-  
-  setHostInfo( camera_ip, username, password, portStationOne, portRecord, portHome);
 
   //Start all the tasks
   Scheduler.start(&WifiTask);
