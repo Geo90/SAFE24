@@ -58,7 +58,7 @@ class PirTask : public Task {
     void loop() {
       int pirValue = digitalRead(pirSen);
       delay(10);
-      Serial.println(pirValue);
+      //   Serial.println(pirValue);
       delay(100);
       doWithPirValue(pirValue);
       doWhenMove();
@@ -123,7 +123,7 @@ class PirTask : public Task {
 
 class MicTask : public Task {
   public:
-
+    const int pirLed = 14;
     const int micLed = 12; // small lamp
     const int micSen = A0; // Analogpin for the pir sensor
     unsigned long previousMillis = 0;
@@ -139,7 +139,7 @@ class MicTask : public Task {
     void loop() {
       int sensorValue = analogRead(micSen);
       delay(100);
-      Serial.println(sensorValue);
+      //   Serial.println(sensorValue);
       doWithSensorValue(sensorValue);
       delay(100);
       // if the camera is activated
@@ -148,24 +148,33 @@ class MicTask : public Task {
         if (currentMillis - previousMillis >= 1000) {
           previousMillis = currentMillis;
           timeValue++;
+          if (timeValue % 2 == 0) {
+            digitalWrite(pirLed, HIGH);
+          }
+          else {
+            digitalWrite(pirLed, LOW);
+          }
         }
-        //After about 15 seconds starts continuous pan motion with speed 9
-        if (timeValue == 15) {
-          sendToCamera(camera_ip, continuousPanTiltMove (9, 0, 1), username, password);
+        //After about 5 seconds starts continuous pan motion with speed 9
+        if (timeValue == 5 && cameraFlag == 1) {
+          sendToCamera(camera_ip, continuousPanTiltMove (10, 0, 1), username, password);
+          cameraFlag = 2;
         }
-        //After about 40 seconds aims the camera to the busstation.
-        if (timeValue == 40) {
+        //After about 29 seconds aims the camera to the busstation.
+        if (timeValue == 30 && cameraFlag == 2) {
           sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
           delay(10);
           sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
+          cameraFlag = 3;
         }
         //After about 60 seconds aims the camera to the homeposition.
-        if (timeValue == 60) {
+        if (timeValue == 60 && cameraFlag == 3) {
           sendToCamera(camera_ip, activateVirtualPort (portHome), username, password);
           delay(10);
           sendToCamera(camera_ip, deactivateVirtualPort (portHome), username, password);
           cameraFlag = 0;
           timeValue = 0;
+
         }
       }
     }
@@ -180,6 +189,7 @@ class MicTask : public Task {
       if (sensorvalue > 71) { // LED ON
         //Movement detected
         digitalWrite(micLed, HIGH);
+        delay(10);
         //Activates virtuall port 8 aims the cameran to the bustation
         sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
         delay(10);
