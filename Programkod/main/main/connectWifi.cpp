@@ -1,3 +1,8 @@
+/**
+ * connectWifi.cpp
+ * 
+  Created by SAFE24, February 18, 2017.
+ */
 
 #include <ESP8266WiFi.h>
 #include "connectWiFi.h"
@@ -15,11 +20,12 @@ void connectWifi(const char ssid[], const char password[]) {
 
   int connectionTimeOut = 0; //Iterator to interrupt the attempt to connect to host
   //Trying to connect and waits until connected to the specified host
-  while (WiFiMulti.run() != WL_CONNECTED || connectionTimeOut > 10) {
+  while (WiFiMulti.run() != WL_CONNECTED) {
+    WiFiMulti.addAP(ssid, password);
     delay(500);
     connectionTimeOut++;
     //When 10 seconds has passed the attempt to establish connection is aborted
-    if (connectionTimeOut > 10) {
+    if (connectionTimeOut > 20) {
       Serial.println("Connection timedout... Couldn't connect to host.");
     }
   }
@@ -37,7 +43,9 @@ int checkConnection() {
     result = 1; //connection established
   } else {
     result = 0; //no connection
+
   }
   return result;
+  Serial.println(result);
 }
 

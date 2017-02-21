@@ -56,7 +56,11 @@ class PirTask : public Task {
     }
 
     void loop() {
+
       int pirValue = digitalRead(pirSen);
+      delay(100);
+      Serial.print("PIR value: ");
+      Serial.println(pirSen);
       delay(10);
       //   Serial.println(pirValue);
       delay(100);
@@ -139,11 +143,12 @@ class MicTask : public Task {
     void loop() {
       int sensorValue = analogRead(micSen);
       delay(100);
-      //   Serial.println(sensorValue);
+      Serial.print("Mic value: ");
+      Serial.println(sensorValue);
       doWithSensorValue(sensorValue);
       delay(100);
       // if the camera is activated
-      if (cameraFlag) {
+      if (cameraFlag > 0) {
         unsigned long currentMillis = millis();
         if (currentMillis - previousMillis >= 1000) {
           previousMillis = currentMillis;
@@ -157,20 +162,20 @@ class MicTask : public Task {
         }
         //After about 5 seconds starts continuous pan motion with speed 9
         if (timeValue == 5 && cameraFlag == 1) {
-          sendToCamera(camera_ip, continuousPanTiltMove (10, 0, 1), username, password);
+          sendToCamera(camera_ip, continuousPanTiltMove (9, 0, 1), username, password);
           cameraFlag = 2;
         }
-        //After about 29 seconds aims the camera to the busstation.
-        if (timeValue == 30 && cameraFlag == 2) {
+        //After about 33 seconds aims the camera to the busstation.
+        if (timeValue == 32 && cameraFlag == 2) {
           sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
-          delay(10);
+          delay(100);
           sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
           cameraFlag = 3;
         }
-        //After about 60 seconds aims the camera to the homeposition.
-        if (timeValue == 60 && cameraFlag == 3) {
+        //After about 40 seconds aims the camera to the homeposition.
+        if (timeValue == 40 && cameraFlag == 3) {
           sendToCamera(camera_ip, activateVirtualPort (portHome), username, password);
-          delay(10);
+          delay(100);
           sendToCamera(camera_ip, deactivateVirtualPort (portHome), username, password);
           cameraFlag = 0;
           timeValue = 0;
@@ -190,15 +195,16 @@ class MicTask : public Task {
         //Movement detected
         digitalWrite(micLed, HIGH);
         delay(10);
+
         //Activates virtuall port 8 aims the cameran to the bustation
         sendToCamera(camera_ip, activateVirtualPort (portStationOne), username, password);
-        delay(10);
+        delay(100);
         //Activates virtuall port 9 that starts recording
         sendToCamera(camera_ip, activateVirtualPort (portRecord), username, password);
-        delay(10);
+        delay(100);
         //Deactivates virtuall port 9
         sendToCamera(camera_ip, deactivateVirtualPort (portRecord), username, password);
-        delay(10);
+        delay(100);
         //Deactivates virtuall port 8
         sendToCamera(camera_ip, deactivateVirtualPort (portStationOne), username, password);
         cameraFlag = 1;
@@ -230,11 +236,15 @@ class WifiTask : public Task {
     }
 
     void loop() {
+   
       // Try to connect the WiFi network as long as the connection is down
-      while (!checkConnection()) {
+      while (checkConnection() == 0) {
+        delay(500);
         Serial.println("Wifi connection is down");
-        connectWifi(ssid, password);
+         connectWifi(ssid, passwordWifi);
       }
+      delay(3000);
+        Serial.println("Connected to WiFi...");
     }
 } WifiTask;
 
