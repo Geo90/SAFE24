@@ -2,18 +2,19 @@
 \contentsline {chapter}{\numberline {1}Inledning}{vi}{chapter.1}
 \contentsline {chapter}{\numberline {2}Teori}{vii}{chapter.2}
 \contentsline {section}{\numberline {2.1}Problemet med skadeg\IeC {\"o}relse}{vii}{section.2.1}
-\contentsline {chapter}{\numberline {3}Material \& metoder}{ix}{chapter.3}
+\contentsline {chapter}{\numberline {3}Material \& Metoder}{ix}{chapter.3}
 \contentsline {section}{\numberline {3.1}Metoder}{ix}{section.3.1}
-\contentsline {section}{\numberline {3.2}ESP8266 - mikroprocessorn}{x}{section.3.2}
-\contentsline {section}{\numberline {3.3}FTP-Server}{x}{section.3.3}
-\contentsline {section}{\numberline {3.4}IP-kameran}{xi}{section.3.4}
-\contentsline {section}{\numberline {3.5}Sensorer}{xi}{section.3.5}
-\contentsline {section}{\numberline {3.6}Arbetsuppgifter}{xiv}{section.3.6}
-\contentsline {chapter}{\numberline {4}Diskussion \& Framtid}{xv}{chapter.4}
-\contentsline {section}{\numberline {4.1}Diskussion}{xv}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Lagar och Etsika Aspekter}{xv}{subsection.4.1.1}
-\contentsline {chapter}{Litteraturf\"orteckning}{xvii}{chapter*.7}
-\contentsline {chapter}{\numberline {5}Bilaga}{xviii}{chapter.5}
-\contentsline {section}{\numberline {5.1}GitHub-l\IeC {\"a}nk}{xviii}{section.5.1}
-\contentsline {section}{\numberline {5.2}Diagram}{xviii}{section.5.2}
-\contentsline {section}{\numberline {5.3}Testfall}{xviii}{section.5.3}
+\contentsline {section}{\numberline {3.2}ESP8266 - mikroprocessorn}{xi}{section.3.2}
+\contentsline {section}{\numberline {3.3}FTP-Server}{xiii}{section.3.3}
+\contentsline {section}{\numberline {3.4}IP-kameran}{xiii}{section.3.4}
+\contentsline {section}{\numberline {3.5}Sensorer}{xiv}{section.3.5}
+\contentsline {section}{\numberline {3.6}Systembeskrivning}{xvii}{section.3.6}
+\contentsline {section}{\numberline {3.7}Arbetsuppgifter}{xvii}{section.3.7}
+\contentsline {chapter}{\numberline {4}Diskussion \& Framtid}{xix}{chapter.4}
+\contentsline {section}{\numberline {4.1}Diskussion}{xix}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Lagar och Etsika Aspekter}{xix}{subsection.4.1.1}
+\contentsline {chapter}{Litteraturf\"orteckning}{xxi}{chapter*.8}
+\contentsline {chapter}{\numberline {5}Bilaga}{xxii}{chapter.5}
+\contentsline {section}{\numberline {5.1}GitHub-l\IeC {\"a}nk}{xxii}{section.5.1}
+\contentsline {section}{\numberline {5.2}Diagram}{xxii}{section.5.2}
+\contentsline {section}{\numberline {5.3}Testfall}{xxii}{section.5.3}

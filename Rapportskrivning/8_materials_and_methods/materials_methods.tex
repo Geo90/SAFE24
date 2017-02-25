@@ -3,7 +3,7 @@
 
 
 
-\chapter{Material \& metoder} % top level followed by section, subsection
+\chapter{Material \& Metoder} % top level followed by section, subsection
 \label{ch:metoder}
 
 % ----------------------- paths to graphics ------------------------
@@ -25,15 +25,80 @@ För att hela systemet skulle kunna fungera samtidigt så användes en schemalä
 
 Pir-sensorns uppgift var att lysa upp busshållplatsen vid rörelse i den. Ljud-sensorns uppgift var att tala om för mikroprocessorn att aktivera IP-kameran så den filmade och skickade iväg filmen till en server. Därför upprättades en FTP-server för att kunna ta emot inspelningar och olika data från kameran och lagra dessa på en dator. Det behövdes ett nätverk för att åstadkomma kommunikation mellan de olika delarna. Mikroprocessorn med sina sensorer tillsammans med kameran och FTP-servern var uppkopplade inom samma nät, delvis via WIFI-anslutning och delvis med direkt-kabel-anslutning.
 
-De finns olika task  i systemet som exekveras parallellt för att kunna låta processorn jobba med flera saker samtidigt. Det finns totalt 3 tasks i systemet varvid två av de (pirsensorn och ljudsensorn) agerar som input till systemet. Den tredje tasken (WifiTask) kontrollerar om det finns en wifi-anslutning, om anslutningen är nere försöker den återansluta till wifi.
+De finns olika tasks  i systemet som exekveras parallellt för att kunna låta processorn jobba med flera saker samtidigt. Det finns totalt 3 tasks i systemet varvid två av de (pirsensorn och ljudsensorn) agerar som inputs till systemet. Den tredje tasken (WifiTask) kontrollerar om det finns en wifi-anslutning, om anslutningen är nere försöker den återansluta till wifi.
 Biblioteket som möjliggör att dessa tasks arbetar oberoende av varandra och som detta systemet använde sig av skapades av Nicholas Wiersma och heter ESP8266Scheduler. 
-\\
+
+\begin{figure}[h]
+
+  \includegraphics[width=\linewidth]{connections.jpg}
+  \caption{Alla komponenter kopplade med varandra.)}
+  \label{fig:connections}
+\end{figure}
+
 
 
 \section{ESP8266 - mikroprocessorn}
 Huvudanledningen för valet av denna mikroprocessor var att den hade en inbyggd Wifi-mottagare vilket var absolut nödvändigt för att kunna kommunicera med nätverket där kameran var uppkopplad. Givetvis kunde gruppen hitta på alternativa lösningar men just denna lösning var den smidigaste. I övrigt fanns det allt de behövde till deras projekt. Det fanns gott om digitala pins samt en analog-pin, dock tog den emot max 1 V. \\
 
-Deras tanke var att kopppla sensorer till ESP:n som sedan kommunicerade med kameran utifrån de uppgiffter som lästes in från sensorerna. ESP:n var då kopplad till samma nätverk som kameran och kommunicerade och skickade kommandon till kameran.\\
+Deras tanke var att kopppla sensorer till ESP:n som sedan kommunicerade med kameran utifrån de uppgiffter som lästes in från sensorerna. ESP:n var då kopplad till samma nätverk som kameran och kommunicerade och skickade kommandon till kameran.
+Att läsa värden från senors-pin:n var inget problem, dock fanns det problem med själva hanteringen av dessa värden rent tidsmässigt och periodiskt. Koden nedan visar hur gruppen fick sina värden.
+\begin{lstlisting}
+const int pirSen = 13; // Digital pin for pir sensor
+...
+pinMode(pirSen, INPUT); // The pin is set as INPUT
+...
+int pirValue = digitalRead(pirSen); // Gets a reading from the pin
+\end{lstlisting}
+Efter flera tester och noteringar kom gruppen fram till ett counter-system för att hantera sensorns digitila värden.
+\begin{lstlisting}
+void doWithPirValue(int pirvalue) {
+  if (pirvalue == HIGH){
+    pirCounter = pirCounter + 1; // Counter for each reading
+    pirSum = pirSum + 10; // Sum-counter for each HIGH value reading
+  }
+
+  if (pirvalue == LOW){
+    pirCounter = pirCounter + 1; // Counter for each reading
+  }
+}
+
+void doWhenMove() {
+  if (pirCounter == 7) {
+    pirCounter = 0; // Reset for the counter of each reading
+    if (pirSum == 70) {
+      prevTime = millis(); // Timer to put light on
+      digitalWrite(pirLed, HIGH); // Big light ON
+    }
+    if (pirSum < 70 && ( millis()  - prevTime ) > 10000 ) {
+      digitalWrite(pirLed, LOW); // Big light OFF
+      prevTime = 0; // Reset for the timer 
+    }
+    pirSum = 0; // Reset for the sum-counter of HIGH value readings
+  }  
+}
+\end{lstlisting}
+När det gällde mikrofonen så läste gruppen av sensorn analogt. Det uppstod under demo-dagen ett problem där mic-sensorn gav höga analoga värden konstant utan stopp. Det berodde på att sensorn hängde upp och ner och vid montering under redovisningen hade sladden till den analoga pin:n lossnat vilket medförde att ESP:n läste in analoga värden på 1023. Det löstes genom att först filtrera bort detta värde i koden med en if-sats och i kretsen genom att koppla ESP:ns analoga pin till jord via en resistor med en hög resistans så den inte påverkade sensorns avläsning när den var korrektkopplad. Koden nedan visar hur sensorn läser in sina värden.
+
+\begin{lstlisting}
+const int micSen = A0; // Analogpin for the pir sensor 
+const int micLed = 12; // Small lamp for mic-action
+
+int sensorValue = analogRead(micSen); // Gets an analog reading
+
+void doWithSensorValue(int sensorvalue) {
+  
+  if ( sensorvalue < 1023 ) { // To make sure of correct reading
+    if (sensorvalue > 71) { // limit value to alert
+        digitalWrite(micLed, HIGH); // MIC light ON
+    }
+    if (sensorvalue < 72) { // limit value to non-alert
+        digitalWrite(micLed, LOW); // MIC light OFF
+    }
+  }
+  
+}
+\end{lstlisting}
+
 \section{FTP-Server}
 För att kunna identifiera personer som ligger bakom skadegörelser behövde systemet lagra bilder eller/och filmer på en server och den var en viktig del av lösningen. Gruppen valde att använda en FTP-server där bilder och/eller filmer skulle lagras. FTP-servern låg under samma subnät som IP-kameran. Information om FTP-servern:
 
@@ -81,6 +146,10 @@ På grund av brist på glas och utrymme för gruppen för att de skulle  göra f
   \caption{En ljudsensor med mikrofon. (www.bazaargadgets.com)}
   \label{fig:mic}
 \end{figure}
+\clearpage
+\section{Systembeskrivning}
+Nu har gruppen beskrivit olika delar av systemet och hur dem används. Om PIR-sensor detekterar någon rörelse då skall lampan ska tändas en viss tid och sedan släckas, så länge sensorn inte detekterar en ny rörelse. Ljud-sensorn är också igång hela tiden. Om ljudsensor detekterar ett ljud som är över gränsvärdet ska den viktiga processen börja. Först aktiveras två virtuella porter i kameran. Den ena riktar kameran mot busshållplatsen och den andra gör att kameran börjar filma och filmen skickas till FTP-servern. Videolängden är 40 sekunder och 5 sekunder börjar kameran att filma runt omkring dvs kameran ska börja vrida sig horisontellt. Ett varv tar cirka 27 sekunder dvs efter 33 sekunder ska kameran riktas mot busshållplatsen igen och det görs genom att aktivera en virtuell port. Kameran ska forsätta filma cirka 7 sekunder till och efter det ska den riktas mot sitt standardläge dvs "homeposition". Ifall ljud sensor detekterar ett annat ljud som är över gränsen inom 40 sekunder då ska processen börja från början dvs kameran riktas tillbaka mot bushållplatsen, ska börja vrida efter 5 sekunder osv. Det enda som blir annarlunda vid detektering av två ljud inom 40 sekunder blir videolängden. Till exempel om ett annat ljud detekteras 15 sekunder efter första ljud då blir videolängden 40+15 sekunder dvs 55 sekunder.\\
+Gruppen var välmedvetna att ljudsensorn inte var det bästa valet för systemet, dock var den den mest tillgängliga. Vid besök hos en elektrokit-grossist kunde de inte få tag på någon användbar trycksensor som var tillräckligt känslig för att ersätta ljudsensorn. Under demo-dagen fick de frågan om de hade tänkt på en Piezo-sensor, vilken är en typ av en tryck-sensor. Efter fakta-sökning fann gruppen att en Piezo-sensor hade varit ett bättre alternativ än ljudsensorn.
 
 \section{Arbetsuppgifter}
 Gruppen arbetade både tillsammans och även enskilt så att var och en av gruppmedlemmarna kunde bidra med något. Benjamin var delaktig i arbetet med flödesdiagram, tasks, hjälp med byggandet av busshållplats och även testfall. Yurdaer arbetade med wifi-kodning av ESP:n, kamera-kommandon, ftp-servern och i rapporten skrev han om sina delar samt om etiska aspekter. Georges bidrag var med struktur av kod, API, manual, testfall, FTP-servern och en del rapportskrivning. Han bidrog även med upprättande av en Latex-mall för rapporten. Louay arbetade med sensorernas kodning, ihopkoppling av alla komponenter, förslag till router-lösning, byggandet av en hållplats och kontinuerlig testning av alla kopplingar. 
