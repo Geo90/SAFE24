@@ -17,4 +17,4 @@
 \contentsline {chapter}{\numberline {5}Bilaga}{xxii}{chapter.5}
 \contentsline {section}{\numberline {5.1}GitHub-l\IeC {\"a}nk}{xxii}{section.5.1}
 \contentsline {section}{\numberline {5.2}Diagram}{xxii}{section.5.2}
-\contentsline {section}{\numberline {5.3}Testfall}{xxii}{section.5.3}
+\contentsline {section}{\numberline {5.3}Testfall}{xxvi}{section.5.3}
