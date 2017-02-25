@@ -191,7 +191,7 @@ class MicTask : public Task {
     */
     int doWithSensorValue(int sensorvalue) {
       int soundDetected = 0; //no movement detected
-      if (sensorvalue > 71) { // LED ON
+      if (sensorvalue > 71 && sensorvalue < 1023) { // LED ON
         //Movement detected
         digitalWrite(micLed, HIGH);
         delay(10);
