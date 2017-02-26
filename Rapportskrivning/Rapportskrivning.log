@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.19)  26 FEB 2017 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.19)  26 FEB 2017 16:03
 entering extended mode
 **./Rapportskrivning.tex
 (Rapportskrivning.tex
@@ -1074,17 +1074,17 @@ tmatter/figures/MAH_logotyp_original.jpg>]
 File: 0_frontmatter/figures/group1.jpg Graphic file (type jpg)
 
 <use 0_frontmatter/figures/group1.jpg>
-Package pdftex.def Info: 0_frontmatter/figures/group1.jpg used on input line 13
+Package pdftex.def Info: 0_frontmatter/figures/group1.jpg used on input line 14
 .
 (pdftex.def)             Requested size: 412.56496pt x 196.66663pt.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 20.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 20.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 20.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 20.
  [2
 
  <./0_frontmatter/figures/group1.jpg>])
@@ -1563,53 +1563,64 @@ Package pdftex.def Info: 10_bilaga/figures/FTPTest.png used on input line 58.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<10_bilaga/figures/HanteraIPKameraTest.png, id=294, 442.65375pt x 1132.98282pt>
-File: 10_bilaga/figures/HanteraIPKameraTest.png Graphic file (type png)
-<use 10_bilaga/figures/HanteraIPKameraTest.png>
-Package pdftex.def Info: 10_bilaga/figures/HanteraIPKameraTest.png used on inpu
-t line 64.
-(pdftex.def)             Requested size: 412.58907pt x 625.97769pt.
+<10_bilaga/figures/HanteraIPKameraTest1.png, id=294, 513.41812pt x 744.53156pt>
+File: 10_bilaga/figures/HanteraIPKameraTest1.png Graphic file (type png)
+<use 10_bilaga/figures/HanteraIPKameraTest1.png>
+Package pdftex.def Info: 10_bilaga/figures/HanteraIPKameraTest1.png used on inp
+ut line 64.
+(pdftex.def)             Requested size: 412.56496pt x 598.28444pt.
 
 
-LaTeX Warning: Float too large for page by 57.42232pt on input line 67.
+LaTeX Warning: Float too large for page by 21.64908pt on input line 66.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<10_bilaga/figures/SensorTest.png, id=295, 628.59843pt x 456.95718pt>
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 68.
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 68.
+[26
+
+ <./10_bilaga/figures/Anslutningstest.png>]
+<10_bilaga/figures/HanteraIPKameraTest2.png, id=300, 513.41812pt x 566.115pt>
+File: 10_bilaga/figures/HanteraIPKameraTest2.png Graphic file (type png)
+
+<use 10_bilaga/figures/HanteraIPKameraTest2.png>
+Package pdftex.def Info: 10_bilaga/figures/HanteraIPKameraTest2.png used on inp
+ut line 71.
+(pdftex.def)             Requested size: 412.56496pt x 454.91396pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<10_bilaga/figures/SensorTest.png, id=301, 628.59843pt x 456.95718pt>
 File: 10_bilaga/figures/SensorTest.png Graphic file (type png)
 
 <use 10_bilaga/figures/SensorTest.png>
-Package pdftex.def Info: 10_bilaga/figures/SensorTest.png used on input line 70
+Package pdftex.def Info: 10_bilaga/figures/SensorTest.png used on input line 78
 .
 (pdftex.def)             Requested size: 412.56496pt x 299.91226pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<10_bilaga/figures/SchedulingTest.png, id=296, 481.8pt x 83.5622pt>
+<10_bilaga/figures/SchedulingTest.png, id=302, 481.8pt x 83.5622pt>
 File: 10_bilaga/figures/SchedulingTest.png Graphic file (type png)
 
 <use 10_bilaga/figures/SchedulingTest.png>
 Package pdftex.def Info: 10_bilaga/figures/SchedulingTest.png used on input lin
-e 76.
+e 84.
 (pdftex.def)             Requested size: 412.56496pt x 71.55606pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
-Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 301.
-Package babel Info: Redefining swedish shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining swedish shorthand "~
-(babel)             in language  on input line 301.
- [26
-
- <./10_bilaga/figures/Anslutningstest.png>]
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 301.
 Package babel Info: Redefining swedish shorthand "~
@@ -1627,7 +1638,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 301.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 301.
- [28 <./10_bilaga/figures/HanteraIPKameraTest.png>]
+ [28 <./10_bilaga/figures/HanteraIPKameraTest1.png>]
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 301.
 Package babel Info: Redefining swedish shorthand "~
@@ -1636,7 +1647,16 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 301.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 301.
- [29 <./10_bilaga/figures/SensorTest.png> <./10_bilaga/figures/SchedulingTest.p
+ [29 <./10_bilaga/figures/HanteraIPKameraTest2.png>]
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 301.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 301.
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 301.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 301.
+ [30 <./10_bilaga/figures/SensorTest.png> <./10_bilaga/figures/SchedulingTest.p
 ng>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
@@ -1650,13 +1670,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
 Package rerunfilecheck Info: File `Rapportskrivning.out' has not changed.
 (rerunfilecheck)             Checksum: D03BB3A9EAD0E70C20532E49289C51E6;1118.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
  ) 
 Here is how much of TeX's memory you used:
- 16876 strings out of 493333
- 270451 string characters out of 3139185
+ 16885 strings out of 493333
+ 270744 string characters out of 3139185
  449706 words of memory out of 3000000
- 19901 multiletter control sequences out of 15000+200000
+ 19907 multiletter control sequences out of 15000+200000
  12439 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,13n,79p,1932b,1865s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1666,9 +1690,9 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb>
-Output written on Rapportskrivning.pdf (29 pages, 1237085 bytes).
+Output written on Rapportskrivning.pdf (30 pages, 1146734 bytes).
 PDF statistics:
- 366 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
- 228 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
+ 233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
