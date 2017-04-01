@@ -1,0 +1,15 @@
+\select@language {swedish}
+\contentsline {chapter}{\numberline {1}Inledning}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Teori}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}Probleml\IeC {\"o}sning}{2}{section.2.1}
+\contentsline {chapter}{\numberline {3}Material \& Metoder}{3}{chapter.3}
+\contentsline {section}{\numberline {3.1}Material}{3}{section.3.1}
+\contentsline {section}{\numberline {3.2}Metoder}{5}{section.3.2}
+\contentsline {section}{\numberline {3.3}Systembeskrivning}{6}{section.3.3}
+\contentsline {section}{\numberline {3.4}Arbetsuppgifter}{6}{section.3.4}
+\contentsline {chapter}{\numberline {4}Lag och Etik}{7}{chapter.4}
+\contentsline {chapter}{Litteraturf\"orteckning}{8}{chapter*.6}
+\contentsline {chapter}{\numberline {5}Bilaga}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}GitHub-l\IeC {\"a}nk}{9}{section.5.1}
+\contentsline {section}{\numberline {5.2}Diagram}{9}{section.5.2}
+\contentsline {section}{\numberline {5.3}Testfall}{13}{section.5.3}
