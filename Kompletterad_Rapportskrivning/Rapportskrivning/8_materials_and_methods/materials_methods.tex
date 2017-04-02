@@ -18,15 +18,15 @@
 % ----------------------- contents from here ------------------------
 
 \section{Material}
-I vår lösning använde vi oss av ett utvecklingskort ESP8266 med ett inbyggt Wifi, vilket var absulut nödvändigt för att kunna kommunicera med det nätverk som kameran var uppkopplad till.
+I vår lösning använde vi oss av ett utvecklingskort ESP8266 med ett inbyggt Wifi som var nödvändig för att kunna kommunicera med det nätverk som kameran var uppkopplad till.
 
 Kameran är av modellen Q6128-E Network Camera med möjlighet till internetuppkoppling. Upplösningen som används är 3840x2860. Ett suffix med datum och tidsinformation läggs till i filnamnet för inspelningen.
 
 En PIR-sensor från Adafruit användes som rörelsedetektor för att lysa upp den stora lampan i hållplatsen.
 
-Som nämt tidigare i rapporten använde vi oss av en helt vanlig ljudsensor som var monterad mot en glasyta. Vi var väl medvetna om att ljudsensorn inte var det bästa valet för systemet, dock var den, den mest tillgängliga. Vid besök hos en elektrokit-grossist kunde vi inte få tag på någon användbar trycksensor som var tillräckligt känslig för att ersätta ljudsensorn. Under demo-dagen fick vi frågan om vi hade tänkt på en Piezo-sensor, som är en typ av en tryck-sensor. Efter fakta-sökning fann vi att en Piezo-sensor hade varit ett bättre alternativ än ljudsensorn.
+Som nämt tidigare i rapporten använde vi oss av en ljudsensor som var monterad mot en glasyta. Vi var väl medvetna om att ljudsensorn inte var det bästa valet för systemet, dock var den, den mest tillgängliga. Vid besök hos en elektrokit-grossist kunde vi inte få tag på någon användbar trycksensor som var tillräckligt känslig för att ersätta ljudsensorn. Under demo-dagen fick vi frågan om vi hade tänkt på en Piezo-sensor, som är en typ av en tryck-sensor. Efter fakta-sökning fann vi att en Piezo-sensor hade varit ett bättre alternativ än ljudsensorn.
 
-För att kunna identifiera att nogån utför en begår vandalisering måste systemet lagra bilder/inspelningar på en server, så vi använde en FTP-server. FTP-servern och IP-kameran låg under samma subnät.\\
+För att kunna identifiera att någon har utfört vandalisering måste systemet lagra bilder/inspelningar på en server. En FTP-server användes. FTP-servern och IP-kameran låg i samma subnät.\\
 
 Information om FTP-servern:
 
@@ -52,7 +52,7 @@ Information om FTP-servern:
 
 
 \section{Metoder}
-Nu har vi beskrivit olika delar av systemet. Om PIR-sensorn detekterar någon rörelse då skall lampan tändas en viss tid och sedan släckas, så länge sensorn inte detekterar en ny rörelse, för att då forsätter lampan att vara tänd. För att lyckas med PIR-sensorn fick vi med hjälp av några delays och räknare räkna in hur många gånger som signalen var hög eller låg. Efter flera tester och försök kom vi fram att det behövdes minst sju rundor med en runda på 0,5 sekunder. Anleddningen till detta var att när det inte fanns någon rörelse så gav PIR-sensorn utslag med några ettor samt några nollor. Då det fanns rörelse gav den utslag på bara ettor.\\
+Nu har vi beskrivit olika delar av systemet. Om PIR-sensorn detekterar någon rörelse då skall lampan tändas en viss tid och sedan släckas, så länge sensorn inte detekterar en ny rörelse, för att då forsätter lampan att vara tänd. För att lyckas med PIR-sensorn fick vi med hjälp av några delays och räknare räkna in hur många gånger som signalen var hög eller låg. Efter flera tester och försök kom vi fram till att det behövdes minst sju rundor med en runda på 0,5 sekunder. Anledningen till detta var att när det inte fanns någon rörelse så gav PIR-sensorn utslag med några ettor samt några nollor. Då det fanns rörelse gav den utslag på bara ettor.\\
 
  Ljud-sensorn är också igång hela tiden. Om ljudsensorn detekterar ett ljud som är över gränsvärdet skall den viktiga processen börja. På grund av brist på glas och utrymme för oss att göra testförsök med att ta sönder glas använde vi istället plast. Plasten skulle föreställa glaset i en busshållplats. Vi kom överens om att sätta tröskelvärdet till 75 utav max 1024 som analoga ingången kunde läsa. Över denna gräns indikerades att glas hade gått sönder.\\
 
@@ -60,7 +60,7 @@ IP-kameran var installerad i mitten av vägen för att den kan rotera fritt efte
 
 ActionPTZStation1: När virtuell port 8 aktiveras så riktas kameran mot en bestämd position som  heter "plats1" (busshållplatsen).
 
-ActionRecord: När virtuell port 9 aktiveras så börjar kameran videoinspelningen och samtidigt skickas inspelningen till FTP-servern.
+ActionRecord: När virtuell port 9 aktiveras så börjar kameran videoinspelningen. Efter avslutad inspelning skickas klippet till FTP-servern.
 
 ActionPTZHome: När virtuell port 10 aktiveras så riktas kameran mot en bestämd position som heter "Safe24"  som motsvarar start och slutpositionen för kameran.
 
