@@ -62,7 +62,12 @@ ActionPTZStation1: När virtuell port 8 aktiveras så riktas kameran mot en best
 
 ActionRecord: När virtuell port 9 aktiveras så börjar kameran videoinspelningen. Efter avslutad inspelning skickas klippet till FTP-servern.
 
-ActionPTZHome: När virtuell port 10 aktiveras så riktas kameran mot en bestämd position som heter Safe24 och som motsvarar start och slutpositionen för kameran.
+ActionPTZHome: När virtuell port 10 aktiveras så riktas kameran mot en bestämd position som heter Safe24 och som motsvarar start och slutpositionen för kameran.\\
+
+Det finns totalt tre tasks i systemet som exekveras parallellt för att kunna låta processorn
+jobba med flera saker samtidigt. Biblioteket som används att schemalägga tasks är skapat av Nicholas Wiersma och heter ESP8266Scheduler.
+
+Två av de tre tasksen (pirsensorn och ljudsensorn) agerar som inputs till systemet. Den tredje tasken (WifiTask) kontrollerar om det finns en wifi-anslutning, om anslutningen är nere försöker den återansluta till wifi.
 
 
  
