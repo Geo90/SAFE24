@@ -52,7 +52,7 @@ Information om FTP-servern:
 
 
 \section{Metoder} 
-Om PIR-sensorn detekterar någon rörelse då skall lampan tändas en viss tid och sedan släckas. Om lampan är tänd och PIR-sensorn detekterar ny rörelse då fortsätter lampan vara tänd. För att lyckas med PIR-sensorn fick vi med hjälp av några delays och räknare räkna in hur många gånger som signalen var hög eller låg. Efter flera tester och försök kom vi fram till att det behövdes minst sju rundor med en runda på 0,5 sekunder. Anledningen till detta var att när det inte fanns någon rörelse så gav PIR-sensorn utslag med några ettor samt några nollor. Då det fanns rörelse gav den utslag på bara ettor.\\
+Om PIR-sensorn detekterar någon rörelse då skall lampan tändas en viss tid och sedan släckas. Om lampan är tänd och PIR-sensorn detekterar ny rörelse då fortsätter lampan vara tänd.\\
 
  Ljud-sensorn är också igång hela tiden. Om ljudsensorn detekterar ett ljud som är över gränsvärdet skall den viktiga processen börja. På grund av brist på glas och utrymme för oss att göra testförsök med att ta sönder glas använde vi istället plast. Plasten skulle föreställa glaset i en busshållplats. Vi kom överens om att sätta tröskelvärdet till 75 utav max 1024 som analoga ingången kunde läsa. Över denna gräns indikerades att glas hade gått sönder.\\
 
@@ -64,10 +64,7 @@ ActionRecord: När virtuell port 9 aktiveras så börjar kameran videoinspelning
 
 ActionPTZHome: När virtuell port 10 aktiveras så riktas kameran mot en bestämd position som heter Safe24 och som motsvarar start och slutpositionen för kameran.\\
 
-Det finns totalt tre tasks i systemet som exekveras parallellt för att kunna låta processorn
-jobba med flera saker samtidigt. Biblioteket som används att schemalägga tasks är skapat av Nicholas Wiersma och heter ESP8266Scheduler.
 
-Två av de tre tasksen (pirsensorn och ljudsensorn) agerar som inputs till systemet. Den tredje tasken (WifiTask) kontrollerar om det finns en wifi-anslutning, om anslutningen är nere försöker den återansluta till wifi.
 
 
  
@@ -83,6 +80,18 @@ Två av de tre tasksen (pirsensorn och ljudsensorn) agerar som inputs till syste
 \section{Systembeskrivning}
 Vi har nämt tidigare i rapporten att vårt kamerasystem skall befinna sig i ett passivt läge så länge inget villkor är uppfyllt. Om ett villkor är uppfyllt då aktiveras två virtuella portar i kameran. Den ena riktar kameran mot busshållplatsen (port 8) och den andra (port 9) gör att kameran börjar filma. Då filmar kameran i fem sekunder och sedan filmar den runt omkring medan den vrider sig horisontellt. Efter ett varv riktas kameran mot busshållplatsen igen och det görs genom att aktivera virtuell port 9. Kameran ska forsätta filma några sekunder till och efter det ska den riktas mot sitt standardläge dvs ActionPTZHome. Den totala videolängden är 40 sekunder och filmen skickas till FTP-servern. Ifall ljudsensor detekterar ett annat ljud som är över gränsen inom 40 sekunder då ska processen börja från början dvs kameran riktas tillbaka mot bushållplatsen osv.\\
  Samtidigt som utvecklingskortet väntar på utslag från ljudsensorn, väntar den på utslag från PIR-sensorn. När någon rör sig inne i hållplatsen ser utvecklingskortet till att en lampa tänds och släcks en viss tidsperiod som hela tiden förlängs vid nya rörelser. I det fall där kamerasystemet aktiveras, tar kamerasystemet över PIR-sensorn och låter lampan att blinka tills kamerasystemet är tillbaka till sitt passiva läge.
+
+
+\section{Tekniska Aspekter} 
+Pir-sensorn vi fick gav inte alltid låg signal när det inte före kom rörelse, utan gav alltid ut en hög signal mellan de låga signalerna. dock visste vi att den alltid gav hög signal vid rörelse. Med hjälp av några fördröjningar och en räknare kunde vi anpassa signalerna för att detektera rörelse. Räknaren räknade in 7 olika signalvärden, där vi konstaterade att allt annat än 7 höga värden i rad motsvarade att det inte förekom någon rörelse. Ibland hände det att vi fick höga värden konstant från pir-sensor även när vii inte hade rörelse. Denna störning filtrerade vi bort direkt efter en avlutad runda, genom att omvandla utvecklingskortets input-pin till output-pin och därefter skriva in ett lågt värde. Givetvis gjorde vi om den pin till input innan räknaren skulle börja med en ny runda.
+
+Biblioteket som användes för att schemalägga tasks är skapat av Nicholas Wiersma och heter ESP8266Scheduler. Schemaläggningsalgoritmen som biblioteket använder är enkel att implementera men saknar viktiga funktioner som exempelvis prioritering. Med hjälp av detta bibliotek  skapade vi tre olika tasks, en för nätverksuppkopplingen (WifiTask), en andra för pir sensor (pirTask) och en tredje för ljussensorn  och kameran (micTask). Två av de tre tasken (pirTask och micTask) agerar som inputs till systemet. Den tredje tasken  kontrollerar om det finns en wifi-anslutning, om anslutningen är nere försöker den återansluta till wifi.\\
+Tidsstyrningen i denna schemaläggning var okänd för oss vilket egentligen inte spelade så stor roll i vår lösning. Vi viste dock att när en task hade satts igång att den kunde hoppa över till en ny task efter en viss okänd tid. Samma sak gällde det att den hoppade även tillbaka från task till en tidigare efter ytterligare  en okänd tid. Att tiden var okänd betraktade vi som oväsentligt  eftersom den tasken som hade hand om glaskrossningen och kamera funktionerna gjorde sina uppdrag i enlighet med våra önskemål. Detta hade vi fått bekräftad att det fungerade, genom våra tester som vi gjorde på systemet.
+
+
+
+
+
 
 \section{Arbetsuppgifter}
 Gruppen arbetade både tillsammans och även enskilt så att var och en av gruppmedlemmarna kunde bidra med något. Benjamin var delaktig i arbetet med flödesdiagram, tasks, hjälp med byggandet av busshållplats och även testfall. Yurdaer arbetade med wifi-kodning av ESP:n, kamera-kommandon, ftp-servern och i rapporten skrev han om sina delar samt om etiska aspekter. Georges bidrag var med struktur av kod, API, manual, testfall, FTP-servern och en del rapportskrivning. Han bidrog även med upprättande av en Latex-mall för rapporten. Louay arbetade med sensorernas kodning, ihopkoppling av alla komponenter, förslag till router-lösning, byggandet av en hållplats och kontinuerlig testning av alla kopplingar. 

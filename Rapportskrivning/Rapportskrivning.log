@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.19)  26 FEB 2017 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.26)  3 AUG 2017 23:06
 entering extended mode
 **./Rapportskrivning.tex
 (Rapportskrivning.tex
-LaTeX2e <2017/01/01> patch level 1
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
 (Latex/Classes/PhDthesisPSnPDF.cls
 Document Class: Latex/Classes/PhDthesisPSnPDF 2007/09/06 v2 PhD thesis class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
@@ -36,7 +36,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -57,10 +57,10 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
 ))
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 
@@ -78,17 +78,18 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 )
 \c@ContinuedFloat=\count89
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
-Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
-\fancy@headwidth=\skip43
-\f@ncyO@elh=\skip44
-\f@ncyO@erh=\skip45
-\f@ncyO@olh=\skip46
-\f@ncyO@orh=\skip47
-\f@ncyO@elf=\skip48
-\f@ncyO@erf=\skip49
-\f@ncyO@olf=\skip50
-\f@ncyO@orf=\skip51
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\eucal.sty"
 Package: eucal 2009/06/22 v3.00 Euler Script fonts
@@ -96,20 +97,20 @@ LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 (Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2016/04/23 3.9r The Babel package
+Package: babel 2017/05/19 3.10 The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\arabi\bblopts.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-swedish\swedish.l
-df
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-swedish\swedish.ldf"
 Language: swedish 2005/03/31 v2.3d Swedish support from the babel system
- ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2016/04/23 3.9r Babel common definitions
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2017/05/19 3.10 Babel common definitions
 \babel@savecnt=\count90
 \U@D=\dimen110
 )
@@ -121,14 +122,14 @@ Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@posthook=\toks17
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -340,6 +341,8 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+0219 (decimal 537)
    defining Unicode char U+021A (decimal 538)
    defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
    defining Unicode char U+1E02 (decimal 7682)
    defining Unicode char U+1E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
@@ -360,12 +363,14 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+2039 (decimal 8249)
    defining Unicode char U+203A (decimal 8250)
    defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -406,7 +411,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -440,7 +445,7 @@ Package color Info: Driver file: pdftex.def on input line 147.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\footmisc\footmisc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks18
 \footnotemargin=\dimen111
@@ -455,7 +460,7 @@ Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip52
 \bibsep=\skip53
@@ -466,7 +471,7 @@ LaTeX Info: Redefining \cite on input line 694.
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\multicol.sty"
-Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \c@tracingmulticols=\count94
 \mult@box=\box26
 \multicol@leftmargin=\dimen112
@@ -514,13 +519,14 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \colbreak@box=\box51
 \mc@col@check@num=\count102
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\tocbibind\tocbibind.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
 
+
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
-) (C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\nomencl\nomencl.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\nomencl\nomencl.sty"
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen121
 \nom@tempdim=\dimen122
@@ -532,10 +538,10 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 
 Writing nomenclature file Rapportskrivning.nlo
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -559,7 +565,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -595,7 +601,7 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 \Hy@pagecounter=\count104
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -604,8 +610,8 @@ Now handling font encoding PD1 ...
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `plainpages' set `false' on input line 4362.
-Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4362.
+Package hyperref Info: Option `plainpages' set `false' on input line 4374.
+Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4374.
 
 
 Package hyperref Warning: Values of option `pdfpagelayout':
@@ -616,43 +622,43 @@ Package hyperref Warning: Values of option `pdfpagelayout':
 (hyperref)                * `TwoPageLeft' (PDF 1.5)
 (hyperref)                * `TwoPageRight' (PDF 1.5)
 (hyperref)                * An empty value disables the option.
-(hyperref)                Unknown value `useoutlines' on input line 4362.
+(hyperref)                Unknown value `useoutlines' on input line 4374.
 
-Package hyperref Info: Option `bookmarks' set `true' on input line 4362.
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 4362.
-Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 436
-2.
-Package hyperref Info: Option `breaklinks' set `true' on input line 4362.
-Package hyperref Info: Option `linktocpage' set `true' on input line 4362.
-Package hyperref Info: Option `colorlinks' set `false' on input line 4362.
-Package hyperref Info: Option `hyperindex' set `false' on input line 4362.
-Package hyperref Info: Option `hyperfigures' set `true' on input line 4362.
-Package hyperref Info: Hyper figures ON on input line 4484.
-Package hyperref Info: Link nesting OFF on input line 4491.
-Package hyperref Info: Hyper index OFF on input line 4496.
-Package hyperref Info: Plain pages OFF on input line 4501.
-Package hyperref Info: Backreferencing OFF on input line 4506.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4374.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 4374.
+Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 437
+4.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4374.
+Package hyperref Info: Option `linktocpage' set `true' on input line 4374.
+Package hyperref Info: Option `colorlinks' set `false' on input line 4374.
+Package hyperref Info: Option `hyperindex' set `false' on input line 4374.
+Package hyperref Info: Option `hyperfigures' set `true' on input line 4374.
+Package hyperref Info: Hyper figures ON on input line 4496.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index OFF on input line 4508.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4735.
+Package hyperref Info: Bookmarks ON on input line 4751.
 \c@Hy@tempcnt=\count106
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5088.
+LaTeX Info: Redefining \url on input line 5104.
 \XeTeXLinkMargin=\dimen124
 \Fld@menulength=\count107
 \Field@Width=\dimen125
 \Fld@charsize=\dimen126
-Package hyperref Info: Hyper figures ON on input line 6340.
-Package hyperref Info: Link nesting OFF on input line 6347.
-Package hyperref Info: Hyper index OFF on input line 6352.
-Package hyperref Info: backreferencing OFF on input line 6357.
-Package hyperref Info: Link coloring OFF on input line 6362.
-Package hyperref Info: Link coloring with OCG OFF on input line 6367.
-Package hyperref Info: PDF/A mode OFF on input line 6372.
-LaTeX Info: Redefining \ref on input line 6412.
-LaTeX Info: Redefining \pageref on input line 6416.
+Package hyperref Info: Hyper figures ON on input line 6356.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index OFF on input line 6368.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
 \Hy@abspage=\count108
 \c@Item=\count109
 \c@Hfootnote=\count110
@@ -661,7 +667,7 @@ LaTeX Info: Redefining \pageref on input line 6416.
 Package hyperref Message: Driver: hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
 \Fld@listcount=\count111
 \c@bookmark@seq@number=\count112
 
@@ -686,7 +692,7 @@ less on input line 206.
 \openout2 = `Latex/Macros/MacroFile1.aux'.
 
 (Latex/Macros/MacroFile1.tex)
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+(C:\Users\Yurdaer\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
 \lst@mode=\count113
 \lst@gtempboxa=\box52
 \lst@token=\toks19
@@ -700,23 +706,24 @@ less on input line 206.
 \lst@lineno=\count118
 \lst@maxwidth=\dimen132
 
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+(C:\Users\Yurdaer\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count119
 \lst@skipnumbers=\count120
 \lst@framebox=\box53
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+(C:\Users\Yurdaer\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+
+(C:\Users\Yurdaer\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\base\glossar
-ies.sty
-Package: glossaries 2017/01/19 v4.29 (NLCT)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\base\glossaries.sty"
+Package: glossaries 2017/06/11 v4.30 (NLCT)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
@@ -727,24 +734,26 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@depth=\count121
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\mfirstuc\mfirstuc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\mfirstuc\mfirstuc.sty"
 Package: mfirstuc 2016/07/31 v2.04 (NLCT)
 
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count122
 )
 \@glsmfirst=\toks22
 \@glsmrest=\toks23
-) (C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\textcase\textcase.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
-) (C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\xfor\xfor.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\xfor\xfor.sty"
 Package: xfor 2009/02/05 v1.05 (NLCT)
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\datatool\datatool-base.
-sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\datatool\datatool-base.sty"
 Package: datatool-base 2016/07/28 v2.27 (NLCT)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip58
 
@@ -802,22 +811,22 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\substr\substr.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\substr\substr.sty"
 Package: substr 2009/10/20 v1.2 Handle substrings
 \c@su@anzahl=\count135
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\datatool\datatool-fp.st
-y
+("C:\Program Files\MiKTeX 2.9\tex\latex\datatool\datatool-fp.sty"
 Package: datatool-fp 2016/07/28 v2.27 (NLCT)
- (C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp.sty
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp.sty"
 Package: fp 1995/04/02
 
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\defpattern.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\defpattern.sty"
 Package: defpattern 1994/10/12
 \actioncount=\count136
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-basic.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-basic.sty"
 Package: fp-basic 1996/05/13
 \FP@xs=\count137
 \FP@xia=\count138
@@ -829,32 +838,32 @@ Package: fp-basic 1996/05/13
 \FP@regs=\count144
 \FP@times=\count145
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-addons.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-addons.sty"
 Package: fp-addons 1995/03/15
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-snap.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-snap.sty"
 Package: fp-snap 1995/04/05
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-exp.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-exp.sty"
 Package: fp-exp 1995/04/03
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-trigo.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-trigo.sty"
 Package: fp-trigo 1995/04/14
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-pas.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-pas.sty"
 Package: fp-pas 1994/08/29
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-random.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-random.sty"
 Package: fp-random 1995/02/23
 \FPseed=\count146
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-eqn.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty"
 Package: fp-eqn 1995/04/03
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-upn.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-upn.sty"
 Package: fp-upn 1996/10/21
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\fp\fp-eval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-eval.sty"
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks29
@@ -867,27 +876,24 @@ Package: fp-eval 1995/04/03
 \dtl@codeB=\count152
 \@dtl@foreach@level=\count153
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\base\glossar
-ies-compatible-307.sty
-Package: glossaries-compatible-307 2017/01/19 v4.29 (NLCT)
-)
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\tracklang\tracklang.sty
-Package: tracklang 2016/11/03 v1.3.3 (NLCT) Track Languages
+("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\base\glossaries-compatible-3
+07.sty"
+Package: glossaries-compatible-307 2017/06/11 v4.30 (NLCT)
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\tracklang\tracklang.sty"
+Package: tracklang 2017/03/25 v1.3.4 (NLCT) Track Languages
 
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\generic\tracklang\tracklang.t
-ex))
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\translator\trans
-lator.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\tracklang\tracklang.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\translator\translator.sty"
 Package: translator 2010/06/12 ver 1.10
 
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\translator\trans
-lator-language-mappings.tex))
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries-swedish\glos
-saries-swedish.ldf
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\translator\translator-language-m
+appings.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries-swedish\glossaries-swedish.l
+df"
 File: glossaries-swedish.ldf 2016/03/05 v1.0
 
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries-swedish\glos
-saries-swedish-utf8.ldf))
+("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries-swedish\glossaries-swedish-u
+tf8.ldf"))
 \gls@level=\count154
 \@gls@tmpb=\toks30
 \gls@tmplen=\skip62
@@ -896,19 +902,16 @@ saries-swedish-utf8.ldf))
 \glsshorttok=\toks33
 \glslongtok=\toks34
 
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\gloss
-ary-hypernav.sty
-Package: glossary-hypernav 2017/01/19 v4.29 (NLCT)
-)
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\gloss
-ary-list.sty
-Package: glossary-list 2017/01/19 v4.29 (NLCT)
+("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypernav.sty
+"
+Package: glossary-hypernav 2017/06/11 v4.30 (NLCT)
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-list.sty"
+Package: glossary-list 2017/06/11 v4.30 (NLCT)
 \glslistdottedwidth=\skip63
-)
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\gloss
-ary-long.sty
-Package: glossary-long 2017/01/19 v4.29 (NLCT)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-long.sty"
+Package: glossary-long 2017/06/11 v4.30 (NLCT)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip64
 \LTright=\skip65
@@ -929,12 +932,10 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \glsdescwidth=\skip68
 \glspagelistwidth=\skip69
 )
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\gloss
-ary-super.sty
-Package: glossary-super 2017/01/19 v4.29 (NLCT)
+("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-super.sty"
+Package: glossary-super 2017/06/11 v4.30 (NLCT)
 
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\supertabular\supertabul
-ar.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \c@tracingst=\count160
 \ST@wd=\dimen143
@@ -953,9 +954,8 @@ Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \ST@dimen=\dimen153
 \ST@pbox=\box60
 ))
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\gloss
-ary-tree.sty
-Package: glossary-tree 2017/01/19 v4.29 (NLCT)
+("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.sty"
+Package: glossary-tree 2017/06/11 v4.30 (NLCT)
 \glstreeindent=\skip73
 ))
 \glswrite=\write4
@@ -964,7 +964,8 @@ Package: glossary-tree 2017/01/19 v4.29 (NLCT)
 
 Package glossaries Info: Writing glossary file Rapportskrivning.glo on input li
 ne 141.
- (Rapportskrivning.aux (0_frontmatter/abstract.aux)
+
+(Rapportskrivning.aux (0_frontmatter/abstract.aux)
 (0_frontmatter/dedication.aux) (0_frontmatter/acknowledgement.aux)
 (1_introduction/introduction.aux) (3_theory/theory.aux) (4/XYZ.aux) (5/XYZ.aux)
 (8_materials_and_methods/materials_methods.aux) (7_discussion/discussion.aux)
@@ -986,7 +987,7 @@ LaTeX Font Info:    ... okay on input line 149.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
 LaTeX Font Info:    ... okay on input line 149.
 
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count161
 \scratchdimen=\dimen154
@@ -1016,7 +1017,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 
-(C:\Users\Benjamin\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\ltcaption.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
@@ -1065,8 +1066,8 @@ Package babel Info: Redefining swedish shorthand "~
 
 \openout4 = `Rapportskrivning.ist'.
 
-{C:/Users/Benjamin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./0_fron
-tmatter/figures/MAH_logotyp_original.jpg>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./0_frontmatter/figures/M
+AH_logotyp_original.jpg>]
 \openout2 = `0_frontmatter/abstract.aux'.
 
  (0_frontmatter/abstract.tex
@@ -1670,27 +1671,23 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
 Package rerunfilecheck Info: File `Rapportskrivning.out' has not changed.
 (rerunfilecheck)             Checksum: D03BB3A9EAD0E70C20532E49289C51E6;1118.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
  ) 
 Here is how much of TeX's memory you used:
- 16885 strings out of 493333
- 270744 string characters out of 3139185
- 449706 words of memory out of 3000000
- 19907 multiletter control sequences out of 15000+200000
+ 16949 strings out of 493323
+ 269791 string characters out of 3139060
+ 452141 words of memory out of 3000000
+ 19979 multiletter control sequences out of 15000+200000
  12439 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,13n,79p,1932b,1865s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,13n,79p,1932b,1869s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb>
-Output written on Rapportskrivning.pdf (30 pages, 1146734 bytes).
+Output written on Rapportskrivning.pdf (30 pages, 1144804 bytes).
 PDF statistics:
  371 PDF objects out of 1000 (max. 8388607)
  119 named destinations out of 1000 (max. 500000)
