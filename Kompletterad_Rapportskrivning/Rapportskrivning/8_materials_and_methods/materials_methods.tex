@@ -54,7 +54,7 @@ Information om FTP-servern:
 \section{Metoder} 
 Om PIR-sensorn detekterar någon rörelse då skall lampan tändas en viss tid och sedan släckas. Om lampan är tänd och PIR-sensorn detekterar ny rörelse då fortsätter lampan vara tänd.\\
 
- Ljud-sensorn är också igång hela tiden. Om ljudsensorn detekterar ett ljud som är över gränsvärdet skall den viktiga processen börja. På grund av brist på glas och utrymme för oss att göra testförsök med att ta sönder glas använde vi istället plast. Plasten skulle föreställa glaset i en busshållplats. Vi kom överens om att sätta tröskelvärdet till 75 utav max 1024 som analoga ingången kunde läsa. Över denna gräns indikerades att glas hade gått sönder.\\
+På grund av brist på glas och utrymme för oss att göra testförsök med att ta sönder glas använde vi istället plast. Plasten skulle föreställa glaset i en busshållplats. Ljud-sensorn är precis som PIR-sensorn också igång hela tiden. Om ljudsensorn detekterar ett ljud som är över gränsvärdet skall den viktiga processen börja. Tester vi utförde på systemt för att filtrera bort störningar medförde att ljudsensorn fick ett tröskelvärde på 75 utav max 1024 som den analoga ingången kunde läsa. Över denna gräns indikerades att glas hade gått sönder. Eftersom denna enkla signalbehandlingen av ljudsensorn räckte för att uppnå våra önskemål och lösa uppgiften så krävdes ingen mer avancerad filtrering av signalen.\\
 
 IP-kameran var installerad i mitten av vägen så att den kan rotera fritt eftersom vandaliseringen kan ske på avstånd från hållplatsen. Den var ansluten via ethernet och vi styrde den med hjälp av http-kommando som utvecklingskortet skickade iväg. Vi fick kamerans http-API (VAPIX) från Axis. Inne i kameran skapade vi tre events ActionPTZStation1, ActionRecord, ActionPTZHome.
 
@@ -65,17 +65,6 @@ ActionRecord: När virtuell port 9 aktiveras så börjar kameran videoinspelning
 ActionPTZHome: När virtuell port 10 aktiveras så riktas kameran mot en bestämd position som heter Safe24 och som motsvarar start och slutpositionen för kameran.\\
 
 
-
-
- 
-
-
-
-
-
-
-
-
 \clearpage
 \section{Systembeskrivning}
 Vi har nämt tidigare i rapporten att vårt kamerasystem skall befinna sig i ett passivt läge så länge inget villkor är uppfyllt. Om ett villkor är uppfyllt då aktiveras två virtuella portar i kameran. Den ena riktar kameran mot busshållplatsen (port 8) och den andra (port 9) gör att kameran börjar filma. Då filmar kameran i fem sekunder och sedan filmar den runt omkring medan den vrider sig horisontellt. Efter ett varv riktas kameran mot busshållplatsen igen och det görs genom att aktivera virtuell port 9. Kameran ska forsätta filma några sekunder till och efter det ska den riktas mot sitt standardläge dvs ActionPTZHome. Den totala videolängden är 40 sekunder och filmen skickas till FTP-servern. Ifall ljudsensor detekterar ett annat ljud som är över gränsen inom 40 sekunder då ska processen börja från början dvs kameran riktas tillbaka mot bushållplatsen osv.\\
@@ -83,13 +72,12 @@ Vi har nämt tidigare i rapporten att vårt kamerasystem skall befinna sig i ett
 
 
 \section{Tekniska Aspekter} 
-Pir-sensorn vi fick gav inte alltid låg signal när det inte före kom rörelse, utan gav alltid ut en hög signal mellan de låga signalerna. dock visste vi att den alltid gav hög signal vid rörelse. Med hjälp av några fördröjningar och en räknare kunde vi anpassa signalerna för att detektera rörelse. Räknaren räknade in 7 olika signalvärden, där vi konstaterade att allt annat än 7 höga värden i rad motsvarade att det inte förekom någon rörelse. Ibland hände det att vi fick höga värden konstant från pir-sensor även när vii inte hade rörelse. Denna störning filtrerade vi bort direkt efter en avlutad runda, genom att omvandla utvecklingskortets input-pin till output-pin och därefter skriva in ett lågt värde. Givetvis gjorde vi om den pin till input innan räknaren skulle börja med en ny runda.
+Pir-sensorn vi använde oss av gav oftast låg signal när det inte förekom rörelse. I de fall där PIR-sensorn gav hög signal när ingen rörelse förekom har detta åtgärdats genom att filtrera signalen. Med hjälp av några fördröjningar och en räknare skapade vi en såkallad runda. På så sätt kunde vi anpassa signalerna för att detektera enbart rörelse. Räknaren räknade in 7 olika signalvärden. Tester av systemet visade att enbart 7 höga värden i rad motsvarade att rörelse detekterats. Ibland hände det att vi fick höga värden konstant från PIR-sensorn även när vi inte hade rörelse. Denna störning filtrerade vi bort direkt efter en avlutad runda; genom att omvandla utvecklingskortets input-pin till output-pin och därefter skriva in ett lågt värde. Givetvis gjorde vi om output-pin till input-pin innan räknaren skulle börja med en ny runda.
 
-Biblioteket som användes för att schemalägga tasks är skapat av Nicholas Wiersma och heter ESP8266Scheduler. Schemaläggningsalgoritmen som biblioteket använder är enkel att implementera men saknar viktiga funktioner som exempelvis prioritering. Med hjälp av detta bibliotek  skapade vi tre olika tasks, en för nätverksuppkopplingen (WifiTask), en andra för pir sensor (pirTask) och en tredje för ljussensorn  och kameran (micTask). Två av de tre tasken (pirTask och micTask) agerar som inputs till systemet. Den tredje tasken  kontrollerar om det finns en wifi-anslutning, om anslutningen är nere försöker den återansluta till wifi.\\
-Tidsstyrningen i denna schemaläggning var okänd för oss vilket egentligen inte spelade så stor roll i vår lösning. Vi viste dock att när en task hade satts igång att den kunde hoppa över till en ny task efter en viss okänd tid. Samma sak gällde det att den hoppade även tillbaka från task till en tidigare efter ytterligare  en okänd tid. Att tiden var okänd betraktade vi som oväsentligt  eftersom den tasken som hade hand om glaskrossningen och kamera funktionerna gjorde sina uppdrag i enlighet med våra önskemål. Detta hade vi fått bekräftad att det fungerade, genom våra tester som vi gjorde på systemet.
+Biblioteket som användes för att schemalägga tasks är skapat av Nicholas Wiersma och heter ESP8266Scheduler. Schemaläggningsalgoritmen som biblioteket använder är enkel att implementera men saknar viktiga funktioner som exempelvis prioritering; vi hade ingen möjlighet att påverka prioriteringen. Med hjälp av detta bibliotek  skapade vi tre olika tasks, en för nätverksuppkopplingen (WifiTask), en för PIR-sensorn (pirTask) och en tredje för ljussensorn och kameran (micTask). Två av de tre tasken (pirTask och micTask) agerar som inputs till systemet. Den tredje tasken  kontrollerar om det finns en WiFi-anslutning, om anslutningen är nere försöker den återansluta till wifi.\\
+Vi visste att när alla tasks hade initierats så kunde varje task hoppa över till en ny task efter en viss okänd tid. Att tiden var okänd betraktade vi som oväsentligt eftersom den tasken som hade hand om glaskrossningen och kamera funktionerna utförde sina uppdrag i enlighet med våra önskemål. Detta hade vi fått bekräftat genom våra tester av systemet.\\
 
-
-
+Vi visste att delayerna inne i en task styrde funktionerna i tasken. Däremot såg vi från våra tester att en och samma task kunde köras två gånger i rad utan att delayerna i föregående task påverkade. Det saknades information om vilken typ av schemaläggning som används i biblioteket som vi använde för schemaläggningen. Utifrån våra tester så verkar tasksen turas om beroende på delayerna som finns inne i varje task.
 
 
 

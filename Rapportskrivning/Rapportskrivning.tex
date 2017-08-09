@@ -136,9 +136,9 @@ section,]      %use section level for toc entries
 \usepackage{color}
 
 
-\glstoctrue
+%\glstoctrue
 %Activate glossary commands
-\makeglossaries
+%\makeglossaries
 \setcitestyle{square}
 
 
@@ -169,7 +169,6 @@ section,]      %use section level for toc entries
 % Your institution may have specific regulations if you need an abstract and where it is to be placed in the document. The default here is just after title.
 
 \include{0_frontmatter/abstract}
-
 % The original template provides and abstractseparate environment, if your institution requires them to be separate. I think it's easier to print the abstract from the complete thesis by restricting printing to the relevant page.
 % \begin{abstractseparate}
 %   \input{Abstract/abstract}
@@ -185,12 +184,14 @@ section,]      %use section level for toc entries
 
 
 %: ----------------------- contents ------------------------
-
+%\newpage
+%\thispagestyle{empty}
+\pagenumbering{arabic}
 \setcounter{secnumdepth}{3} % organisational level that receives a numbers
 \setcounter{tocdepth}{3}    % print table of contents for level 3
-\tableofcontents            % print the table of contents
+\tableofcontents           % print the table of contents
 % levels are: 0 - chapter, 1 - section, 2 - subsection, 3 - subsection
-
+\thispagestyle{empty}
 
 %: ----------------------- list of figures/tables ------------------------
 
@@ -199,7 +200,6 @@ section,]      %use section level for toc entries
 % Tie in external source file for definitions: /0_frontmatter/glossary.tex
 % Glossary entries can also be defined in the main text. See glossary.tex
  
-\newpage
 \begin{multicols}{2} % \begin{multicols}{#columns}[header text][space]
 \begin{footnotesize} % scriptsize(7) < footnotesize(8) < small (9) < normal (10) % target name for links to glossary\nomenclature{MLP}{Multilayerperceptron; a type of network that includes one layer of input nodes, a arbitrary count of hidden layers and a output layer of nodes} 
 \printglossaries
@@ -222,6 +222,7 @@ section,]      %use section level for toc entries
 
 % Parts of the thesis are included below. Rename the files as required.
 % But take care that the paths match. You can also change the order of appearance by moving the include commands.
+
 \include{1_introduction/introduction}	% background information
 %\include{2/aims}						% aims of the project
 \include{3_theory/theory}			

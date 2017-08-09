@@ -20,13 +20,19 @@
 
 
 \section{Metoder}
-Nu när gruppen hade ett problem återstod det att lösa problemet. I kittet fanns olika komponenter och sensorer. I början var uppmärksamheten riktad mot en vibrationssensor för att upptäcka slag eller skadegörelse mot glasrutorna, dock visade det sig omedelbart att den var för känslig. Under tiden var det bestämt att använda en pir-sensor som skulle upptäcka rörelse inne i hållplatsen och därefter tända en lampa en viss period av tid. Tanken var att göra väntande busspassagerare trygga med hjälp av ljuset medan de väntade på bussen. Tillbaka till skadegörelsen av glasrutorna för att nu hade gruppen bestämt sig för att använda en ljud-sensor för att upptäcka slag eller skadegörelse mot en glasruta. En IP-kamera var installerad i mitten av vägen för att först filma hållplatsen och även runt omkring i ett varv om 360 grader. 
-För att hela systemet skulle kunna fungera samtidigt så användes en schemaläggare så att varje komponent kunde vara aktiv utan att begränsa andra komponenter. Detta var nödvändigt att göra eftersom sensorer som användes skulle lyssna kontinuerligt på förändringar hos omgivningen medan systemet var aktivt och utförde andra uppgifter.\\
+För att öka tryggheten för väntande bussresenärer utvecklades ett system för att detektera närvaro.\\
 
-Pir-sensorns uppgift var att lysa upp busshållplatsen vid rörelse i den. Ljud-sensorns uppgift var att tala om för mikroprocessorn att aktivera IP-kameran så den filmade och skickade iväg filmen till en server. Därför upprättades en FTP-server för att kunna ta emot inspelningar och olika data från kameran och lagra dessa på en dator. Det behövdes ett nätverk för att åstadkomma kommunikation mellan de olika delarna. Mikroprocessorn med sina sensorer tillsammans med kameran och FTP-servern var uppkopplade inom samma nät, delvis via WIFI-anslutning och delvis med direkt-kabel-anslutning.
+En vibrationssensor användes först men den var för känslig så vibrationssensorn ersattes med en PIR-sensor istället. När värdet från PIR-sensorn överskred ett tröskelvärde så tändes en lampa. Lampan var tänd en viss förutbestämd tid innan den släcktes. Denna systemlösningen kommer att användas när aktiv övervakning ska ske.\\
 
-De finns olika tasks  i systemet som exekveras parallellt för att kunna låta processorn jobba med flera saker samtidigt. Det finns totalt 3 tasks i systemet varvid två av de (pirsensorn och ljudsensorn) agerar som inputs till systemet. Den tredje tasken (WifiTask) kontrollerar om det finns en wifi-anslutning, om anslutningen är nere försöker den återansluta till wifi.
-Biblioteket som möjliggör att dessa tasks arbetar oberoende av varandra och som detta systemet använde sig av skapades av Nicholas Wiersma och heter ESP8266Scheduler. 
+För att upptäcka vandalisering av busshållplatsen användes en ljud-sensor. \\
+
+IP-kameran var installerad i mitten av vägen för att först filma hållplatsen och sen omgivningen runt hållplatsen. Detta är viktigt eftersom vandaliseringen kan ske på avstånd.\\
+
+En schemaläggare användes för att hela systemet skulle fungera samtidigt så att komponenter inte begränsade varandra. Varje komponent turades om en begränsad tid att vara aktiv. Detta var nödvändigt att göra eftersom sensorer skulle lyssna kontinuerligt på förändringar hos omgivningen medan systemet var aktivt och utförde andra uppgifter.\\
+
+En FTP-server upprättades för att kunna ta emot videoinspelningar från IP-kameran . När IP-kameran aktiverades så filmade kameran 5 sekunder och sen ett helt varv på ytterligare 30 sekunder. \\
+
+Det finns totalt tre tasks i systemet som exekveras parallellt för att kunna låta processorn jobba med flera saker samtidigt. Biblioteket som möjliggör att dessa tasks arbetar oberoende av varandra och som detta systemet använde sig av skapades av Nicholas Wiersma och heter ESP8266Scheduler. Två av de tre tasksen(pirsensorn och ljudsensorn) agerar som inputs till systemet. Den tredje tasken (WifiTask) kontrollerar om det finns en wifi-anslutning, om anslutningen är nere försöker den återansluta.
 
 \begin{figure}[h]
 
@@ -38,10 +44,12 @@ Biblioteket som möjliggör att dessa tasks arbetar oberoende av varandra och so
 
 
 \section{ESP8266 - mikroprocessorn}
-Huvudanledningen för valet av denna mikroprocessor var att den hade en inbyggd Wifi-mottagare vilket var absolut nödvändigt för att kunna kommunicera med nätverket där kameran var uppkopplad. Givetvis kunde gruppen hitta på alternativa lösningar men just denna lösning var den smidigaste. I övrigt fanns det allt de behövde till deras projekt. Det fanns gott om digitala pins samt en analog-pin, dock tog den emot max 1 V. \\
+Huvudanledningen för valet av denna mikroprocessor var att den hade en inbyggd Wifi-mottagare vilket var absolut nödvändigt för att kunna kommunicera med nätverket där kameran var uppkopplad. Givetvis kunde gruppen hitta på alternativa lösningar men just denna lösning var den smidigaste. Det fanns tillräckligt med både digitala ingångar och en analog ingång. Den analoga ingången klarar en spänning på 1V.\\
 
-Deras tanke var att kopppla sensorer till ESP:n som sedan kommunicerade med kameran utifrån de uppgiffter som lästes in från sensorerna. ESP:n var då kopplad till samma nätverk som kameran och kommunicerade och skickade kommandon till kameran.
-Att läsa värden från senors-pin:n var inget problem, dock fanns det problem med själva hanteringen av dessa värden rent tidsmässigt och periodiskt. Koden nedan visar hur gruppen fick sina värden.
+Sensorer kopplades till ESP:n och ESP:n kommunicerade med kameran via wifi-anslutning.\\
+
+Svårigheten som uppstod var hanteringen av avlästa sensor värden med avseende på tid och periodicitet. Koden nedan visar hur gruppen fick sina värden:
+
 \begin{lstlisting}
 const int pirSen = 13; // Digital pin for pir sensor
 ...
@@ -77,7 +85,7 @@ void doWhenMove() {
   }  
 }
 \end{lstlisting}
-När det gällde mikrofonen så läste gruppen av sensorn analogt. Det uppstod under demo-dagen ett problem där mic-sensorn gav höga analoga värden konstant utan stopp. Det berodde på att sensorn hängde upp och ner och vid montering under redovisningen hade sladden till den analoga pin:n lossnat vilket medförde att ESP:n läste in analoga värden på 1023. Det löstes genom att först filtrera bort detta värde i koden med en if-sats och i kretsen genom att koppla ESP:ns analoga pin till jord via en resistor med en hög resistans så den inte påverkade sensorns avläsning när den var korrektkopplad. Koden nedan visar hur sensorn läser in sina värden.
+ESP:n läste av ljud-sensorn (mikrofonen) analogt. Det uppstod under demo-dagen ett problem där mikrofonen hela tiden gav höga analoga värden. Det berodde på att sensorn hängde upp och ner och vid montering under redovisningen hade sladden från mikrofonen till ESP:n lossnat vilket medförde att ESP:n läste in analoga värden på 1023. Det löstes genom att filtrera bort analoga värdet på 1023 i koden med en if-sats och kopplade ESP:ns analoga pin till jord via en resistor. Resistorn hade en hög resistans så den inte påverkade sensorns avläsning. Koden nedan visar hur sensorn läser in sina värden.
 
 \begin{lstlisting}
 const int micSen = A0; // Analogpin for the pir sensor 
@@ -100,7 +108,9 @@ void doWithSensorValue(int sensorvalue) {
 \end{lstlisting}
 
 \section{FTP-Server}
-För att kunna identifiera personer som ligger bakom skadegörelser behövde systemet lagra bilder eller/och filmer på en server och den var en viktig del av lösningen. Gruppen valde att använda en FTP-server där bilder och/eller filmer skulle lagras. FTP-servern låg under samma subnät som IP-kameran. Information om FTP-servern:
+För att kunna identifiera personer begår vandalisering måste systemet lagra bilder/inspelningar på en server. En FTP-server användes. FTP-servern och IP-kameran låg under samma subnät.\\
+
+Information om FTP-servern:
 
 \begin{itemize}
 \item IP adress : 192.168.0.106
@@ -113,17 +123,19 @@ För att kunna identifiera personer som ligger bakom skadegörelser behövde sys
 
 \end{itemize}
 \section{IP-kameran}
-Kameran som används var tillhandahållen av AXIS. Kameran var en Q6128-E Network Camera med möjlighet till att via  internetuppkoppling sända bilder och streama video till en server.\\
+Kameran är av modellen Q6128-E Network Camera med möjlighet till internetuppkoppling. Upplösningen som används är 3840x2860. Ett suffix med datum och tidsinformation läggs till i filnamnet för inspelningen.\\
 
-IP-kameran användes för att skicka bilder och video till en server för datalagring.
+IP-kameran användes för att skicka bilder och video till en server för datalagring.\\
 
-Kommunikationen med kameran gjordes via ESP8266 som sände kommandon över internet för att styra kameran.
+Kommunikationen med kameran gjordes via ESP8266 som sände kommandon över internet för att styra kameran.\\
 
-Grupperna skapade tre aktiviteter i kameran, ”ActionPTZStation1”, ”ActionRecord”, ”ActionPTZHome”.
-ActionRecord var en aktivitet som spelade in en film som var en minut lång och skickade den till FTP-server som har namnet FTP-Safe24. Filmens upplösning som skickades till FTP-servern var 3840x2860. Ett suffix lades i filmen som innehöll datum och tidsinformation. ActionRecord aktiverades när virtuell port 9 var aktiv.\\
-ActionPTZHome var den som riktade kameran till hemposition. Kamerans hemposition var definierad som position ”Safe24”. ActionPTZHome kunde aktiveras genom att aktivera virtuell port nummer 10.
-ActionPTZStation1 var den som riktade kameran till position som heter ”plats1” (busshållplatsen). ”. ActionPTZHome kunde aktiveras egenom att aktivera virtuell port nummer 8.
+Tre events skapades; "ActionPTZStation1", "ActionRecord", "ActionPTZHome".\\
 
+ActionPTZStation1: När virtuell port X aktiveras så riktas kameran till en bestämd position som heter "plats1" (busshållplatsen).\\
+
+ActionRecord: När virtuell port 9 aktiveras så börjar kameran videoinspelningen. Efter avslutad inspelning skickas inspelningen till FTP-servern. \\
+
+ActionPTZHome: När virtuell port X aktiveras så riktas kameran till en bestämd position som heter "Safe24" och motsvarar start och slutpositionen för kameran.\\
 
 \section{Sensorer}
 En PIR-sensor från Adafruit användes som rörelsedetektor för att lysa upp den stora lampan. Den kopplades till ESP:n via tre sladdar, en röd som gick till strömmen, trots att det krävdes minst 5 V så gick det bra med 3,3 V från ESP:n. Den andra sladden gick till jord och den tredje är själva signalsladden som då gick till en digital pin som var satt till input-mode. För att gruppen skulle lyckas med pir-sensorn fick de med hjälp av delay och en counter räkna in hur många gånger som signalen är hög eller låg. Efter flera tester och försök kom de fram till att det behövdes minst 7 rundor där en runda är på 0,5 s. Anledningen till detta var att näär det inte fanns rörelse så gav PIR-sensor utsalg med 6 ettor och en nolla. Då det fanns rörelse gav den utslag på bara ettor. Slutligen gällde det att om programmmet läste in 7 värden från signal-pin, så skulle summan vara 7 vid rörelse och om summan var under sju betydde det att ett av värden var noll, alltså ingen rörelse. Ibland kom det även störningar som gjorde att PIR-sensorn bara visade ettor, vilket senare fram i tiden löstes genom att utföra en digitalWrite på PIR-input-pin:n med värdet låg.  \\
