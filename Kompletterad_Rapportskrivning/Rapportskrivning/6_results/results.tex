@@ -3,22 +3,17 @@
 
 
 %: ----------------------- name of chapter  -------------------------
-\chapter{Resultat} % top level followed by section, subsection
-\label{ch:resultat}
+\chapter{Resultat} % top level followed by section,subsection
+\label{resultat}
 
 %: ----------------------- paths to graphics ------------------------
 
-% change according to folder and file names
-\ifpdf
-    \graphicspath{{6/figures/PNG/}{6/figures/PDF/}{6/figures/}}
-\else
-    \graphicspath{{6/figures/EPS/}{6/figures/}}
-\fi
+
 
 %: ----------------------- contents from here ------------------------
 
 
-\section{Testfall}
+
 Under testfasen användes det webbaserade programmet testrail. Fördelen med det var att flera personer kunde lägga till och redigera testfallen samt att vi fick en grafisk överblick över vilka testfall som har passerat respektive fallerat. 
 Testfallen skrevs på så sätt att de skulle validera systemlösningen vilket gick ut på att kontrollera kamerans bestämda rörlighet, sensorernas känslighet, kommunikationen mellan esp8266 och kameran, kommunikationen mellan kameran och ftp-servern samt att testa kamerans anslutning till wifi nätverket.
 Vi testade schemaläggningen genom att skriva ut ett visst ord i slutet av varje task, och vänta på att se det ordet utskrivet. När vi startade programmet såg vi att vissa task kördes flera gånger innan den hoppade till nästa task, dock kördes alla task i ordning. 
