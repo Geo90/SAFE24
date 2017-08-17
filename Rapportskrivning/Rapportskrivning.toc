@@ -10,11 +10,13 @@
 \contentsline {section}{\numberline {3.5}Sensorer}{9}{section.3.5}
 \contentsline {section}{\numberline {3.6}Systembeskrivning}{12}{section.3.6}
 \contentsline {section}{\numberline {3.7}Arbetsuppgifter}{12}{section.3.7}
-\contentsline {chapter}{\numberline {4}Diskussion \& Framtid}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}Diskussion}{14}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Lagar och Etsika Aspekter}{14}{subsection.4.1.1}
-\contentsline {chapter}{Litteraturf\"orteckning}{16}{chapter*.8}
-\contentsline {chapter}{\numberline {5}Bilaga}{17}{chapter.5}
-\contentsline {section}{\numberline {5.1}GitHub-l\IeC {\"a}nk}{17}{section.5.1}
-\contentsline {section}{\numberline {5.2}Diagram}{17}{section.5.2}
-\contentsline {section}{\numberline {5.3}Testfall}{21}{section.5.3}
+\contentsline {chapter}{\numberline {4}Resultat}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Testfall}{14}{section.4.1}
+\contentsline {chapter}{\numberline {5}Diskussion \& Framtid}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}Diskussion}{15}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Lagar och Etsika Aspekter}{15}{subsection.5.1.1}
+\contentsline {chapter}{Litteraturf\"orteckning}{17}{chapter*.8}
+\contentsline {chapter}{\numberline {6}Bilaga}{18}{chapter.6}
+\contentsline {section}{\numberline {6.1}GitHub-l\IeC {\"a}nk}{18}{section.6.1}
+\contentsline {section}{\numberline {6.2}Diagram}{18}{section.6.2}
+\contentsline {section}{\numberline {6.3}Testfall}{22}{section.6.3}

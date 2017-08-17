@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.31)  31 MAR 2017 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  16 AUG 2017 02:44
 entering extended mode
 **./Rapportskrivning.tex
 (Rapportskrivning.tex
@@ -6,9 +6,9 @@ LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
 (Latex/Classes/PhDthesisPSnPDF.cls
 Document Class: Latex/Classes/PhDthesisPSnPDF 2007/09/06 v2 PhD thesis class
-("C:\Verktyg\MiKTeX 2.9\tex\latex\base\report.cls"
+(E:\Miktex\tex\latex\base\report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Verktyg\MiKTeX 2.9\tex\latex\base\size11.clo"
+(E:\Miktex\tex\latex\base\size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,10 +24,10 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(E:\Miktex\tex\latex\amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(E:\Miktex\tex\latex\amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks14
 \symAMSa=\mathgroup4
@@ -35,36 +35,36 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Verktyg\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+(E:\Miktex\tex\latex\graphics\graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(E:\Miktex\tex\latex\graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+(E:\Miktex\tex\latex\graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+(E:\Miktex\tex\latex\graphics-def\pdftex.def
 File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
-("C:\Verktyg\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(E:\Miktex\tex\generic\oberdiek\infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Verktyg\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(E:\Miktex\tex\generic\oberdiek\ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
 ))
-("C:\Verktyg\MiKTeX 2.9\tex\latex\caption\caption.sty"
+(E:\Miktex\tex\latex\caption\caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+(E:\Miktex\tex\latex\caption\caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(E:\Miktex\tex\latex\graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
@@ -78,57 +78,55 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 )
 \c@ContinuedFloat=\count89
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
-Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
-\fancy@headwidth=\skip43
-\f@ncyO@elh=\skip44
-\f@ncyO@erh=\skip45
-\f@ncyO@olh=\skip46
-\f@ncyO@orh=\skip47
-\f@ncyO@elf=\skip48
-\f@ncyO@erf=\skip49
-\f@ncyO@olf=\skip50
-\f@ncyO@orf=\skip51
+(E:\Miktex\tex\latex\fancyhdr\fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\amsfonts\eucal.sty"
+(E:\Miktex\tex\latex\amsfonts\eucal.sty
 Package: eucal 2009/06/22 v3.00 Euler Script fonts
 LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 (Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
-)
-("C:\Verktyg\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2016/04/23 3.9r The Babel package
-
+) (E:\Miktex\tex\generic\babel\babel.sty
+Package: babel 2017/05/19 3.10 The Babel package
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Verktyg\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+(E:\Miktex\tex\latex\arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\babel-swedish\swedish.ldf"
+(E:\Miktex\tex\latex\babel-swedish\swedish.ldf
 Language: swedish 2005/03/31 v2.3d Swedish support from the babel system
 
-("C:\Verktyg\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2016/04/23 3.9r Babel common definitions
+(E:\Miktex\tex\generic\babel\babel.def
+File: babel.def 2017/05/19 3.10 Babel common definitions
 \babel@savecnt=\count90
 \U@D=\dimen110
 )
 Package babel Info: Making " an active character on input line 90.
 ))
-("C:\Verktyg\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(E:\Miktex\tex\latex\base\inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
-
-("C:\Verktyg\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+ (E:\Miktex\tex\latex\base\utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+(E:\Miktex\tex\latex\base\t1enc.dfu
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -367,9 +365,8 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
-
-("C:\Verktyg\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+ (E:\Miktex\tex\latex\base\ot1enc.dfu
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -409,8 +406,8 @@ File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+(E:\Miktex\tex\latex\base\omsenc.dfu
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -432,19 +429,17 @@ Now handling font encoding U ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-))
-("C:\Verktyg\MiKTeX 2.9\tex\latex\graphics\color.sty"
+)) (E:\Miktex\tex\latex\graphics\color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-
-("C:\Verktyg\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+(E:\Miktex\tex\latex\graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
+(E:\Miktex\tex\latex\graphics\dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-("C:\Verktyg\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+(E:\Miktex\tex\latex\footmisc\footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks18
 \footnotemargin=\dimen111
@@ -459,18 +454,17 @@ Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+(E:\Miktex\tex\latex\natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip52
 \bibsep=\skip53
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count93
-)
-("C:\Verktyg\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+) (E:\Miktex\tex\latex\base\ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\tools\multicol.sty"
-Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+(E:\Miktex\tex\latex\tools\multicol.sty
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \c@tracingmulticols=\count94
 \mult@box=\box26
 \multicol@leftmargin=\dimen112
@@ -518,14 +512,14 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \colbreak@box=\box51
 \mc@col@check@num=\count102
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
+(E:\Miktex\tex\latex\tocbibind\tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
 
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
-) ("C:\Verktyg\MiKTeX 2.9\tex\latex\nomencl\nomencl.sty"
+) (E:\Miktex\tex\latex\nomencl\nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen121
 \nom@tempdim=\dimen122
@@ -536,17 +530,17 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 
 
 Writing nomenclature file Rapportskrivning.nlo
-("C:\Verktyg\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+(E:\Miktex\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
+(E:\Miktex\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
 
-("C:\Verktyg\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+(E:\Miktex\tex\generic\oberdiek\hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Verktyg\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+(E:\Miktex\tex\generic\oberdiek\hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -586,27 +580,27 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-("C:\Verktyg\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(E:\Miktex\tex\generic\ifxetex\ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+(E:\Miktex\tex\latex\oberdiek\auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(E:\Miktex\tex\latex\oberdiek\kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen123
 \Hy@linkcounter=\count103
 \Hy@pagecounter=\count104
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
+(E:\Miktex\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count105
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(E:\Miktex\tex\latex\00miktex\hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `plainpages' set `false' on input line 4374.
@@ -640,7 +634,7 @@ Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
 \c@Hy@tempcnt=\count106
-("C:\Verktyg\MiKTeX 2.9\tex\latex\url\url.sty"
+(E:\Miktex\tex\latex\url\url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -665,19 +659,19 @@ LaTeX Info: Redefining \pageref on input line 6432.
 
 Package hyperref Message: Driver: hpdftex.
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
+(E:\Miktex\tex\latex\hyperref\hpdftex.def
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
 \Fld@listcount=\count111
 \c@bookmark@seq@number=\count112
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(E:\Miktex\tex\latex\oberdiek\rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip57
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(E:\Miktex\tex\latex\graphics\graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
@@ -690,8 +684,7 @@ less on input line 206.
 \@input{Latex/Macros/MacroFile1.aux}
 \openout2 = `Latex/Macros/MacroFile1.aux'.
 
-(Latex/Macros/MacroFile1.tex)
-("C:\Verktyg\MiKTeX 2.9\tex\latex\listings\listings.sty"
+(Latex/Macros/MacroFile1.tex) (E:\Miktex\tex\latex\listings\listings.sty
 \lst@mode=\count113
 \lst@gtempboxa=\box52
 \lst@token=\toks19
@@ -705,71 +698,69 @@ less on input line 206.
 \lst@lineno=\count118
 \lst@maxwidth=\dimen132
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+(E:\Miktex\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count119
 \lst@skipnumbers=\count120
 \lst@framebox=\box53
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+(E:\Miktex\tex\latex\listings\listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+(E:\Miktex\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\glossaries\base\glossaries.sty"
-Package: glossaries 2017/01/19 v4.29 (NLCT)
+(E:\Miktex\tex\latex\glossaries\base\glossaries.sty
+Package: glossaries 2017/08/10 v4.31 (NLCT)
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+(E:\Miktex\tex\latex\xkeyval\xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-("C:\Verktyg\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-("C:\Verktyg\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+(E:\Miktex\tex\generic\xkeyval\xkeyval.tex
+(E:\Miktex\tex\generic\xkeyval\xkvutils.tex
 \XKV@toks=\toks20
 \XKV@tempa@toks=\toks21
 )
 \XKV@depth=\count121
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-("C:\Verktyg\MiKTeX 2.9\tex\latex\mfirstuc\mfirstuc.sty"
+(E:\Miktex\tex\latex\mfirstuc\mfirstuc.sty
 Package: mfirstuc 2016/07/31 v2.04 (NLCT)
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
+(E:\Miktex\tex\latex\etoolbox\etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count122
 )
 \@glsmfirst=\toks22
 \@glsmrest=\toks23
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
+(E:\Miktex\tex\latex\textcase\textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
-)
-("C:\Verktyg\MiKTeX 2.9\tex\latex\xfor\xfor.sty"
+) (E:\Miktex\tex\latex\xfor\xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
-)
-("C:\Verktyg\MiKTeX 2.9\tex\latex\datatool\datatool-base.sty"
+) (E:\Miktex\tex\latex\datatool\datatool-base.sty
 Package: datatool-base 2016/07/28 v2.27 (NLCT)
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(E:\Miktex\tex\latex\amsmath\amsmath.sty
 Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip58
 
 For additional information on amsmath, use the `?' option.
-("C:\Verktyg\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(E:\Miktex\tex\latex\amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(E:\Miktex\tex\latex\amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
 \ex@=\dimen133
 ))
-("C:\Verktyg\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(E:\Miktex\tex\latex\amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen134
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(E:\Miktex\tex\latex\amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count123
@@ -810,22 +801,20 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\substr\substr.sty"
+(E:\Miktex\tex\latex\substr\substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
 \c@su@anzahl=\count135
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\datatool\datatool-fp.sty"
+(E:\Miktex\tex\latex\datatool\datatool-fp.sty
 Package: datatool-fp 2016/07/28 v2.27 (NLCT)
-
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp.sty"
+ (E:\Miktex\tex\latex\fp\fp.sty
 Package: fp 1995/04/02
 
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\defpattern.sty"
+(E:\Miktex\tex\latex\fp\defpattern.sty
 Package: defpattern 1994/10/12
 \actioncount=\count136
-)
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp-basic.sty"
+) (E:\Miktex\tex\latex\fp\fp-basic.sty
 Package: fp-basic 1996/05/13
 \FP@xs=\count137
 \FP@xia=\count138
@@ -837,32 +826,28 @@ Package: fp-basic 1996/05/13
 \FP@regs=\count144
 \FP@times=\count145
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp-addons.sty"
+(E:\Miktex\tex\latex\fp\fp-addons.sty
 Package: fp-addons 1995/03/15
-)
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp-snap.sty"
+) (E:\Miktex\tex\latex\fp\fp-snap.sty
 Package: fp-snap 1995/04/05
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp-exp.sty"
+(E:\Miktex\tex\latex\fp\fp-exp.sty
 Package: fp-exp 1995/04/03
-)
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp-trigo.sty"
+) (E:\Miktex\tex\latex\fp\fp-trigo.sty
 Package: fp-trigo 1995/04/14
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp-pas.sty"
+(E:\Miktex\tex\latex\fp\fp-pas.sty
 Package: fp-pas 1994/08/29
-)
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp-random.sty"
+) (E:\Miktex\tex\latex\fp\fp-random.sty
 Package: fp-random 1995/02/23
 \FPseed=\count146
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty"
+(E:\Miktex\tex\latex\fp\fp-eqn.sty
 Package: fp-eqn 1995/04/03
-)
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp-upn.sty"
+) (E:\Miktex\tex\latex\fp\fp-upn.sty
 Package: fp-upn 1996/10/21
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\fp\fp-eval.sty"
+(E:\Miktex\tex\latex\fp\fp-eval.sty
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks29
@@ -875,23 +860,21 @@ Package: fp-eval 1995/04/03
 \dtl@codeB=\count152
 \@dtl@foreach@level=\count153
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\glossaries\base\glossaries-compatible-307.sty
-"
-Package: glossaries-compatible-307 2017/01/19 v4.29 (NLCT)
-) ("C:\Verktyg\MiKTeX 2.9\tex\latex\tracklang\tracklang.sty"
+(E:\Miktex\tex\latex\glossaries\base\glossaries-compatible-307.sty
+Package: glossaries-compatible-307 2017/08/10 v4.31 (NLCT)
+)
+(E:\Miktex\tex\latex\tracklang\tracklang.sty
 Package: tracklang 2017/03/25 v1.3.4 (NLCT) Track Languages
 
-("C:\Verktyg\MiKTeX 2.9\tex\generic\tracklang\tracklang.tex"))
-("C:\Verktyg\MiKTeX 2.9\tex\latex\beamer\translator\translator.sty"
+(E:\Miktex\tex\generic\tracklang\tracklang.tex))
+(E:\Miktex\tex\latex\beamer\translator\translator.sty
 Package: translator 2010/06/12 ver 1.10
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\beamer\translator\translator-language-mapping
-s.tex"))
-("C:\Verktyg\MiKTeX 2.9\tex\latex\glossaries-swedish\glossaries-swedish.ldf"
+(E:\Miktex\tex\latex\beamer\translator\translator-language-mappings.tex))
+(E:\Miktex\tex\latex\glossaries-swedish\glossaries-swedish.ldf
 File: glossaries-swedish.ldf 2016/03/05 v1.0
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\glossaries-swedish\glossaries-swedish-utf8.ld
-f"))
+(E:\Miktex\tex\latex\glossaries-swedish\glossaries-swedish-utf8.ldf))
 \gls@level=\count154
 \@gls@tmpb=\toks30
 \gls@tmplen=\skip62
@@ -899,16 +882,18 @@ f"))
 \glslabeltok=\toks32
 \glsshorttok=\toks33
 \glslongtok=\toks34
- ("C:\Verktyg\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypernav.sty"
-Package: glossary-hypernav 2017/01/19 v4.29 (NLCT)
-) ("C:\Verktyg\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-list.sty"
-Package: glossary-list 2017/01/19 v4.29 (NLCT)
+
+(E:\Miktex\tex\latex\glossaries\styles\glossary-hypernav.sty
+Package: glossary-hypernav 2017/08/10 v4.31 (NLCT)
+)
+(E:\Miktex\tex\latex\glossaries\styles\glossary-list.sty
+Package: glossary-list 2017/08/10 v4.31 (NLCT)
 \glslistdottedwidth=\skip63
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-long.sty"
-Package: glossary-long 2017/01/19 v4.29 (NLCT)
+(E:\Miktex\tex\latex\glossaries\styles\glossary-long.sty
+Package: glossary-long 2017/08/10 v4.31 (NLCT)
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+(E:\Miktex\tex\latex\tools\longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip64
 \LTright=\skip65
@@ -929,10 +914,10 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \glsdescwidth=\skip68
 \glspagelistwidth=\skip69
 )
-("C:\Verktyg\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-super.sty"
-Package: glossary-super 2017/01/19 v4.29 (NLCT)
+(E:\Miktex\tex\latex\glossaries\styles\glossary-super.sty
+Package: glossary-super 2017/08/10 v4.31 (NLCT)
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
+(E:\Miktex\tex\latex\supertabular\supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \c@tracingst=\count160
 \ST@wd=\dimen143
@@ -951,15 +936,15 @@ Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \ST@dimen=\dimen153
 \ST@pbox=\box60
 ))
-("C:\Verktyg\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.sty"
-Package: glossary-tree 2017/01/19 v4.29 (NLCT)
+(E:\Miktex\tex\latex\glossaries\styles\glossary-tree.sty
+Package: glossary-tree 2017/08/10 v4.31 (NLCT)
 \glstreeindent=\skip73
 ))
 (Rapportskrivning.aux (0_frontmatter/abstract.aux)
 (0_frontmatter/dedication.aux) (0_frontmatter/acknowledgement.aux)
 (1_introduction/introduction.aux) (3_theory/theory.aux) (4/XYZ.aux) (5/XYZ.aux)
-(8_materials_and_methods/materials_methods.aux) (7_discussion/discussion.aux)
-(10_bilaga/bilaga.aux))
+(8_materials_and_methods/materials_methods.aux) (6_results/results.aux)
+(7_discussion/discussion.aux) (10_bilaga/bilaga.aux))
 \openout1 = `Rapportskrivning.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
@@ -976,7 +961,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
 LaTeX Font Info:    ... okay on input line 149.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
 LaTeX Font Info:    ... okay on input line 149.
- ("C:\Verktyg\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+(E:\Miktex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count161
 \scratchdimen=\dimen154
@@ -989,10 +975,10 @@ LaTeX Font Info:    ... okay on input line 149.
 \MPnumerator=\count165
 \makeMPintoPDFobject=\count166
 \everyMPtoPDFconversion=\toks37
-) ("C:\Verktyg\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+) (E:\Miktex\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+(E:\Miktex\tex\latex\oberdiek\grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1006,7 +992,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+(E:\Miktex\tex\latex\caption\ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
@@ -1014,10 +1000,10 @@ Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box62
 Package hyperref Info: Link coloring OFF on input line 149.
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+(E:\Miktex\tex\latex\hyperref\nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-("C:\Verktyg\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+(E:\Miktex\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count167
@@ -1025,14 +1011,14 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 149.
 LaTeX Info: Redefining \pageref on input line 149.
 LaTeX Info: Redefining \nameref on input line 149.
-
-(Rapportskrivning.out) (Rapportskrivning.out)
+ (Rapportskrivning.out)
+(Rapportskrivning.out)
 \@outlinefile=\write4
 \openout4 = `Rapportskrivning.out'.
 
 \c@lstlisting=\count168
  (Rapportskrivning.glsdefs)
-<0_frontmatter/figures/MAH_logotyp_original.jpg, id=79, 130.4875pt x 139.52126p
+<0_frontmatter/figures/MAH_logotyp_original.jpg, id=95, 130.4875pt x 139.52126p
 t>
 File: 0_frontmatter/figures/MAH_logotyp_original.jpg Graphic file (type jpg)
  <use 0_frontmatter/figures/MAH_logotyp_original.jpg>
@@ -1058,7 +1044,7 @@ AH_logotyp_original.jpg>]
 \openout2 = `0_frontmatter/abstract.aux'.
 
  (0_frontmatter/abstract.tex
-<0_frontmatter/figures/group1.jpg, id=91, 581.17125pt x 277.035pt>
+<0_frontmatter/figures/group1.jpg, id=107, 581.17125pt x 277.035pt>
 File: 0_frontmatter/figures/group1.jpg Graphic file (type jpg)
 
 <use 0_frontmatter/figures/group1.jpg>
@@ -1097,14 +1083,30 @@ Package babel Info: Redefining swedish shorthand "~
 No file 0_frontmatter/acknowledgement.tex.
 (Rapportskrivning.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 4.
- ("C:\Verktyg\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ (E:\Miktex\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(E:\Miktex\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 24.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 24.
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 24.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 24.
+ [1
+\FN@pp@footnotehinttrue 
+
+
+\FN@pp@footnotehinttrue 
+
+
+])
 \tf@toc=\write5
 \openout5 = `Rapportskrivning.toc'.
 
@@ -1118,14 +1120,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 226.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 226.
-[1
-\FN@pp@footnotehinttrue 
-
-
-\FN@pp@footnotehinttrue 
-
-
-]
+[2]
 \openout2 = `1_introduction/introduction.aux'.
 
  (1_introduction/introduction.tex
@@ -1134,7 +1129,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 6.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 6.
-<1_introduction/figures/vandal.jpg, id=127, 770.88pt x 430.60875pt>
+<1_introduction/figures/vandal.jpg, id=151, 770.88pt x 430.60875pt>
 File: 1_introduction/figures/vandal.jpg Graphic file (type jpg)
 
 <use 1_introduction/figures/vandal.jpg>
@@ -1174,7 +1169,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 19.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 19.
-<3_theory/figures/lind.jpg, id=132, 657.95813pt x 249.93375pt>
+<3_theory/figures/lind.jpg, id=156, 657.95813pt x 249.93375pt>
 File: 3_theory/figures/lind.jpg Graphic file (type jpg)
 
 <use 3_theory/figures/lind.jpg>
@@ -1188,7 +1183,12 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 32.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 32.
- [2
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.32 
+      [2
 
 
 
@@ -1238,7 +1238,7 @@ Package babel Info: Redefining swedish shorthand "~
 
 
 ]
-<8_materials_and_methods/figures/connections.jpg, id=147, 791.95876pt x 605.261
+<8_materials_and_methods/figures/connections.jpg, id=170, 791.95876pt x 605.261
 25pt>
 File: 8_materials_and_methods/figures/connections.jpg Graphic file (type jpg)
  <use 8_materials_and_methods/figures/connections.jpg>
@@ -1283,7 +1283,7 @@ Package babel Info: Redefining swedish shorthand "~
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 116.
 
 
-("C:\Verktyg\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+(E:\Miktex\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -1306,7 +1306,7 @@ Package babel Info: Redefining swedish shorthand "|
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 140.
 
-<8_materials_and_methods/figures/pir.jpg, id=217, 292.09125pt x 219.219pt>
+<8_materials_and_methods/figures/pir.jpg, id=241, 292.09125pt x 219.219pt>
 File: 8_materials_and_methods/figures/pir.jpg Graphic file (type jpg)
 
 <use 8_materials_and_methods/figures/pir.jpg>
@@ -1325,7 +1325,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 153.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 153.
-[9] <8_materials_and_methods/figures/mic.jpg, id=223, 803.0pt x 301.125pt>
+[9] <8_materials_and_methods/figures/mic.jpg, id=246, 803.0pt x 301.125pt>
 File: 8_materials_and_methods/figures/mic.jpg Graphic file (type jpg)
 
 <use 8_materials_and_methods/figures/mic.jpg>
@@ -1382,10 +1382,36 @@ Package babel Info: Redefining swedish shorthand "|
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 233.
  [13]
+\openout2 = `6_results/results.aux'.
+
+ (6_results/results.tex
+ 4.
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 6.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 6.
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 21.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 21.
+)
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 234.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 234.
+Package babel Info: Redefining swedish shorthand "|
+(babel)             in language  on input line 234.
+Package babel Info: Redefining swedish shorthand "~
+(babel)             in language  on input line 234.
+ [14
+
+
+
+]
 \openout2 = `7_discussion/discussion.aux'.
 
  (7_discussion/discussion.tex
- 4.
+ 5.
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining swedish shorthand "~
@@ -1406,7 +1432,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 35.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 35.
-[14
+[15
 
 
 
@@ -1419,7 +1445,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 235.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 235.
- [15]
+ [16]
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 294.
 Package babel Info: Redefining swedish shorthand "~
@@ -1432,14 +1458,14 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 302.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 302.
- [16
+ [17
 
 
 ]
 \openout2 = `10_bilaga/bilaga.aux'.
 
  (10_bilaga/bilaga.tex
- 5.
+ 6.
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining swedish shorthand "~
@@ -1452,7 +1478,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 27.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 27.
-<10_bilaga/figures/diagram.png, id=260, 861.2175pt x 1840.8775pt>
+<10_bilaga/figures/diagram.png, id=287, 861.2175pt x 1840.8775pt>
 File: 10_bilaga/figures/diagram.png Graphic file (type png)
 
 <use 10_bilaga/figures/diagram.png>
@@ -1465,7 +1491,7 @@ LaTeX Warning: Float too large for page by 57.41898pt on input line 33.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<10_bilaga/figures/diagramSensor.png, id=262, 606.265pt x 693.59125pt>
+<10_bilaga/figures/diagramSensor.png, id=289, 606.265pt x 693.59125pt>
 File: 10_bilaga/figures/diagramSensor.png Graphic file (type png)
 
 <use 10_bilaga/figures/diagramSensor.png>
@@ -1476,7 +1502,7 @@ Package pdftex.def Info: 10_bilaga/figures/diagramSensor.png used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<10_bilaga/figures/Systembeskrivning.jpg, id=263, 573.14125pt x 563.10374pt>
+<10_bilaga/figures/Systembeskrivning.jpg, id=290, 573.14125pt x 563.10374pt>
 File: 10_bilaga/figures/Systembeskrivning.jpg Graphic file (type jpg)
 
 <use 10_bilaga/figures/Systembeskrivning.jpg>
@@ -1495,7 +1521,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 47.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 47.
-[17
+[18
 
 
 ]
@@ -1507,7 +1533,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 47.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 47.
- [18 <./10_bilaga/figures/diagram.png>]
+ [19 <./10_bilaga/figures/diagram.png>]
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 47.
 Package babel Info: Redefining swedish shorthand "~
@@ -1516,7 +1542,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 47.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 47.
- [19 <./10_bilaga/figures/diagramSensor.png>]
+ [20 <./10_bilaga/figures/diagramSensor.png>]
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 47.
 Package babel Info: Redefining swedish shorthand "~
@@ -1525,13 +1551,13 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 47.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 47.
- [20 <./10_bilaga/figures/Systembeskrivning.jpg>]
+ [21 <./10_bilaga/figures/Systembeskrivning.jpg>]
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 49.
 
-<10_bilaga/figures/Anslutningstest.png, id=285, 520.94624pt x 435.12563pt>
+<10_bilaga/figures/Anslutningstest.png, id=313, 520.94624pt x 435.12563pt>
 File: 10_bilaga/figures/Anslutningstest.png Graphic file (type png)
 
 <use 10_bilaga/figures/Anslutningstest.png>
@@ -1539,7 +1565,7 @@ Package pdftex.def Info: 10_bilaga/figures/Anslutningstest.png used on input li
 ne 52.
 (pdftex.def)             Requested size: 412.56496pt x 344.60196pt.
 
-<10_bilaga/figures/FTPTest.png, id=286, 544.28343pt x 670.75594pt>
+<10_bilaga/figures/FTPTest.png, id=314, 544.28343pt x 670.75594pt>
 File: 10_bilaga/figures/FTPTest.png Graphic file (type png)
 
 <use 10_bilaga/figures/FTPTest.png>
@@ -1550,7 +1576,7 @@ Package pdftex.def Info: 10_bilaga/figures/FTPTest.png used on input line 58.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<10_bilaga/figures/HanteraIPKameraTest1.png, id=287, 513.41812pt x 744.53156pt>
+<10_bilaga/figures/HanteraIPKameraTest1.png, id=315, 513.41812pt x 744.53156pt>
 File: 10_bilaga/figures/HanteraIPKameraTest1.png Graphic file (type png)
 <use 10_bilaga/figures/HanteraIPKameraTest1.png>
 Package pdftex.def Info: 10_bilaga/figures/HanteraIPKameraTest1.png used on inp
@@ -1571,10 +1597,10 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 68.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 68.
-[21
+[22
 
  <./10_bilaga/figures/Anslutningstest.png>]
-<10_bilaga/figures/HanteraIPKameraTest2.png, id=294, 513.41812pt x 566.115pt>
+<10_bilaga/figures/HanteraIPKameraTest2.png, id=321, 513.41812pt x 566.115pt>
 File: 10_bilaga/figures/HanteraIPKameraTest2.png Graphic file (type png)
 
 <use 10_bilaga/figures/HanteraIPKameraTest2.png>
@@ -1585,7 +1611,7 @@ ut line 71.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<10_bilaga/figures/SensorTest.png, id=295, 628.59843pt x 456.95718pt>
+<10_bilaga/figures/SensorTest.png, id=322, 628.59843pt x 456.95718pt>
 File: 10_bilaga/figures/SensorTest.png Graphic file (type png)
 
 <use 10_bilaga/figures/SensorTest.png>
@@ -1596,7 +1622,7 @@ Package pdftex.def Info: 10_bilaga/figures/SensorTest.png used on input line 78
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<10_bilaga/figures/SchedulingTest.png, id=296, 481.8pt x 83.5622pt>
+<10_bilaga/figures/SchedulingTest.png, id=323, 481.8pt x 83.5622pt>
 File: 10_bilaga/figures/SchedulingTest.png Graphic file (type png)
 
 <use 10_bilaga/figures/SchedulingTest.png>
@@ -1616,7 +1642,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 302.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 302.
- [22 <./10_bilaga/figures/FTPTest.png>]
+ [23 <./10_bilaga/figures/FTPTest.png>]
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 302.
 Package babel Info: Redefining swedish shorthand "~
@@ -1625,7 +1651,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 302.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 302.
- [23 <./10_bilaga/figures/HanteraIPKameraTest1.png>]
+ [24 <./10_bilaga/figures/HanteraIPKameraTest1.png>]
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 302.
 Package babel Info: Redefining swedish shorthand "~
@@ -1634,7 +1660,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 302.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 302.
- [24 <./10_bilaga/figures/HanteraIPKameraTest2.png>]
+ [25 <./10_bilaga/figures/HanteraIPKameraTest2.png>]
 Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 302.
 Package babel Info: Redefining swedish shorthand "~
@@ -1643,7 +1669,7 @@ Package babel Info: Redefining swedish shorthand "|
 (babel)             in language  on input line 302.
 Package babel Info: Redefining swedish shorthand "~
 (babel)             in language  on input line 302.
- [25 <./10_bilaga/figures/SensorTest.png> <./10_bilaga/figures/SchedulingTest.p
+ [26 <./10_bilaga/figures/SensorTest.png> <./10_bilaga/figures/SchedulingTest.p
 ng>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 303.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 303.
@@ -1651,30 +1677,42 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 303.
 (Rapportskrivning.aux (0_frontmatter/abstract.aux)
 (0_frontmatter/dedication.aux) (0_frontmatter/acknowledgement.aux)
 (1_introduction/introduction.aux) (3_theory/theory.aux) (4/XYZ.aux) (5/XYZ.aux)
-(8_materials_and_methods/materials_methods.aux) (7_discussion/discussion.aux)
-(10_bilaga/bilaga.aux))
+(8_materials_and_methods/materials_methods.aux) (6_results/results.aux)
+(7_discussion/discussion.aux) (10_bilaga/bilaga.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 303.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 303.
-Package rerunfilecheck Info: File `Rapportskrivning.out' has not changed.
-(rerunfilecheck)             Checksum: D03BB3A9EAD0E70C20532E49289C51E6;1118.
+
+
+Package rerunfilecheck Warning: File `Rapportskrivning.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Rapportskrivning.out':
+(rerunfilecheck)             Before: 68FA31F380F1327E35DDF70012355C9F;1334
+(rerunfilecheck)             After:  58ECBEE084F60B463EEEB70653AED031;1219.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 303.
  ) 
 Here is how much of TeX's memory you used:
- 16884 strings out of 493333
- 267259 string characters out of 3141777
- 444809 words of memory out of 3000000
- 19910 multiletter control sequences out of 15000+200000
+ 16963 strings out of 493323
+ 265461 string characters out of 3146850
+ 447586 words of memory out of 3000000
+ 19984 multiletter control sequences out of 15000+200000
  12439 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,12n,79p,1932b,1865s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Verktyg/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Verktyg/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Verktyg/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Verktyg/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr12.pfb><C:/Verktyg/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><C:/Verktyg/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Rapportskrivning.pdf (29 pages, 1143248 bytes).
+ 45i,12n,79p,1932b,1869s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{section.4.3} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4.2} has been referenced but does not exist
+, replaced by a fixed one
+
+<E:/Miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/Miktex/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb><E:/Miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+<E:/Miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><E:/Miktex/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><E:/Miktex/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Rapportskrivning.pdf (31 pages, 1146588 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 394 PDF objects out of 1000 (max. 8388607)
+ 122 named destinations out of 1000 (max. 500000)
+ 265 words of extra memory for PDF output out of 10000 (max. 10000000)
 

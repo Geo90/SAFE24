@@ -18,13 +18,13 @@
 %: ----------------------- contents from here ------------------------
 
 
-
-\section{PIR-sensorn}
-
-
-\section{Mikrofon}
-
 \section{Testfall}
+
+Under testfasen användes det webbaserade programmet testrail. Fördelen med det var att flera personer kunde lägga till och redigera testfallen samt att vi fick en grafisk överblick över vilka testfall som har passerat respektive fallerat. 
+Testfallen skrevs på så sätt att de skulle validera systemlösningen vilket gick ut på att kontrollera kamerans bestämda rörlighet, sensorernas känslighet, kommunikationen mellan esp8266 och kameran, kommunikationen mellan kameran och ftp-servern samt att testa kamerans anslutning till wifi nätverket.
+Vi testade schemaläggningen genom att skriva ut ett visst ord i slutet av varje task, och vänta på att se det ordet utskrivet. När vi startade programmet såg vi att vissa task kördes flera gånger innan den hoppade till nästa task, dock kördes alla task i ordning. 
+Resultaten från samtliga testfall överensstämde med det förväntade resultatet. Som en följd av detta passerade alla tester och inga justeringar av systemlösningen var nödvändiga. Med andra ord har systemlösningen validerats att den löser problemet genom testningen.
+
 
 
 % ---------------------------------------------------------------------------
